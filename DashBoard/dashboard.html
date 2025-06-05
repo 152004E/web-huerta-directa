@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashBoard User</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../login-20250405T183650Z-001/login/logo.png"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="person-circle-outline"></ion-icon
+              ></span>
+              <span class="titulo">Emerson Reyes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="home-outline"></ion-icon
+              ></span>
+              <span class="titulo">DashBoard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="people-outline"></ion-icon
+              ></span>
+              <span class="titulo">Customers</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="chatbubble-outline"></ion-icon
+              ></span>
+              <span class="titulo">menssage</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="help-outline"></ion-icon
+              ></span>
+              <span class="titulo">Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="settings-outline"></ion-icon
+              ></span>
+              <span class="titulo">settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="lock-closed-outline"></ion-icon
+              ></span>
+              <span class="titulo">Password</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="exit-outline"></ion-icon
+              ></span>
+              <span class="titulo">Sing Out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--MAIN -->
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+          <!--Buscar-->
+          <div class="search">
+            <label for="">
+              <input type="text" placeholder="Search here" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+          <!--imagen de usuario-->
+          <div class="userImg">
+            <img src="./imagesDashBoard/user.jpg" alt="user imag" />
+          </div>
+        </div>
+
+        <!--Cartas de informacion-->
+        <div class="cardBox">
+          <div class="card">
+            <div>
+              <div class="numbers">2,453</div>
+              <div class="cardName">total views</div>
+            </div>
+            <div class="iconBox">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">53</div>
+              <div class="cardName">Sales</div>
+            </div>
+            <div class="iconBox">
+              <ion-icon name="cart-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">453</div>
+              <div class="cardName">Comment</div>
+            </div>
+            <div class="iconBox">
+              <ion-icon name="chatbubbles-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">$6,453</div>
+              <div class="cardName">Earning</div>
+            </div>
+            <div class="iconBox">
+              <ion-icon name="cash-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <!--TABLA DE USUARIOS-->
+        <div class="details">
+          <div class="recentOrders">
+            <div class="cardHeader">
+              <h2>Recent Orders</h2>
+              <a href="#" class="btn">View All</a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <td>Product</td>
+                  <td>Customer</td>
+                  <td>Status</td>
+                  <td>Price</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Product 1</td>
+                  <td>Emerson Reyes</td>
+                  <td><span class="status delivered">Delivered</span></td>
+                  <td>$2,000.00</td>
+                </tr>
+                <tr>
+                  <td>Product 2</td>
+                  <td>Santiago Puentes</td>
+                  <td><span class="status pending">Pending</span></td>
+                  <td>$1,500.00</td>
+                </tr>
+                <tr>
+                  <td>Product 3</td>
+                  <td>Carolina Arias</td>
+                  <td><span class="status return">Return</span></td>
+                  <td>$3,000.00</td>
+                </tr>
+                <tr>
+                  <td>Product 4</td>
+                  <td>Eduar Vega</td>
+                  <td><span class="status delivered">Delivered</span></td>
+                  <td>$2,500.00</td>
+                </tr>
+                <tr>
+                  <td>Product 5</td>
+                  <td>Alfonso Lopez</td>
+                  <td><span class="status pending">Pending</span></td>
+                  <td>$1,800.00</td>
+                </tr>
+                <tr>
+                  <td>Product 6</td>
+                  <td>Lina Marcela</td>
+                  <td><span class="status delivered">Delivered</span></td>
+                  <td>$2,200.00</td>
+                </tr>
+                <tr>
+                  <td>Product 7</td>
+                  <td>Julian Torres</td>
+                  <td><span class="status pending">Pending</span></td>
+                  <td>$1,300.00</td>
+                </tr>
+                <tr>
+                  <td>Product 8</td>
+                  <td>Camilo Rojas</td>
+                  <td><span class="status return">Return</span></td>
+                  <td>$2,800.00</td>
+                </tr>
+                <tr>
+                  <td>Product 9</td>
+                  <td>Daniela Gómez</td>
+                  <td><span class="status inprogress">Inprogress</span></td>
+                  <td>$3,200.00</td>
+                </tr>
+                <tr>
+                  <td>Product 10</td>
+                  <td>Mateo Álvarez</td>
+                  <td><span class="status pending">Pending</span></td>
+                  <td>$1,900.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!--News customers-->
+          <div class="recentCustomer">
+            <div class="cardHeader">
+              <h2>Recent Customer</h2>
+            </div>
+            <table>
+              <tr>
+                <td>
+                  <div class="imgBx">
+                    <img src="./imagesDashBoard/img1.jpg" alt="user" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Jesus <br /><span>Italy</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imgBx">
+                    <img src="./imagesDashBoard/img2.jpg" alt="user" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Maria <br /><span>Spain</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imgBx">
+                    <img src="./imagesDashBoard/img3.jpg" alt="user" />
+                  </div>
+                </td>
+                <td>
+                  <h4>John <br /><span>USA</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imgBx">
+                    <img src="./imagesDashBoard/img4.jpg" alt="user" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Lucía <br /><span>Argentina</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imgBx">
+                    <img src="./imagesDashBoard/img5.jpg" alt="user" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Kenji <br /><span>Japan</span></h4>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <div class="imgBx">
+                    <img src="./imagesDashBoard/img1.jpg" alt="user" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Jesus <br /><span>Italy</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imgBx">
+                    <img src="./imagesDashBoard/img2.jpg" alt="user" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Maria <br /><span>Spain</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imgBx">
+                    <img src="./imagesDashBoard/img3.jpg" alt="user" />
+                  </div>
+                </td>
+                <td>
+                  <h4>John <br /><span>USA</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imgBx">
+                    <img src="./imagesDashBoard/img4.jpg" alt="user" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Lucía <br /><span>Argentina</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imgBx">
+                    <img src="./imagesDashBoard/img5.jpg" alt="user" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Kenji <br /><span>Japan</span></h4>
+                </td>
+              </tr>
+              
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
