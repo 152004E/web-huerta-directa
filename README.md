@@ -1,6 +1,6 @@
-# 📘 SENA Portfolio – Fourth Trimester Projects
+# 📘 Project SENA  
 
-Welcome to my Portfolio, a collection of projects developed during the fourth trimester of my studies in Software Analysis and Development. These projects reflect the skills and competencies I've acquired in areas such as PHP, SQL, HTML, and software architecture.
+Welcome to my Portfolio, a collection of projects developed during  my studies in Software Analysis and Development. These projects reflect the skills and competencies I've acquired in areas such as PHP, SQL, HTML, and software architecture.
 
 ---
 
