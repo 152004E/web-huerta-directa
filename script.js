@@ -50,49 +50,47 @@ function insertarCarrito(elemento) {
   mostrarAlerta("Producto agregado al carrito");
 }
 function mostrarAlerta(mensaje) {
-    const alerta = document.createElement("div");
-    alerta.textContent = mensaje;
-    alerta.style.position = "fixed";
-    alerta.style.top = "20px";
-    alerta.style.right = "20px";
-    alerta.style.backgroundColor = "#28a745";
-    alerta.style.color = "#fff";
-    alerta.style.padding = "10px 20px";
-    alerta.style.borderRadius = "5px";
-    alerta.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
-    alerta.style.zIndex = "9999";
-    alerta.style.fontFamily = "sans-serif";
-  
-    document.body.appendChild(alerta);
-  
-    setTimeout(() => {
-      alerta.remove(); 
-    }, 2000);
-  }
+  const alerta = document.createElement("div");
+  alerta.textContent = mensaje;
+  alerta.style.position = "fixed";
+  alerta.style.top = "20px";
+  alerta.style.right = "20px";
+  alerta.style.backgroundColor = "#28a745";
+  alerta.style.color = "#fff";
+  alerta.style.padding = "10px 20px";
+  alerta.style.borderRadius = "5px";
+  alerta.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+  alerta.style.zIndex = "9999";
+  alerta.style.fontFamily = "sans-serif";
 
+  document.body.appendChild(alerta);
 
+  setTimeout(() => {
+    alerta.remove();
+  }, 2000);
+}
 
-  function mostrarAlertaEliminacion(mensaje) {
-    const alerta = document.createElement("div");
-    alerta.textContent = mensaje;
-    alerta.style.position = "fixed";
-    alerta.style.top = "20px";
-    alerta.style.left = "20px"; 
-    alerta.style.backgroundColor = "#dc3545"; 
-    alerta.style.color = "#fff";
-    alerta.style.padding = "10px 20px";
-    alerta.style.borderRadius = "5px";
-    alerta.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
-    alerta.style.zIndex = "9999";
-    alerta.style.fontFamily = "sans-serif";
-  
-    document.body.appendChild(alerta);
-  
-    setTimeout(() => {
-      alerta.remove();
-    }, 2000);
-  }
-  
+function mostrarAlertaEliminacion(mensaje) {
+  const alerta = document.createElement("div");
+  alerta.textContent = mensaje;
+  alerta.style.position = "fixed";
+  alerta.style.top = "20px";
+  alerta.style.left = "20px";
+  alerta.style.backgroundColor = "#dc3545";
+  alerta.style.color = "#fff";
+  alerta.style.padding = "10px 20px";
+  alerta.style.borderRadius = "5px";
+  alerta.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+  alerta.style.zIndex = "9999";
+  alerta.style.fontFamily = "sans-serif";
+
+  document.body.appendChild(alerta);
+
+  setTimeout(() => {
+    alerta.remove();
+  }, 2000);
+}
+
 function eliminarElemento(e) {
   e.preventDefault();
   let elemento, elementoId;
@@ -108,5 +106,4 @@ function vaciarCarrito() {
     lista.removeChild(lista.firstChild);
   }
   mostrarAlertaEliminacion("Productos eliminados del carrito");
- 
 }
