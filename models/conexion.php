@@ -1,6 +1,6 @@
 <?php
 
-$conexion = new PDO("mysql:host=localhost;dbname=huerta;", "root", "");
+$conexion = new PDO("mysql:host=localhost;dbname=Huerta;", "root", "");
 
 
 ?>
