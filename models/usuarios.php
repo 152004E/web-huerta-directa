@@ -6,7 +6,7 @@ class usuarios
     public function Login($correo, $clave) {
     try {
         include 'conexion.php';
-        $consultar = $conexion->prepare("SELECT correo,clave,perfil_usuario,estado FROM usuario WHERE correo=? AND clave=?");
+        $consultar = $conexion->prepare("SELECT email,password_user,fk_id_role FROM TB_users WHERE correo=? AND clave=?");
         $consultar->execute([$correo, $clave]);
         $lista = $consultar->fetchAll(PDO::FETCH_NUM);
         $conexion = null;
@@ -31,7 +31,7 @@ class Administrador extends usuarios
     public function ConsultaGeneral() {
         try {
             include 'conexion.php';
-            $consultar = $conexion->prepare("SELECT * FROM usuarios");
+            $consultar = $conexion->prepare("SELECT * FROM TB_users");
             $consultar->execute();
             $lista = $consultar->fetchAll(PDO::FETCH_NUM);
             $conexion = null;
