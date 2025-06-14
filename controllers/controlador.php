@@ -2,7 +2,7 @@
 
 //var_dump($_POST);
 
-include "../models/usuario.php";
+include "../models/usuarios.php";
 
 $usuario = new usuarios();
 $respuesta = $usuario->Login($_POST["email"], $_POST["password_user"]);
@@ -13,10 +13,10 @@ if($respuesta instanceof Exception){
     header("location:../views/Errores/error500.html");
 }
 else if(!empty($respuesta)){
-    if($respuesta[0]["perfil_usuario"]=="1"){
-        header("location:../views/administrador.html");
+    if($respuesta[0]["fk_id"]=="1"){
+        header("location:../views/Dashboard/dashboard.html");
     }
-    else if ($respuesta[0]["perfil_usuario"]=="2"){
+    else if ($respuesta[0]["fk_id"]=="2"){
         header("location:../views/coordinador.html");
     }
 }
