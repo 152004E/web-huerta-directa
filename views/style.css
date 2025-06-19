@@ -434,35 +434,35 @@ input{
 }
 
 .slider > div > .wrapper {
-  width: calc(100% - (20px + 2em));
-  margin-left: auto;
+  width:  100%;
+  margin-left:   auto;
 }
 .slider .item {
-  position: relative;
-  height: 900px;;
+  position:   relative;
+  height: 1000px;
 }
 .slider .text-content {
-  position: relative;
-  height: 300%;
-  justify-content: flex-end;
-  padding: 0 0 10% 10%;
+  position:  relative;
+  height: 500%;
+  justify-content: center;
+  padding:  500 px, 0;
   z-index: 1;
 }
 .slider h4 {
-  font-size: var(--font-small);
-  font-weight: var(--fw7);
-  width: fit-content;
-  padding: 4px 10px;
-  background-color: var(--dark-color);
-  color: var(--white-color);
-  border-radius: 4px;
+  font-size:   19px;
+  font-weight:  500;
+  width:   13%;
+  padding: 7px 19px;
+  background-color: #8dc84b;
+  color: #fffffe;
+  border-radius: 60px;
 }
 .text-content :where(h2,h3) span:first-child {
-  font-weight: var(--fw3);
-  columns: var(--light-text-color);
+  font-weight: 600;
+  columns: #8dc84b;
 }
 .text-content :where(h2,h3) span:last-child {
-  color: var(--secondary-dark-color);
+  color: #8dc84b;
   text-transform: uppercase;
   letter-spacing: -1px;
 
