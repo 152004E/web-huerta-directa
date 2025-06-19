@@ -5,6 +5,8 @@ const vaciarCarritoBtn = document.querySelector("#vaciar-carrito");
 
 cargarEvenetListeners();
 
+
+
 function cargarEvenetListeners() {
   elementos1.addEventListener("click", comprarElemento);
   carrito.addEventListener("click", eliminarElemento);
@@ -108,12 +110,16 @@ function vaciarCarrito() {
   mostrarAlertaEliminacion("Productos eliminados del carrito");
 }
 
-//slider
-const swiper = new Swiper('.swiper', {
+document.getElementById("miBoton").addEventListener("click", function() {
+  window.location.href = "/views/Pasarela_Pagos/Pasarela.html";
+});
+
+//slider     lo modifique porque no se ha terminado y me da error en consola 
+/*const swiper = new Swiper('.swiper', {
   loop: true,
 
   pagination: {
     el: '.swiper-pagination',
   },
 
-});
+});*/
