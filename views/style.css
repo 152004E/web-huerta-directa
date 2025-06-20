@@ -433,68 +433,76 @@ input{
   }
 }
 
-.slider > .container > .wrapper {
-  width:  100%;
-  margin-left: auto;
-}
-.myslider {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide{
+.slider .item {
+  position: relative;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
-.swiper .item{
-  position: relative;
-  width: 600px;
+.slider .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slider .text-content {
   position:  absolute;
-  height: 500%;
-  left: 10%;
+  top: 50%;
+  left: 8%;
   transform: translateY(-50%);
-  z-index: 10; 
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  z-index: 10;
+  max-width: 450px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 20px; 
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
-.slider h4 {
-  font-size:   19px;
-  font-weight:  500;
-  width:   fit-content;
-  padding: 7px 19px;
+.slider .text-content h4 {
   background-color: #8dc84b;
-  color: #fffffe;
-  border-radius: 60px;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
-.text-content :where(h2,h3) span:first-child {
-  font-weight: 800;
-  columns: #8dc84b;
-}
-.text-content :where(h2,h3) span:last-child {
+.slider .text-content h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 20px;
   color: #8dc84b;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.slider .text-content h2 strong {
+  font-weight: 700;
+  color: #8dc84b;
+  font-size: 36px;
 
 }
 .slider .primary-button{
   display: inline-block;
-  padding: 15px 25px;
+  padding: 15px 30px;
   color: #ffff;
   background-color: #8dc84b;
   border-radius: 50px;
-  text-transform: capitalize;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 .slider .primary-button:hover{
-  color: #ffffff;
   background-color: #004d00; 
   
+}
+
+.slider-section {
+
+  background-color: #faf2dd;
+
 }
 
 
