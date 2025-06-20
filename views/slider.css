@@ -14,7 +14,7 @@
 }
 
 .slider .text-content {
-  position:  absolute;
+  position: absolute;
   top: 50%;
   left: 8%;
   transform: translateY(-50%);
@@ -22,7 +22,7 @@
   max-width: 450px;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 30px;
-  border-radius: 20px; 
+  border-radius: 20px;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
@@ -46,9 +46,8 @@
   font-weight: 700;
   color: #8dc84b;
   font-size: 36px;
-
 }
-.slider .primary-button{
+.slider .primary-button {
   display: inline-block;
   padding: 15px 30px;
   color: #ffff;
@@ -59,14 +58,10 @@
   transition: background-color 0.3s ease;
   text-decoration: none;
 }
-.slider .primary-button:hover{
-  background-color: #004d00; 
-  
+.slider .primary-button:hover {
+  background-color: #004d00;
 }
 
 .slider-section {
-
   background-color: #faf2dd;
-
 }
-
