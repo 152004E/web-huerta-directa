@@ -4,28 +4,32 @@
 
 include "../models/usuarios.php";
 
+//var_dump($_POST);
+
+
 $usuario = new usuarios();
 $respuesta = $usuario->Login($_POST["email"], $_POST["password_user"]);
 
-//var_dump($respuesta);
+//Var_dump($respuesta);
 
 if($respuesta instanceof Exception){
     header("location:../views/Errores/error500.html");
 }
 else if(!empty($respuesta)){
     if($respuesta[0]["fk_id_role"]=="1"){
-        header("location:../views/Dashboard/dashboard.html");
+        header("location:../views/DashBoard/dashboard.html");
     }
     else if ($respuesta[0]["fk_id_role"]=="2"){
         header("location:../views/index.html");
     }
 }
-else {
+else{
     echo "
         <script>
             alert('Datos incorrectos, vuelva a intentar');
-            location.href='../views/login/pagina.html';
+            location.href='../views/login/login/pagina.html';
         </script>
     ";
 }
+
 ?>
