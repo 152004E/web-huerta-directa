@@ -115,11 +115,11 @@ document.getElementById("miBoton").addEventListener("click", function() {
 });
 
 //slider     lo modifique porque no se ha terminado y me da error en consola 
-/*const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper', {
   loop: true,
 
   pagination: {
     el: '.swiper-pagination',
   },
 
-});*/
+});
