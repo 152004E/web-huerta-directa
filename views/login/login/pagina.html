@@ -11,6 +11,7 @@
     <title>login Huerta Directa</title>
     <link rel="icon" type="image/png" href="../login/logo.png" />
 
+    
   </head>
 
   <body>
@@ -29,17 +30,31 @@
             <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
           <img class="H-logo" src="logo.png" alt="logo" width="100" />
-          <label>Nombre de usuario</label>
-          <input type="text" placeholder="Nombre usuario" />
-          <label>Ingrese su correo electronico</label>
+
+          <div class="from-group">
+            <label>Nombre de usuario</label>
+          <input type="text" placeholder="Ejemplo: Santiago Puentes" />
+          </div>
+          <div class="correo-contraseña">
+            <div class="from-group">
+            <label>Ingrese su correo electronico</label>
           <input
-            id="correoRegistro"
+            id="correoRegistr"
             type="email"
             placeholder="Ingrese su correo electronico"
             required
           />
-          <label>Ingrese su contraseña</label>
+          </div>
+
+
+           <div class="from-group">
+            <label>Ingrese su contraseña</label>
           <input type="password" placeholder="Contraseña" />
+          </div>
+          </div>
+
+           
+          
           <button type="submit" class="btn-1">Registrar</button>
         </form>
       </div>
@@ -58,17 +73,30 @@
           </div>
           <span>Usa tu correo y contraseña</span>
           <img src="logo.png" alt="logo" width="100" />
-          <label>Ingrese su correo electronico</label>
 
+
+
+           <div class="from-group">
+            <label>Ingrese su correo electronico</label>
           <input
-            id="correoLogin"
+            id="correoRegistro"
             type="email"
             placeholder="Ingrese su correo electronico"
             required
           />
-          <label>Ingrese su contraseña</label>
+          </div>
 
-          <input type="password" placeholder="ingrese su contraseña" />
+
+           <div class="from-group">
+            <label>Ingrese su contraseña</label>
+          <input type="password" placeholder="Contraseña" />
+          </div>
+          
+
+
+
+
+
           <a class="forget" href="#">Olvidaste tu contraseña?</a>
           <button type="submit" class="btn-1">Ingresar</button>
         </form>

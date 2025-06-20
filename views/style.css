@@ -9,13 +9,13 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important; 
 }
 img {
   max-width: 100%;
 }
 
-.container {
+.container1 {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -72,6 +72,22 @@ img {
 .menu label {
   cursor: pointer;
   display: none;
+}
+.enlace{
+  margin: 7px 0px 0px 0px;
+
+  bottom: 0;
+}
+.ajustar{
+  gap: 17px;
+  display: flex;
+  margin: 0%;
+
+}
+.ajustar a{
+  
+  margin: 0%;
+
 }
 .submenu {
   position: relative;
@@ -423,12 +439,12 @@ input{
 }
 
 @media(max-width: 1200px){
-  .container{
+  .container1{
     max-width: 1000px;
   }
 }
 @media(max-width: 1070px){
-  .container{
+  .container1{
     max-width: 900px;
   }
 }
