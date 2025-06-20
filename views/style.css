@@ -433,25 +433,40 @@ input{
   }
 }
 
-.slider > div > .wrapper {
+.slider > .container > .wrapper {
   width:  100%;
-  margin-left:   auto;
+  margin-left: auto;
 }
-.slider .item {
-  position:   relative;
-  height: 1000px;
+.myslider {
+  width: 100%;
+  height: 100%;
 }
-.slider .text-content {
-  position:  relative;
-  height: 500%;
+
+.swiper-slide{
+  display: flex;
   justify-content: center;
-  padding:  500 px, 0;
-  z-index: 1;
+  align-items: center;
+}
+
+.swiper .item{
+  position: relative;
+  width: 600px;
+}
+
+.slider .text-content {
+  position:  absolute;
+  height: 500%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 10; 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .slider h4 {
   font-size:   19px;
   font-weight:  500;
-  width:   13%;
+  width:   fit-content;
   padding: 7px 19px;
   background-color: #8dc84b;
   color: #fffffe;
@@ -464,7 +479,7 @@ input{
 .text-content :where(h2,h3) span:last-child {
   color: #8dc84b;
   text-transform: uppercase;
-  letter-spacing: -px;
+  letter-spacing: 1px;
 
 }
 .slider .primary-button{
