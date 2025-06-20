@@ -9,13 +9,13 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important; 
 }
 img {
   max-width: 100%;
 }
 
-.container {
+.container1 {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -72,6 +72,22 @@ img {
 .menu label {
   cursor: pointer;
   display: none;
+}
+.enlace{
+  margin: 7px 0px 0px 0px;
+
+  bottom: 0;
+}
+.ajustar{
+  gap: 17px;
+  display: flex;
+  margin: 0%;
+
+}
+.ajustar a{
+  
+  margin: 0%;
+
 }
 .submenu {
   position: relative;
@@ -423,63 +439,16 @@ input{
 }
 
 @media(max-width: 1200px){
-  .container{
+  .container1{
     max-width: 1000px;
   }
 }
 @media(max-width: 1070px){
-  .container{
+  .container1{
     max-width: 900px;
   }
 }
 
-.slider > div > .wrapper {
-  width:  100%;
-  margin-left:   auto;
-}
-.slider .item {
-  position:   relative;
-  height: 1000px;
-}
-.slider .text-content {
-  position:  relative;
-  height: 500%;
-  justify-content: center;
-  padding:  500 px, 0;
-  z-index: 1;
-}
-.slider h4 {
-  font-size:   19px;
-  font-weight:  500;
-  width:   13%;
-  padding: 7px 19px;
-  background-color: #8dc84b;
-  color: #fffffe;
-  border-radius: 60px;
-}
-.text-content :where(h2,h3) span:first-child {
-  font-weight: 800;
-  columns: #8dc84b;
-}
-.text-content :where(h2,h3) span:last-child {
-  color: #8dc84b;
-  text-transform: uppercase;
-  letter-spacing: -px;
 
-}
-.slider .primary-button{
-  display: inline-block;
-  padding: 15px 25px;
-  color: #ffff;
-  background-color: #8dc84b;
-  border-radius: 50px;
-  text-transform: capitalize;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.slider .primary-button:hover{
-  color: #ffffff;
-  background-color: #004d00; 
-  
-}
 
 
