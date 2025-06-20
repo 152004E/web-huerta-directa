@@ -6,7 +6,7 @@ class usuarios
     public function Login($email, $password_user) {
     try {
         include 'conexion.php';
-        $consultar = $conexion->prepare("SELECT email,password_user,fk_id_role FROM TB_users WHERE email=? AND password_user=?");
+        $consultar = $conexion->prepare("SELECT fk_id_role,email,password_user, FROM TB_users WHERE fk_id_role=? AND email=? AND password_user=?");
         $consultar->execute([$email, $password_user]);
         $lista = $consultar->fetchAll(PDO::FETCH_NUM);
         $conexion = null;
