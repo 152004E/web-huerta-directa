@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Huerta directa</title>
-    <link rel="stylesheet" href="style.css" /><link rel="icon" type="image/png" href="login-20250405T183650Z-001/login/logo.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="login/login/logo.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="slider.css" />
   </head>
+
   <body>
     <header class="header">
-      <div class="menu container">
+      <div class="menu container1">
         <a href="#" class="logo">Huerta directa</a>
         <input type="checkbox" id="menu" />
         <label for="menu">
@@ -25,10 +34,10 @@
             <li><a href="Quienes_somos/quienes_somos.html">Somos</a></li>
           </ul>
         </nav>
-        <div>
+        <div class="ajustar">
           <ul>
             <li class="submenu">
-              <img src="images/car.svg" alt="" />
+              <img class="enlace" src="images/car.svg" alt="" />
               <div id="carrito">
                 <table id="lista-carrito">
                   <thead>
@@ -42,17 +51,25 @@
                   <tbody></tbody>
                 </table>
                 <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+                <a
+                  href="/views/Pasarela_Pagos/Pasarela.html"
+                  id="miBoton"
+                  class="btn-2"
+                  >Ir a pagar</a
+                >
               </div>
             </li>
           </ul>
         </div>
       </div>
-      <div class="header-content container">
+      <div class="header-content container1">
         <div class="header-txt">
-          
           <h1>Frutas y verduras</h1>
           <p>
-            En Huerta Directa, te conectamos con productos campesinos frescos y de calidad, cosechados directamente por manos locales. Disfruta de alimentos 100% naturales, sin intermediarios y al mejor precio. ¡Comer sano y apoyar al campo nunca fue tan fácil!
+            En Huerta Directa, te conectamos con productos campesinos frescos y
+            de calidad, cosechados directamente por manos locales. Disfruta de
+            alimentos 100% naturales, sin intermediarios y al mejor precio.
+            ¡Comer sano y apoyar al campo nunca fue tan fácil!
           </p>
           <a href="#" class="btn-1">Informacion</a>
         </div>
@@ -61,7 +78,7 @@
         </div>
       </div>
     </header>
-    <section class="information container">
+    <section class="information container1">
       <div class="information-content">
         <div class="information-1">
           <img src="images/i1.svg" alt="" />
@@ -75,12 +92,14 @@
         </div>
         <div class="information-1">
           <img src="images/i3.svg" alt="" />
-          <h3> Entrega a domicilio</h3>
+          <h3>Entrega a domicilio</h3>
           <p>Recibe fresco y rápido.</p>
         </div>
       </div>
     </section>
-    <section class="oferts container">
+
+    <!--ofertas section-->
+    <section class="oferts container1">
       <div class="ofert">
         <img src="images/f1.png" alt="" />
         <h3>oferta</h3>
@@ -102,166 +121,241 @@
         <p>Premium</p>
       </div>
     </section>
-    <section>
-   
+    <section class="slider-section">
       <!-- carrusel-jesus,santiago -->
       <!-- Slider en proceso, aun con errores visual -->
-       <main>
-        <div class="slider">
-          <div class="container">
-            <div class="wrapper">
-              <div class="myslider swiper">
-                <div class="swiper.wrapper">
-                  <div class="swiper.slide">
-                    <div class="item">
-                      <div class="image object-cover">
-                        <img src="images/1.png" alt="">
-                      </div>
-                      <div class="text-content flexcol">
-                        <h4>Fruta Fresca</h4>
-                        <h2><span>Compra Ahora!!</span><br><span>Las frutas mas frescas</span></h2>
-                        <a href="#" class="primary-button">Comprar</a>
-                      </div>
+      <div class="slider">
+        <div class="container">
+          <div class="wrapper">
+            <div class="myslider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="item">
+                    <div class="image object-cover">
+                      <img src="images/1.png" alt="" />
+                    </div>
+                    <div class="text-content flexcol">
+                      <h4>Frutas Premium</h4>
+                      <h2>
+                        <span>Del campo a tu casa</span><br /><strong
+                          >Las más frescas del mercado</strong
+                        >
+                      </h2>
+                      <a href="#" class="primary-button">Ver Mas</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="item">
+                    <div class="image object-cover">
+                      <img src="images/pr4.png" alt="" />
+                    </div>
+                    <div class="text-content flexcol">
+                      <h4>Fruta Fresca</h4>
+                      <h2>
+                        <span>Recién Cosechada</span><br /><strong
+                          >Productos de calidad</strong
+                        >
+                      </h2>
+                      <a href="#" class="primary-button">Ver Más</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="item">
+                    <div class="image object-cover">
+                      <img src="images/pr5.png" alt="" />
+                    </div>
+                    <div class="text-content flexcol">
+                      <h4>Frutas seleccionadas</h4>
+                      <h2>
+                        <span>La mejor cosecha</span><br /><strong
+                          >Agro Colombiano
+                        </strong>
+                      </h2>
+                      <a href="#" class="primary-button">Ver Más</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="item">
+                    <div class="image object-cover">
+                      <img src="images/pr6.png" alt="" />
+                    </div>
+                    <div class="text-content flexcol">
+                      <h4>100% con amor</h4>
+                      <h2>
+                        <span>De la mejor calidad</span><br /><strong
+                          >De la huerta, Directo a tu casa</strong
+                        >
+                      </h2>
+                      <a href="#" class="primary-button">Ver Más</a>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
-       </main>
-
+      </div>
     </section>
 
-    <main class="products container" id="lista-1">
-        <h2>Productos destacados</h2>
-        <div class="product-content">
-            <div class="product">
-                <img src="images/pr1.png" alt="">
-                <div class="product-txt">
-                    <h3>manzana</h3>
-                    <p class="precio">$700</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar</a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="images/pr2.png" alt="">
-                <div class="product-txt">
-                    <h3>producto</h3>
-                    <p class="precio">$800</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar</a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="images/pr3.png" alt="">
-                <div class="product-txt">
-                    <h3>producto</h3>
-                    <p class="precio">$900</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar</a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="images/pr4.png" alt="">
-                <div class="product-txt">
-                    <h3>producto</h3>
-                    <p class="precio">$1200</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar</a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="images/pr5.png" alt="">
-                <div class="product-txt">
-                    <h3>producto</h3>
-                    <p class="precio">$2300</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar</a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="images/pr6.png" alt="">
-                <div class="product-txt">
-                    <h3>producto</h3>
-                    <p class="precio">$300</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar</a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="images/pr7.png" alt="">
-                <div class="product-txt">
-                    <h3>producto</h3>
-                    <p class="precio">$1600</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="7">Agregar</a>
-                </div>
-            </div>
-            <div class="product">
-                <img src="images/pr8.png" alt="">
-                <div class="product-txt">
-                    <h3>producto</h3>
-                    <p class="precio">$1100</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="8">Agregar</a>
-                </div>
-            </div>
+    <main class="products container1" id="lista-1">
+      <h2>Productos destacados</h2>
+      <div class="product-content">
+        <div class="product">
+          <img src="images/pr1.png" alt="" />
+          <div class="product-txt">
+            <h3>manzana</h3>
+            <p class="precio">$700</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar</a>
+          </div>
         </div>
+        <div class="product">
+          <img src="images/pr2.png" alt="" />
+          <div class="product-txt">
+            <h3>producto</h3>
+            <p class="precio">$800</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar</a>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/pr3.png" alt="" />
+          <div class="product-txt">
+            <h3>producto</h3>
+            <p class="precio">$900</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar</a>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/pr4.png" alt="" />
+          <div class="product-txt">
+            <h3>producto</h3>
+            <p class="precio">$1200</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar</a>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/pr5.png" alt="" />
+          <div class="product-txt">
+            <h3>producto</h3>
+            <p class="precio">$2300</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar</a>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/pr6.png" alt="" />
+          <div class="product-txt">
+            <h3>producto</h3>
+            <p class="precio">$300</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar</a>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/pr7.png" alt="" />
+          <div class="product-txt">
+            <h3>producto</h3>
+            <p class="precio">$1600</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="7">Agregar</a>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/pr8.png" alt="" />
+          <div class="product-txt">
+            <h3>producto</h3>
+            <p class="precio">$1100</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="8">Agregar</a>
+          </div>
+        </div>
+      </div>
     </main>
-    <section class="service">
-        <div class="service-1">
-            <img class="store" src="images/1.png" alt="">
-        </div>
-        <div class="service-2">
-            <img class="store" src="images/2.png" alt="">
-        </div>
-        <div class="service-3">
-            <img class="store" src="images/3.png" alt="">
-        </div>
-    </section>
+
     <section class="contanct container">
-        <form >
-            <input type="email" placeholder="correo">
-            <input type="submit" class="btn-3">
-        </form>
+      <form>
+        <input type="email" placeholder="correo" />
+        <input type="submit" class="btn-3" />
+      </form>
     </section>
-    <footer class="footer1" style="background-color: #8BC34A; padding: 40px 0; color: white;">
-      <div class="footer_container" style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; text-align: left;">
-        
-        <div class="content_footer" style="flex: 1; min-width: 200px; margin: 10px;">
+    <footer
+      class="footer1"
+      style="background-color: #8bc34a; padding: 40px 0; color: white"
+    >
+      <div
+        class="footer_container"
+        style="
+          max-width: 1200px;
+          margin: auto;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          text-align: left;
+        "
+      >
+        <div
+          class="content_footer"
+          style="flex: 1; min-width: 200px; margin: 10px"
+        >
           <h4>Huerta Directa</h4>
-          <ul style="list-style: none; padding: 0;">
-            <li><a href="login/login/pagina.html" style="text-decoration: none;">Inicio</a></li>
-            <li><a href="../views/DashBoard/dashboard.html" style="text-decoration: none;">Servicios</a></li>
-            <li><a href="#" style="text-decoration: none;">Nosotros</a></li>
-            <li><a href="#" style="text-decoration: none;">Contacto</a></li>
+          <ul style="list-style: none; padding: 0">
+            <li>
+              <a href="login/login/pagina.html" style="text-decoration: none"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                href="../views/DashBoard/dashboard.html"
+                style="text-decoration: none"
+                >Servicios</a
+              >
+            </li>
+            <li><a href="#" style="text-decoration: none">Nosotros</a></li>
+            <li><a href="#" style="text-decoration: none">Contacto</a></li>
           </ul>
         </div>
-    
-        <div style="flex: 1; min-width: 200px; margin: 10px;">
+
+        <div style="flex: 1; min-width: 200px; margin: 10px">
           <h4>Soporte</h4>
-          <ul style="list-style: none; padding: 0;">
-            <li><a href="#" style=" text-decoration: none;">Preguntas frecuentes</a></li>
-            <li><a href="#" style=" text-decoration: none;">Política de privacidad</a></li>
-            <li><a href="#" style=" text-decoration: none;">Términos y condiciones</a></li>
-            <li><a href="#" style=" text-decoration: none;">Ayuda</a></li>
+          <ul style="list-style: none; padding: 0">
+            <li>
+              <a href="#" style="text-decoration: none">Preguntas frecuentes</a>
+            </li>
+            <li>
+              <a href="#" style="text-decoration: none"
+                >Política de privacidad</a
+              >
+            </li>
+            <li>
+              <a href="#" style="text-decoration: none"
+                >Términos y condiciones</a
+              >
+            </li>
+            <li><a href="#" style="text-decoration: none">Ayuda</a></li>
           </ul>
         </div>
-    
-        <div style="flex: 1; min-width: 200px; margin: 10px;">
+
+        <div style="flex: 1; min-width: 200px; margin: 10px">
           <h4>Productores</h4>
-          <ul style="list-style: none; padding: 0;">
-            <li><a href="#" style=" text-decoration: none;">Unirse a la red</a></li>
-            <li><a href="#" style=" text-decoration: none;">Beneficios</a></li>
-            <li><a href="#" style=" text-decoration: none;">Testimonios</a></li>
-            <li><a href="#" style=" text-decoration: none;">Capacitación</a></li>
+          <ul style="list-style: none; padding: 0">
+            <li>
+              <a href="#" style="text-decoration: none">Unirse a la red</a>
+            </li>
+            <li><a href="#" style="text-decoration: none">Beneficios</a></li>
+            <li><a href="#" style="text-decoration: none">Testimonios</a></li>
+            <li><a href="#" style="text-decoration: none">Capacitación</a></li>
           </ul>
         </div>
-    
-        <div style="flex: 1; min-width: 200px; margin: 10px;">
+
+        <div style="flex: 1; min-width: 200px; margin: 10px">
           <h4>Contáctanos</h4>
-          <ul style="list-style: none; padding: 0;">
+          <ul style="list-style: none; padding: 0">
             <li>Email: contacto@huertadirecta.com</li>
             <li>Tel: +57 300 000 0000</li>
             <li>WhatsApp</li>
             <li>Redes sociales</li>
           </ul>
         </div>
-    
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

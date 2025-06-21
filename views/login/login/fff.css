@@ -36,6 +36,12 @@ body {
   margin: 20px 0;
 }
 
+.from-group label {
+  font-weight: 400;
+  padding-left: 15px;
+  margin: 10px 0px;
+}
+
 .container span {
   font-size: 12px;
 }
@@ -254,5 +260,3 @@ section {
   background-position: 70px 50px;
   background-position: right center;
 }
-
-
