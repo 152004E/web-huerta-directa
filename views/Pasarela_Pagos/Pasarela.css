@@ -43,7 +43,7 @@ input {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgb(38, 39, 39); /* #f7efd8*/
+  background-color:  #f7efd8;
 }
 select {
   width: 100%;
