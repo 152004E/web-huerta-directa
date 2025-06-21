@@ -1,5 +1,5 @@
-create database Huerta;
-use huerta;
+create database huerta_directa;
+use huerta_directa;
 
  CREATE TABLE TB_roles(
 id_role int primary key not null auto_increment,
