@@ -11,6 +11,18 @@
 /build
 /out
 
+# Archivos de configuración de Obsidian
+.obsidian/
+
+# Archivos de base de datos SQLite (si llegaran a usarlos)
+*.sqlite
+*.db
+
+# Configuraciones de navegador o screenshots temporales
+*.webp
+*.tmp
+*.bak
+
 # Archivos de caché de herramientas de desarrollo
 # Vite cache
 .vite/
