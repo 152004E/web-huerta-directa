@@ -432,3 +432,93 @@ input {
     max-width: 900px;
   }
 }
+
+/*Categorias */
+.categories {
+  background-color: #faf2dd; /* fondo oscuro */
+  color: rgb(0, 0, 0);
+  padding: 5rem 0;
+}
+
+.categories h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.categories__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 4rem;
+  padding: 0 2rem;
+}
+
+.categories__left p {
+  margin: 1rem 0 2rem;
+  color: #000000;
+}
+
+.btn {
+  background-color: #8dc84b;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #004d00;
+}
+
+.categories__right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.category {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.category__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+/* Colores diferentes por categoría (puedes personalizarlos más si deseas) */
+.category:nth-child(1) .category__icon { background: #735ff2; }
+.category:nth-child(2) .category__icon { background: #ff5e57; }
+.category:nth-child(3) .category__icon { background: #1dd1a1; }
+.category:nth-child(4) .category__icon { background: #feca57; }
+.category:nth-child(5) .category__icon { background: #48dbfb; }
+.category:nth-child(6) .category__icon { background: #a55eea; }
+
+.category h5 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: rgb(0, 0, 0);
+}
+
+.category p {
+  color: #000000;
+  font-size: 0.9rem;
+}
