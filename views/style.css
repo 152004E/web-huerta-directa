@@ -20,7 +20,7 @@ img {
   margin: 0 auto;
 }
 .header {
-  background-color: #f7efd8;
+  background: linear-gradient(to bottom, #fef5dc 90%, #ffffff 100%);
   display: flex;
   align-items: center;
   min-height: 70vh;
@@ -435,7 +435,7 @@ input {
 
 /*Categorias */
 .categories {
-  background-color: #faf2dd; 
+  background: linear-gradient(to bottom, #ffffff 0%, #fef5dc 20%, #fef5dc 90%, #ffffff 100%);
   color: rgb(0, 0, 0);
   padding: 5rem 0;
 }
