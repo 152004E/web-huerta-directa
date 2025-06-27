@@ -39,7 +39,6 @@ insert into TB_users(fk_id_role, email, password_user)
 CREATE TABLE TB_orders(
 id_order int auto_increment primary key unique,
 fk_id_user int not null,
-product_detail text not null,
 total_amount decimal(10,2) not null,
 order_date date not null,
 FOREIGN KEY (fk_id_user) REFERENCES TB_users(id_user)
@@ -48,9 +47,10 @@ FOREIGN KEY (fk_id_user) REFERENCES TB_users(id_user)
 CREATE TABLE TB_products(
 id_product int auto_increment primary key unique,
 name_product varchar (50) not null,
-description_product text not null,
 price decimal(10,2) not null,
 category varchar(100) not null,
+image_product VARCHAR(255) not null,
+description_product text not null,
 publication_date date null
 );
 
@@ -90,6 +90,7 @@ FOREIGN KEY (fk_id_sale) REFERENCES TB_sales(id_sale)
 
 CREATE TABLE TB_orders_products(
 id_order_product int auto_increment primary key unique,
+product_detail text not null,
 fk_id_order int not null,
 fk_id_product int not null,
 FOREIGN KEY (fk_id_order) REFERENCES TB_orders(id_order),

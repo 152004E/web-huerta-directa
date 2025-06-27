@@ -10,6 +10,7 @@
       type="image/png"
       href="login/login/logo.png"
     />
+    <!--link para el slider y css del slider-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -18,7 +19,11 @@
 
     
     <link rel="stylesheet" href="slider.css" />
+    <!--agregacion para los iconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--  Animacion al hacer scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
   </head>
 
@@ -132,61 +137,6 @@
       </div>
     </section>
 
-  <!--Ctegorias-->
-  <section class="categories">
-    <div class="container categories-container">
-      <div class="categories__left">
-        <h1>Categorias</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat id tempore deleniti eum ipsam tenetur voluptatem, hic perferendis iste perspiciatis excepturi aliquam accusantium dolores eveniet enim minima provident! Voluptate, ex.
-        </p>
-        <a href="#" class="btn">Saber más</a>
-      </div>
-
-      <div class="categories__right">
-        <article class="category">
-          <span class="category__icon"><i class="fa-solid fa-apple-whole"></i></span>
-          <h5>Frutas</h5>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </article>
-
-        <article class="category">
-          <span class="category__icon"><i class="fa-solid fa-carrot"></i></span>
-          <h5>Verduras Y hortalizas</h5>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </article>
-
-        <article class="category">
-          <span class="category__icon"><i class="fa-solid fa-cow"></i></span>
-          <h5>Lacteos</h5>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </article>
-
-        <article class="category">
-          <span class="category__icon"><i class="fa-solid fa-drumstick-bite"></i></span>
-          <h5>Carnes y Proteinas</h5>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </article>
-
-        <article class="category">
-          <span class="category__icon"><i class="fa-solid fa-bowl-food"></i></span>
-          <h5>Cereales y granos</h5>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </article>
-
-        <article class="category">
-          <span class="category__icon"><i class="fa-solid fa-cookie"></i></span>
-          <h5>Productos organicos</h5>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </article>
-      </div>
-    </div>
-
-
-
-
-
-  </section>
     <section class="slider-section">
       <!-- carrusel-jesus,santiago -->
       <div class="slider">
@@ -336,6 +286,82 @@
       </div>
     </main>
 
+
+      <!--Ctegorias-->
+  <section class="categories">
+    <div class="container categories__container">
+      <div class="categories__left">
+        <h1 data-aos="fade-right">Categorias</h1>
+        <p data-aos="fade-right" data-aos-delay="200">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat id tempore deleniti eum ipsam tenetur voluptatem, hic perferendis iste perspiciatis excepturi aliquam accusantium dolores eveniet enim minima provident! Voluptate, ex.
+        </p>
+        <a href="#" class="btn" data-aos="fade-right" data-aos-delay="400" >Saber más</a>
+      </div>
+
+      <div class="categories__right">
+        <article class="category" data-aos="zoom-in" data-aos-delay="100">
+          <span class="category__icon green2"><i class="fa-solid fa-apple-whole"></i></span>
+          <h5>Frutas</h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="200">
+          <span class="category__icon green"><i class="fa-solid fa-carrot"></i></span>
+          <h5>Verduras Y hortalizas</h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="300">
+          <span class="category__icon green2"><i class="fa-solid fa-cow"></i></span>
+          <h5>Lacteos</h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="100">
+          <span class="category__icon green"><i class="fa-solid fa-drumstick-bite"></i></span>
+          <h5>Carnes y Proteinas</h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="200">
+          <span class="category__icon green2"><i class="fa-solid fa-bowl-food"></i></span>
+          <h5>Cereales y granos</h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="300">
+          <span class="category__icon green"><i class="fa-solid fa-cookie"></i></span>
+          <h5>Productos organicos</h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="100">
+          <span class="category__icon green2"><i class="fa-solid fa-plate-wheat"></i></span>
+          <h5>Miel y derivados</h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="200">
+          <span class="category__icon green"><i class="fa-solid fa-glass-water"></i></span>
+          <h5>Bebidas naturales</h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="300">
+          <span class="category__icon green2"><i class="fa-solid fa-box-open"></i></span>
+          <h5>Cajas mixtas o combos</h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+
+      </div>
+    </div>
+
+
+
+
+
+  </section>
+
     <section class="contanct container">
       <form>
         <input type="email" placeholder="correo" />
@@ -425,5 +451,14 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <!-- scrit para animaciones al scrollear -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // duración en ms
+        offset: 100,     // cuándo se empieza a activar
+        once: true       // solo una vez por scroll
+      });
+    </script>
   </body>
 </html>

@@ -63,5 +63,5 @@
 }
 
 .slider-section {
-  background-color: #faf2dd;
+  background: linear-gradient(to bottom, #ffffff 0%, #fef5dc 20%, #fef5dc 90%, #ffffff 100%);
 }
