@@ -33,12 +33,32 @@
           <img src="images/menu.png" class="menu-icon" alt="menu" />
         </label>
         <nav class="navbar">
-          <ul>
-            <li><a href="login/login/pagina.html">Inicio</a></li>
-            <li><a href="Errores/error404.html">Servicios</a></li>
-            <li><a href="Errores/error500.html">Contactos</a></li>
-            <li><a href="./pagina_principal/landing.html">Nosotros</a></li>
-            <li><a href="Quienes_somos/quienes_somos.html">Somos</a></li>
+          <ul class="nav-menu">
+            <li class="dropdown">
+            <a href="">Inicio ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="login/login/pagina.html">📲 Iniciar Sesion</a></li>
+              <li><a href="login/login/pagina.html">📲 Registrarse</a></li>
+            </ul>
+            </li>
+            <li class="dropdown">
+            <a href="">Servicios ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="Errores/error404.html">🚚 Entrega a domicilio</a></li>
+              <li><a href="Errores/error404.html">📦 Venta al por mayor</a></li>
+              <li><a href="Errores/error404.html">🌱 Asesoría agrícola</a></li>
+            </ul>
+            </li>
+            <li><a href="#categorias">Categorias</a></li>
+            <li class="dropdown">
+            <a href="">Conocenos ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./pagina_principal/landing.html">🔗 Unete</a></li>
+              <li><a href="Quienes_somos/quienes_somos.html">🔎 Quienes somos</a></li>
+              <li><a href="Errores/error500.html">🎛️ Contactanos</a></li>
+            </ul>
+            </li>
+            <li><a href="#lista-1">Productos</a></li>
           </ul>
         </nav>
         <div class="agragar_producto">
@@ -285,7 +305,7 @@
 
 
       <!--Ctegorias-->
-  <section class="categories">
+  <section class="categories" id="categorias">
     <div class="container categories__container">
       <div class="categories__left">
         <h1 data-aos="fade-right">Categorias</h1>
