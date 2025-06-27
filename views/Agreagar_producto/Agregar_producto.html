@@ -33,8 +33,9 @@
     <div class="container1 d-flex align-items-center justify-content-center">
       <form
         class="input-box categoria-form border p-4 border-2 rounded-5 px-5"
-        action=""
+        action="../../models/productos.php"
         method="POST"
+        enctype="multipart/form-data"
       >
         <div class="titulo d-flex align-items-center justify-content-center">
           <h2 class="text-uppercase">Registro de Producto</h2>
@@ -102,7 +103,7 @@
           class="form-group d-flex align-items-center justify-content-between"
         >
           <label for="imagen">Imagen del producto:</label>
-          <input type="file" id="imagen" name="imagen" hidden />
+          <input type="file" id="imagen" name="image_product" accept="image/*" required hidden />
           <label for="imagen" class="custom-file-label"
             >📁 Seleccionar imagen</label
           >
