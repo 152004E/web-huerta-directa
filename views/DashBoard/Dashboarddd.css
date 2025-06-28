@@ -208,16 +208,16 @@ aside .sidebar .message-count {
 main {
 margin-top: 1.4rem;
 }
-main.date{
+main.date {
     display: inline-block;
-    background: var(--color-light);
-    border-radius: var(--border-radius-1);
+    background: #004d00;
+    border-radius: 15px;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
 }
-main.date.input[type0="date"]{
+main.date.input [type0="date"] {
     background: transparent;
-    color: var(--color--dark);
+    color: black;
 }
 
 main .insights{
