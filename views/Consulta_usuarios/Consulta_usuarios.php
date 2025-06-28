@@ -22,7 +22,7 @@
                 <div class="accordion-body">
 
                      <?php
-                        include "../views/buscador_usuarios/buscador_usuarios.html";
+                        include "../buscador_usuarios/buscador_usuarios.html";
                         echo "<hr>";
                         
                     ?>

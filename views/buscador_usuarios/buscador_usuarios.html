@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <section>
+        <form action="" method="post">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Seleccione el filtro de búsqueda</label>
+                <select name="dato" class="form-control">
+                    <option value="id">Código</option>                   
+                    <option value="nombre">Nombre</option>
+                </select>            
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Digite el valor a consultar</label>
+                <input name="valor" required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Consultar</button>
+        </form>
+    </section>
+</body>
+</html>

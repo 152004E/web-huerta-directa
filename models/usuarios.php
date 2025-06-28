@@ -36,7 +36,17 @@ class usuarios
 
     public function ConsultaEspecifica($dato, $valor) {}
 
-    public function Eliminar($id) {}
+    public function Eliminar($id){
+        try{
+            include "conexion.php";
+            $validar = $conexion->prepare("update usuario set  where id=?");
+            $validar->execute([$id]);
+            return true;
+        }
+        catch(Exception $e){
+            return $e;
+        }
+    }
 }
 
 
