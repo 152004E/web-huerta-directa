@@ -3,7 +3,7 @@
 include "../models/usuario.php";
 
 $objeto = new usuarios();
-$respuesta = $objeto->Actualizar($_POST["id"],$_POST["documento"],$_POST["nombre"],$_POST["telefono"]);
+$respuesta = $objeto->Actualizar($id_product, $_POST["nombre"],$_POST["precio"],$_POST["categoria-producto"],$_POST["descripcion"]);
 if($respuesta instanceof Exception){
     if($respuesta->getCode()==23000)
     {
