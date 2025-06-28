@@ -212,10 +212,21 @@ $productos = $producto->ObtenerTodos();
 
 
           </table>
+                <br>
+          <section>
+            <//button type="submit" class="btn-1">Consultar usuarios:<///button>
+            <li><a href="../Consulta_usuarios/Consulta_usuarios.php">Consultar</a></li>
+
+
+          </section>
         </div>
       </div>
     </div>
+
   </div>
+
+
+
   <script
     type="module"
     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
