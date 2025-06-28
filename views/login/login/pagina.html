@@ -17,8 +17,8 @@
       <div class="form-container sign-up">
         <!-- This is first from -->
         <form
-          action="../../../controllers/controlador.php"
-          onsubmit="return validarCorreo('correoRegistro')"
+          action="../../../controllers/registrar_usuario.php"
+          method="post"
         >
           <h1>Crear cuenta</h1>
           <div class="social-icons">
@@ -31,7 +31,7 @@
 
           <div class="from-group">
             <label>Nombre de usuario</label>
-            <input type="text" placeholder="Ejemplo: Santiago Puentes" />
+            <input type="text"name="Nombre_usuario" placeholder="Ejemplo: Santiago Puentes" />
           </div>
           <div class="correo-contraseña">
             <div class="from-group">
@@ -39,6 +39,7 @@
               <input
                 id="correoRegistr"
                 type="email"
+                name="email"
                 placeholder="Ingrese su correo electronico"
                 required
               />
@@ -46,7 +47,7 @@
 
             <div class="from-group">
               <label>Ingrese su contraseña</label>
-              <input type="password" placeholder="Contraseña" />
+              <input type="password" name="password" placeholder="Contraseña" />
             </div>
           </div>
 
@@ -58,7 +59,8 @@
         <form
           action="../../../controllers/controlador.php"
           method="post"
-          onsubmit="return validarCorreo('correoLogin')"
+          onsubmit="return validarCorreo('correoRegistro')"
+          
         >
           <h1 class="iniciar_sesion">Iniciar Sesion</h1>
           <div class="social-icons">

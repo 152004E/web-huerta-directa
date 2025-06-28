@@ -15,8 +15,21 @@ class usuarios
     catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
+
     }
-    public function Registrar($correo, $clave, $perfil_usuario, $estado) {}
+    public function Registrar($name_user, $email, $password_user) {
+        try{
+        include "conexion.php";
+        $fk_id_role = 2;
+        $RegistrarU = $conexion-> prepare("INSERT INTO TB_users(fk_id_role, name_user, email, password_user) VALUES (?,?,?,?)");
+        $RegistrarU-> execute([$fk_id_role, $name_user, $email, $password_user]);
+        $conexion = null;
+        return true;
+        }
+        catch(PDOException $e){
+            echo "Error: ". $e->getMessage();
+        }
+    }
    
 
     public function ConsultaGeneral() {}
@@ -26,6 +39,8 @@ class usuarios
     public function Eliminar($id) {}
 }
 
+
+/*
 class Administrador extends usuarios
 {
     public function ConsultaGeneral() {
@@ -42,5 +57,5 @@ class Administrador extends usuarios
         }
     }
 }
-
+*/
 ?>
