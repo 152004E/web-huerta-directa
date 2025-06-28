@@ -23,16 +23,12 @@ $producto = new productos();
 
 $respuesta = $producto->Registrar($_POST["nombre"], $_POST["precio"], $_POST["categoria-producto"], $nombreImagen, $_POST["descripcion"]);
 
-if($respuesta instanceof Exception){
-    echo "
-        <script>
-            alert('Error de servidor, intente más tarde');
-            location.href='../views/index.html';
-        </script>
-    ";
-}
-else if(!empty($respuesta)){
-     header("location:../views/DashBoard/dashboard.html");
+
+
+if($respuesta){
+    echo "<script>alert('Registro exitoso. Redirigiendo...');</script>";
+    header("location:../views/DashBoard/dashboard.php");
+     exit;
  
 }
 else{
@@ -43,7 +39,6 @@ else{
         </script>
     ";
 }
-
 
 ?>
 

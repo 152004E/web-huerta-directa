@@ -584,3 +584,37 @@ input {
 html {
   scroll-behavior: smooth;
 }
+
+/*botone*/
+th.acciones,
+td.acciones {
+  text-align: center;
+  width: 130px;
+  white-space: nowrap;
+}
+
+.btn-edit,
+.btn-delete {
+  display: inline-block;
+  padding: 5px 8px;
+  font-size: 12px;
+  margin: 2px;
+  border-radius: 6px;
+  color: #fff !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-edit {
+  background-color: #5bc0de;
+}
+.btn-edit:hover {
+  background-color: #31b0d5;
+}
+
+.btn-delete {
+  background-color: #d9534f;
+}
+.btn-delete:hover {
+  background-color: #c9302c;
+}
