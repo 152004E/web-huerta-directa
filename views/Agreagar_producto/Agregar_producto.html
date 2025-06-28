@@ -105,8 +105,8 @@
           <label for="imagen">Imagen del producto:</label>
           <input type="file" id="imagen" name="image_product" accept="image/*" required hidden />
           <label for="imagen" class="custom-file-label"
-            >📁 Seleccionar imagen</label
-          >
+            >📁 Seleccionar imagen
+          </label>
           <span id="file-name">Ningún archivo seleccionado</span>
         </div>
 
@@ -137,5 +137,17 @@
         </div>
       </form>
     </div>
+  <script>
+  const inputImagen = document.getElementById('imagen');
+  const fileNameSpan = document.getElementById('file-name');
+
+  inputImagen.addEventListener('change', function () {
+    if (inputImagen.files.length > 0) {
+      fileNameSpan.textContent = inputImagen.files[0].name;
+    } else {
+      fileNameSpan.textContent = "Ningún archivo seleccionado";
+    }
+  });
+  </script>
   </body>
 </html>
