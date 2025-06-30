@@ -207,16 +207,18 @@ aside .sidebar .message-count {
 
 /*---------------MAIN --------------------*/
 main {
-margin-top: 1.4rem;
+    margin-top: 1.4rem;
 }
+
 main .date {
     display: inline-block;
-    background: #ffffff;
-    border-radius: 10px;
+    background-color: #fff;
+    border-radius: 1rem;
     margin-top: 1rem;
     padding: 0.5rem 1.6rem;
 }
-main .date  input[type="date"] {
+
+main .date input[type='date']{
     background: transparent;
     color: black;
 }
@@ -224,192 +226,26 @@ main .date  input[type="date"] {
 main .insights{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.6em;
+    gap: 1.6rem;
 }
 
 main .insights > div {
-    background: white;
-    padding: 2px 10px;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: var(--box-shadow);
+    background: #fff;
+    padding: 1.8rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
     transition: all 300ms ease;
-}
+} 
+
 main .insights > div:hover {
     box-shadow: none;
 }
 
 main .insights > div span {
-    background: var(--color-primary);
+    background: #8dc84b;
     padding: 0.5rem;
     border-radius: 50%;
-    color: var(--color-white);
+    color: #fff;
     font-size: 2rem;
-}
-
-main .insights > div.expense span {
-    background: var(--color-danger);
-}
-
-main .insights > div.income span {
-    background: var(--color-success);
-}
-
-main .insights > div .middle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-main .insights > div .middle h3 {
-    margin: 1rem 0 0.6rem;
-    font-size: 1rem;
-}
-
-main .insights .progress {
-    font-size: 0.9rem;
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
-}
-
-main .insights .progress svg {
-    width: 7rem;
-    height: 7rem;
-}
-
-main .insights svg circle {
-    fill: none;
-    stroke-width: var(--color-primary);
-    stroke-linecap: 14;
-    stroke-linecap: round;
-    transform: translate(5px, 5px);
-    stroke-dasharray: 110;
-    stroke-dashoffset: 92;
-}
-main .insights .expenses svg circle {
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-main .insights .expenses svg circle {
-    stroke-dashoffset: 20;
-    stroke-dasharray: 80;
-}
-main .insights .expenses svg circle {
-    stroke-dashoffset: 35;
-    stroke-dasharray: 110;
-}
-
-main .insights .expenses svg circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main .insights small {
-    margin-top: 1.3rem;
-    display: block;
-}
-/*---------------- RECENT ODERS -------------------------*/
-main .recent-orders {
-    margin-top: 2rem;
-}
-main .recent-orders table {
-    margin-bottom: 0.8rem;
-}
-
-main .recent-orders table th {
-    background: var(--color-white);
-    width: 100%;
-    border-radius: var(--card-border-radius);
-    padding: var(--card-padding);
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    transition: all 300ms ease;
-}
-
-main .recent-orders table th:hover {
-    box-shadow: none;
-}
-
-main .recent-orders a {
-    text-align:center;
-    display: block;
-    margin: 1rem auto;
-color: var(--color-primary);
-}
-
-/*----------------- RIGHT -------------------------*/
-.right {
-    display: flex;
-    justify-content: end;
-    gap: 2rem;
-}
-.right .top {
-    display: flex;
-    justify-content: end;
-    gap: 2rem;
-}
-.right .top button {
-    background: var(--color-white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1,6rem;
-    width: 4.2rem;
-    cursor: pointer;
-    border-radius: var(--card-border-radius);
-}
-
-.right .top button span {
-    font-size: 1.2rem;
-    width: 50%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.right .theme-toggler span active {
-    background: var(--color-primary); ;
-    color: white;
-    border-radius: var(--card-border-radius-1);
-}
-
-.right ,top .profile {
-    display: flex;
-    gap: 2rem;
-    text-align: right;
-}
-
-/*----------------- Recent Updates -------------------------*/
-.right .recent-updates {
-    margin-top: 0,8rem;    
-}
-
-.right .recent-updates h2 {
-    margin-bottom: 0.8rem;
-}
-
-.right .recent-updates .updates {
-    background: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--box-shadow);
-    transition: all 300ms ease;
-}
-
-.right .recent-updates .updates:hover {
-    box-shadow: none;
-}
-
-.right .recent-updates .updates .update {
-    display: grid;
-    grid-template-columns: 2.6rem auto;
-    gap: 1rem;
-    margin-bottom: 1rem;
 }

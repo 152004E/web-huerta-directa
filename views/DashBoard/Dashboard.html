@@ -72,24 +72,22 @@
         <!-- fin del asside -->
         <main>
             <h1>Dashboard</h1>
+
             <div class="date">
                 <input type="date">
             </div>
+
             <div class="insights">
                 <div class="sales">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#e3e3e3">
-                        <path
-                            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h360v80H200v560h560v-360h80v360q0 33-23.5 56.5T760-120H200Zm80-160h80v-280h-80v280Zm160 0h80v-400h-80v400Zm160 0h80v-160h-80v160Zm80-320v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80ZM480-480Z" />
-                    </svg>
+                    <span class="material-symbols-outlined">analytics</span>
                     <div class="middle">
-                        <div clsss="left">
-                            <h3>Total de ventas</h3>
+                        <div class="left">
+                            <h3>Ventas</h3>
                             <h1>$25,000</h1>
                         </div>
                         <div class="progress">
                             <svg>
-                                <circle cx='38' cy='38' r='' 36></circle>
+                                <circle cx='38' cy='38' r='36'></circle>
                             </svg>
                             <div class="number">
                                 <p>81%</p>
@@ -98,225 +96,47 @@
                     </div>
                     <small class="text-muted">Ultimas 24 horas</small>
                 </div>
-                <!---------- final de ventas ------------->
+                <!---FIN DE VENTAS--->
                 <div class="expenses">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#e3e3e3">
-                        <path
-                            d="M80-120v-80h800v80H80Zm40-120v-280h120v280H120Zm200 0v-480h120v480H320Zm200 0v-360h120v360H520Zm200 0v-600h120v600H720Z" />
-                    </svg>
-                    <div clsss="left">
-                        <h3>Total de Gastos</h3>
-                        <h1>$25,000</h1>
-                    </div>
-                    <div class="progress">
-                        <svg>
-                            <circle cx='38' cy='38' r='' 36></circle>
-                        </svg>
-                        <div class="number">
-                            <p>62%</p>
+                    <span class="material-symbols-outlined">bar_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Gastos</h3>
+                            <h1>$15,567</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>62%</p>
+                            </div>
                         </div>
                     </div>
+                    <small class="text-muted">Ultimas 24 horas</small>
                 </div>
-                <small class="text-muted">Ultimas 24 horas</small>
-            </div>
-            <!---------- END OF Gastos ------------->
-            <div class="income">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                    fill="#e3e3e3">
-                    <path
-                        d="M120-120v-80l80-80v160h-80Zm160 0v-240l80-80v320h-80Zm160 0v-320l80 81v239h-80Zm160 0v-239l80-80v319h-80Zm160 0v-400l80-80v480h-80ZM120-327v-113l280-280 160 160 280-280v113L560-447 400-607 120-327Z" />
-                </svg>
-                <div class="middle">
-                    <div clsss="left">
-                        <h3>Total de ingresos</h3>
-                        <h1>$25,000</h1>
-                    </div>
-                    <div class="progress">
-                        <svg>
-                            <circle cx='38' cy='38' r='' 36></circle>
-                        </svg>
-                        <div class="number">
-                            <p>50%</p>
+                <!---FIN DE GASTOS--->
+                <div class="income">
+                    <span class="material-symbols-outlined">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Ingresos</h3>
+                            <h1>$10,240</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>31%</p>
+                            </div>
                         </div>
                     </div>
+                    <small class="text-muted">Ultimas 24 horas</small>
                 </div>
-                <small class="text-muted">Ultimas 24 horas</small>
+                <!---FIN DE INGRESOS--->
             </div>
-            <!---------- END OF Ingresos ------------->
-    </div>
-    <div class="recent-orders">
-        <div class="recent-orders">
-            <h2>Recent Orders</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Product Name</th>
-                        <th>Product Number</th>
-                        <th>Payment</th>
-                        <th>Status</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Foldable Mini Drone</td>
-                        <td>85631</td>
-                        <td>Due</td>
-                        <td class="warning">Pending</td>
-                        <td class="primary">Details</td>
-                    </tr>
-                    <tr>
-                        <td>Foldable Mini Drone</td>
-                        <td>85631</td>
-                        <td>Due</td>
-                        <td class="warning">Pending</td>
-                        <td class="primary">Details</td>
-                    </tr>
-                    <tr>
-                        <td>Foldable Mini Drone</td>
-                        <td>85631</td>
-                        <td>Due</td>
-                        <td class="warning">Pending</td>
-                        <td class="primary">Details</td>
-                    </tr>
-                    <tr>
-                        <td>Foldable Mini Drone</td>
-                        <td>85631</td>
-                        <td>Due</td>
-                        <td class="warning">Pending</td>
-                        <td class="primary">Details</td>
-                    </tr>
-                    <tr>
-                        <td>Foldable Mini Drone</td>
-                        <td>85631</td>
-                        <td>Due</td>
-                        <td class="warning">Pending</td>
-                        <td class="primary">Details</td>
-                    </tr>
-
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-            <a href="#">Show All</a>
-        </div>
-
-        <!---------- END OF RECENT ORDERS ------------->
-
-    </div>
-    </main>
-    <!---------- END OF MAIN CONTENT ------------->
-    <div class="rigth">
-        <div class="top">
-            <button id="menu-btn">
-                <span class="material-icons-sharp">menu</span>
-
-            </button>
-            <div class="theme-toggler">
-                <span class="material-symbols-outlined ative">Modo claro</span>
-                <span class="material-symbols-outlined">Modo oscuro</span>
-
-            </div>
-            <div>
-                <div class="profile">
-                    <div class="info">
-                        <p>Hola, <b>Jesus</b></p>
-                        <small class="text-muted">Administrador</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="../images/profile.jpg" alt="Profile Photo">
-                    </div>
-                </div>
-                <!---------- END OF PROFILE -------------->
-            </div>
-        </div>
-        <div class="recent-updates">
-            <h2>Recent Updates</h2>
-            <div class="updates">
-                <div class="update">
-                    <div class="profile-photo">
-                        <img src="../images/profile.jpg" alt="Profile Photo">
-                    </div>
-                    <div class="message">
-                        <p><b>Jesus</b>recii orde de</p>
-                        <small class="text-muted">2 minutoss despues</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-                <div class="recent-updates">
-            <h2>Recent Updates</h2>
-            <div class="updates">
-                <div class="update">
-                    <div class="profile-photo">
-                        <img src="../images/profile.jpg" alt="Profile Photo">
-                    </div>
-                    <div class="message">
-                        <p><b>Jesus</b>recii orde de</p>
-                        <small class="text-muted">2 minutoss despues</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-                <div class="recent-updates">
-            <h2>Recent Updates</h2>
-            <div class="updates">
-                <div class="update">
-                    <div class="profile-photo">
-                        <img src="../images/profile.jpg" alt="Profile Photo">
-                    </div>
-                    <div class="message">
-                        <p><b>Jesus</b>recii orde de</p>
-                        <small class="text-muted">2 minutoss despues</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-                <div class="recent-updates">
-            <h2>Recent Updates</h2>
-            <div class="updates">
-                <div class="update">
-                    <div class="profile-photo">
-                        <img src="../images/profile.jpg" alt="Profile Photo">
-                    </div>
-                    <div class="message">
-                        <p><b>Jesus</b>recii orde de</p>
-                        <small class="text-muted">2 minutoss despues</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!---------- END OF RECENT UPDATES -------------->
-          <div class="sales-analytics">
-            <h2>Sales Analytics</h2>
-            <div class="item online">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/>Local_mall</svg>
-                </div>
-                <div class="right">
-                    <div class="info">
-                        <h3>Online Orders</h3>
-                        <small class="text-muted">last 24 hours</small>
-                    </div>
-                    <h5 class="danger">-17%</h5>
-                    <h3>1100</h3>
-                </div>    
-             </div>
-                         <div class="item online">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/>Shopping cart</svg>
-                </div>
-                <div class="right">
-                    <div class="info">
-                        <h3>Online Orders</h3>
-                        <small class="text-muted">last 24 hours</small>
-                    </div>
-                    <h5 class="success">+39%</h5>
-                    <h3>3859</h3>
-                </div>    
-             </div>
-          </div>
-    </div>
+        </main>
 </body>
 
 </html>
