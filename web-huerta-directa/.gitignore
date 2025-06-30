@@ -1,0 +1,120 @@
+# .gitignore
+
+# Dependencias
+# Ignora la carpeta que contiene todos los paquetes descargados.
+# Esta carpeta se regenera al ejecutar 'npm install' o 'yarn install'.
+/node_modules
+
+# Archivos de build y producción
+# Carpeta de salida de la compilación de producción (común en Vite y Create React App).
+/dist
+/build
+/out
+
+# Archivos de caché de herramientas de desarrollo
+# Vite cache
+.vite/
+# Parcel cache
+.cache/
+# Next.js cache
+.next/
+# Gatsby cache
+.cache/
+public/
+
+# Archivos de log
+# Ignora archivos de log generados por npm, yarn, o la aplicación.
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Archivos de entorno
+# Estos archivos suelen contener variables de entorno y secretos (API keys, etc.)
+# y no deben ser subidos al repositorio. En su lugar, se suele tener un archivo
+# .env.example o .env.template con la estructura, pero sin los valores reales.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Archivos específicos del sistema operativo
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.Trash-*
+
+# Archivos de configuración de Editores e IDEs
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+*.[pt]o
+
+# Archivos de Test y Cobertura
+coverage/
+.nyc_output/
+node_modules/.cache
+
+# Archivos temporales de TypeScript
+# Si estás usando TypeScript, a veces se generan estos archivos.
+*.tsbuildinfo
+
+# Archivos de dependencias específicas de pnpm
+# Si usas pnpm, puede generar este archivo.
+pnpm-lock.yaml
+
+# Otros archivos generados o temporales
+# Storybook
+.storybook-static/
+storybook-static/
+
+# Archivos de configuración local de ciertas herramientas
+.eslintcache
+.prettierignore
+# (Si .prettierignore debe estar en el repo, coméntalo)
+
+# Archivos compilados de Sass/Less
+*.css.map
+
+# Documentación generada (si usas herramientas como JSDoc, TypeDoc, etc.)
+# /docs/api (ejemplo)
+
+# Archivos específicos de tu proyecto que no quieras versionar
+# Por ejemplo, si tienes archivos de imagen muy grandes para pruebas locales:
+# /public/large-test-images/
+# /src/assets/temp/
