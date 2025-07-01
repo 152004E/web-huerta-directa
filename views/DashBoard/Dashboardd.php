@@ -177,9 +177,7 @@ $productos = $producto->ObtenerTodos();
         <!--FIN DEL MAIN 😜😝🤤-->
         <div class="right">
             <div class="top">
-                <button id="menu-btn">
-                    <span class="material-symbols-outlined">dehaze</span>
-                </button>
+                
                 <div class="theme-toggler">
                     <span class="material-symbols-outlined active">light_mode</span>
                     <span class="material-symbols-outlined">dark_mode</span>
