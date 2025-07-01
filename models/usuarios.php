@@ -15,17 +15,78 @@ class usuarios
     catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
+
     }
-    public function Registrar($correo, $clave, $perfil_usuario, $estado) {}
+    public function Registrar($name_user, $email, $password_user) {
+        try{
+        include "conexion.php";
+        $fk_id_role = 2;
+        $RegistrarU = $conexion-> prepare("INSERT INTO TB_users(fk_id_role, name_user, email, password_user) VALUES (?,?,?,?)");
+        $RegistrarU-> execute([$fk_id_role, $name_user, $email, $password_user]);
+        $conexion = null;
+        return true;
+        }
+        catch(PDOException $e){
+            echo "Error: ". $e->getMessage();
+        }
+    }
+    public function Actualizar($id_product, $name_product, $price, $category, $description_product) {
+        try{
+        include "conexion.php";
+      
+        $ActualizarU = $conexion-> prepare("update usuario set name_product=?, price=?, category=?, description_product where id_product=?");
+        $ActualizarU-> execute([ $name_product, $price, $category, $description_product, $id_product,]);
+        $conexion = null;
+        return true;
+        }
+        catch(PDOException $e){
+            echo "Error: ". $e->getMessage();
+        }
+    }
    
 
-    public function ConsultaGeneral() {}
+     public function ConsultaGeneral(){
+        try{
+            include "conexion.php";
+            $validar = $conexion->prepare("select * from TB_users");
+            $validar->execute();
+            $lista = $validar->fetchAll(PDO::FETCH_NUM); 
+            return $lista;
+        }
+        catch(Exception $e){
+            return $e;
+        }
+    }
 
-    public function ConsultaEspecifica($dato, $valor) {}
 
-    public function Eliminar($id) {}
+    public function ConsultaEspecifica($dato,$valor){
+        try{
+            include "conexion.php";
+            $validar = $conexion->prepare("select * from Tb_users where $dato = ? ");
+            $validar->execute([$valor]);
+            $lista = $validar->fetchAll(PDO::FETCH_NUM); 
+            return $lista;
+        }
+        catch(Exception $e){
+            return $e;
+        }
+    }
+
+    public function Eliminar($id){
+        try{
+            include "conexion.php";
+            $validar = $conexion->prepare("update TB_users set  where id_product=?");
+            $validar->execute([$id]);
+            return true;
+        }
+        catch(Exception $e){
+            return $e;
+        }
+    }
 }
 
+
+/*
 class Administrador extends usuarios
 {
     public function ConsultaGeneral() {
@@ -42,5 +103,5 @@ class Administrador extends usuarios
         }
     }
 }
-
+*/
 ?>

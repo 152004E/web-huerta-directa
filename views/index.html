@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--  Animacion al hacer scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Link para el font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
 
 
   </head>
@@ -36,17 +38,38 @@
           <img src="images/menu.png" class="menu-icon" alt="menu" />
         </label>
         <nav class="navbar">
-          <ul>
-            <li><a href="login/login/pagina.html">Inicio</a></li>
-            <li><a href="Errores/error404.html">Servicios</a></li>
-            <li><a href="Errores/error500.html">Contactos</a></li>
-            <li><a href="./pagina_principal/landing.html">Nosotros</a></li>
-            <li><a href="Quienes_somos/quienes_somos.html">Somos</a></li>
+          <ul class="nav-menu">
+            <li class="dropdown">
+            <a href="">Inicio ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="../views/login/login/Log in.html ">📲 Iniciar Sesion</a></li>
+              <li><a href="../views/DashBoard/Dashboardd.php">📲 Registrarse</a></li>
+            </ul>
+            </li>
+            <li class="dropdown">
+            <a href="">Servicios ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="Errores/error404.html">🚚 Entrega a domicilio</a></li>
+              <li><a href="Errores/error404.html">📦 Venta al por mayor</a></li>
+              <li><a href="Errores/error404.html">🌱 Asesoría agrícola</a></li>
+            </ul>
+            </li>
+            <li><a href="#categorias">Categorias</a></li>
+            <li class="dropdown">
+            <a href="">Conocenos ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./pagina_principal/landing.html">🔗 Unete</a></li>
+              <li><a href="Quienes_somos/quienes_somos.html">🔎 Quienes somos</a></li>
+              <li><a href="Errores/error500.html">🎛️ Contactanos</a></li>
+            </ul>
+            </li>
+            <li><a href="#lista-1">Productos</a></li>
           </ul>
         </nav>
         <div class="agragar_producto">
           <a class="Producto btn-2 " href="./Agreagar_producto/Agregar_producto.html">Agregar <br> Producto</a>
-
+          
+        
         </div>
         <div class="ajustar">
           <ul>
@@ -74,7 +97,7 @@
               </div>
             </li>
           </ul>
-        </div>
+        </div>  
         
       </div>
       <div class="header-content container1">
@@ -217,9 +240,9 @@
     </section>
 
     <main class="products container1" id="lista-1">
-      <h2>Productos destacados</h2>
+      <h2 data-aos="zoom-in" >Productos destacados</h2>
       <div class="product-content">
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="100">
           <img src="images/pr1.png" alt="" />
           <div class="product-txt">
             <h3>manzana</h3>
@@ -227,7 +250,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="200">
           <img src="images/pr2.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -235,7 +258,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="300">
           <img src="images/pr3.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -243,7 +266,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="400">
           <img src="images/pr4.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -251,7 +274,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="100">
           <img src="images/pr5.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -259,7 +282,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="200">
           <img src="images/pr6.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -267,7 +290,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="300">
           <img src="images/pr7.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -275,7 +298,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="7">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="400">
           <img src="images/pr8.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -288,7 +311,7 @@
 
 
       <!--Ctegorias-->
-  <section class="categories">
+  <section class="categories" id="categorias">
     <div class="container categories__container">
       <div class="categories__left">
         <h1 data-aos="fade-right">Categorias</h1>
@@ -362,12 +385,7 @@
 
   </section>
 
-    <section class="contanct container">
-      <form>
-        <input type="email" placeholder="correo" />
-        <input type="submit" class="btn-3" />
-      </form>
-    </section>
+
     <footer
       class="footer1"
       style="background-color: #8bc34a; padding: 40px 0; color: white"

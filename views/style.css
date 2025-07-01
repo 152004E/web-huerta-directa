@@ -45,21 +45,76 @@ img {
 .logo:hover {
   color: #028602;
 }
-.menu .navbar ul li {
-  position: relative;
-  float: left;
-}
-.menu .navbar ul li a {
-  font-size: 18px;
-  padding: 20px;
-  display: block !important;
-  color: #333128;
-  font-weight: 600;
-  transition: color 0.3s ease, color 0.3s ease;
+/* Navbar Actualizado */
+.navbar {
+  background-color: #fff5dc; /* Color claro */
+  padding: 10px 0;
 }
 
-.menu .navbar ul li a:hover {
-  color: #807f7f;
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #7bbf45;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  min-width: 220px;
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2fbd7;
+  color: #7bbf45;
+  border-left: 4px solid #7bbf45;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 #menu {
@@ -268,7 +323,7 @@ h3 {
 .btn-2 {
   display: inline-block;
   margin-top: 15px;
-  padding: 7px 15px;
+  padding: 10px 20px;
   color: #ffff;
   background-color: #8dc84b;
   border-radius: 5px;
@@ -524,4 +579,42 @@ input {
 .category p {
   color: #000000;
   font-size: 0.9rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*botone*/
+th.acciones,
+td.acciones {
+  text-align: center;
+  width: 130px;
+  white-space: nowrap;
+}
+
+.btn-edit,
+.btn-delete {
+  display: inline-block;
+  padding: 5px 8px;
+  font-size: 12px;
+  margin: 2px;
+  border-radius: 6px;
+  color: #fff !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-edit {
+  background-color: #5bc0de;
+}
+.btn-edit:hover {
+  background-color: #31b0d5;
+}
+
+.btn-delete {
+  background-color: #d9534f;
+}
+.btn-delete:hover {
+  background-color: #c9302c;
 }

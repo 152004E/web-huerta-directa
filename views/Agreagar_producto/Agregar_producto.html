@@ -33,7 +33,7 @@
     <div class="container1 d-flex align-items-center justify-content-center">
       <form
         class="input-box categoria-form border p-4 border-2 rounded-5 px-5"
-        action="../../models/productos.php"
+        action="../../controllers/ControladorP.php"
         method="POST"
         enctype="multipart/form-data"
       >
@@ -105,8 +105,8 @@
           <label for="imagen">Imagen del producto:</label>
           <input type="file" id="imagen" name="image_product" accept="image/*" required hidden />
           <label for="imagen" class="custom-file-label"
-            >📁 Seleccionar imagen</label
-          >
+            >📁 Seleccionar imagen
+          </label>
           <span id="file-name">Ningún archivo seleccionado</span>
         </div>
 
@@ -126,9 +126,9 @@
         <br />
 
         <div
-          class="container-button d-flex align-items-center justify-content-center gap-3"
+          class="container-button d-flex align-items-center justify-content-center gap-3" 
         >
-         <button type="submit" class="btn-2">pagar</button>
+         <button type="submit" class="btn-2">Registrar</button>
           <a
             class="btn-2 d-flex justify-content-center align-items-center"
             href="../index.html"
@@ -137,5 +137,17 @@
         </div>
       </form>
     </div>
+  <script>
+  const inputImagen = document.getElementById('imagen');
+  const fileNameSpan = document.getElementById('file-name');
+
+  inputImagen.addEventListener('change', function () {
+    if (inputImagen.files.length > 0) {
+      fileNameSpan.textContent = inputImagen.files[0].name;
+    } else {
+      fileNameSpan.textContent = "Ningún archivo seleccionado";
+    }
+  });
+  </script>
   </body>
 </html>
