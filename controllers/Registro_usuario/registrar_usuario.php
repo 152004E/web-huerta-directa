@@ -27,7 +27,7 @@ else if ($respuesta === true) {
             header("location:../views/index.html");
         } else {
             // Administrador
-            header("location:../views/dashboard/Dashboard.html");
+            header("location:../views/dashboard/Dashboardd.php");
         }
 
     } else {

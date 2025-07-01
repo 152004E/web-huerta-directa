@@ -1,3 +1,9 @@
+<?php
+include "../../models/productos.php";
+$producto = new productos();
+$productos = $producto->ObtenerTodos();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,9 +64,9 @@
                     <span class="material-symbols-outlined">settings</span>
                     <h3>Configuracion</h3>
                 </a>
-                <a href="#">
+                <a href="../Consulta_usuarios/Consulta_usuarios.php">
                     <span class="material-symbols-outlined">add</span>
-                    <h3>Añadir Usuario</h3>
+                    <h3>Consultar Usuario</h3>
                 </a>
                 <a href="#">
                     <span class="material-symbols-outlined">logout</span>
@@ -141,54 +147,32 @@
                 <h2>Ordenes recientes</h2>
                 <table>
                     <thead>
-                        <tr>
-                        <th>Nombre del producto</th>
-                        <th>Descripcion del producto</th>
-                        <th>Precio</th>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Categoria</th>
                         <th>Estado</th>
-                        <th></th>
-                        </tr>
+                        <th>Precio</th>
+                        <th class="acciones">Acciones</th>
+                    </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>manzana</td>
-                            <td>fruta fresca</td>
-                            <td>1500</td>
-                            <td class="warning">Pendiente</td>
-                            <td class="primary">Detalles</td>
-                        </tr>
-                        <tr>
-                            <td>manzana</td>
-                            <td>fruta fresca</td>
-                            <td>1500</td>
-                            <td class="warning">Pendiente</td>
-                            <td class="primary">Detalles</td>
-                        </tr>
-                        <tr>
-                            <td>manzana</td>
-                            <td>fruta fresca</td>
-                            <td>1500</td>
-                            <td class="warning">Pendiente</td>
-                            <td class="primary">Detalles</td>
-                        </tr>
-                        <tr>
-                            <td>manzana</td>
-                            <td>fruta fresca</td>
-                            <td>1500</td>
-                            <td class="warning">Pendiente</td>
-                            <td class="primary">Detalles</td>
-                        </tr>
-                        <tr>
-                            <td>manzana</td>
-                            <td>fruta fresca</td>
-                            <td>1500</td>
-                            <td class="warning">Pendiente</td>
-                            <td class="primary">Detalles</td>
-                        </tr>
-                    </tbody>
+                        <tbody>
+                            <?php foreach ($productos as $producto): ?>
+                                <tr>
+                                    <td><?= htmlspecialchars($producto['name_product']) ?></td>
+                                    <td><?= htmlspecialchars($producto['category']) ?></td>
+                                    <td><span class="status delivered">Disponible</span></td>
+                                    <td>$<?= number_format($producto['price'], 2) ?></td>
+                                    <td class="acciones">
+                                    <a href="../../controllers/eliminar_producto.php?id=<?= $producto['id_product'] ?>" class="btn-delete" onclick="return confirm('¿Eliminar este producto?')">❌</a>
+                                    <a href="../Actualizar_producto/form_actualizar_producto.php?id=<?= $producto['id_product'] ?>" class="btn-edit">✏️</a>
+                                </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
                 </table>
                 <a href="#">Mostrar todo</a>
             </div>
+
         </main>
         <!--FIN DEL MAIN 😜😝🤤-->
         <div class="right">

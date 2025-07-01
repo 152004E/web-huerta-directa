@@ -27,7 +27,7 @@ $respuesta = $producto->Registrar($_POST["nombre"], $_POST["precio"], $_POST["ca
 
 if($respuesta){
     echo "<script>alert('Registro exitoso. Redirigiendo...');</script>";
-    header("location:../views/DashBoard/dashboard.php");
+    header("location:../views/DashBoard/Dashboardd.php");
      exit;
  
 }

@@ -11,7 +11,7 @@ $respuesta = $producto->Actualizar(
 );
 
 if ($respuesta) {
-    header("Location: ../views/DashBoard/dashboard.php");
+    header("Location: ../views/DashBoard/Dashboardd.php");
 } else {
     echo "Error al actualizar producto.";
 }
