@@ -15,7 +15,11 @@ $productos = $producto->ObtenerTodos();
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
     <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="Dashboarddd.css">
-
+    <link
+      rel="icon"
+      type="image/png"
+      href="../login/login/logo.png"
+    />
 </head>
 
 <body>
@@ -24,7 +28,7 @@ $productos = $producto->ObtenerTodos();
             <div class="top">
                 <div class="logo">
                     <img src="../images/logo.png" alt="Logo">
-                    <h2 class="text-muted">Huerta<span class="danger">Directa</span></h2>
+                    <h2>Huerta<span class="danger">Directa</span></h2>
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-symbols-outlined">close</span>
