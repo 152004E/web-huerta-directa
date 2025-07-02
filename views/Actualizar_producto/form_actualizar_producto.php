@@ -63,6 +63,7 @@ $prod = $datos[0];
 
       <div class="mb-3">
         <label for="price" class="form-label">Precio:</label>
+        
         <input type="number" class="form-control" name="price" id="price" value="<?= $prod['price'] ?>" step="0.01" required>
       </div>
 
