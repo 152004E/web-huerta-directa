@@ -72,7 +72,7 @@ $productos = $producto->ObtenerTodos();
                     <span class="material-symbols-outlined">add</span>
                     <h3>Consultar Usuario</h3>
                 </a>
-                <a href="#">
+                <a href="../index.html">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
