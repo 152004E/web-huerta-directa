@@ -17,8 +17,8 @@
       <div class="form-container sign-up">
         <!-- This is first from -->
         <form
-          action="../../controllers/Registro_usario/registrar_usuario.php"
-          method="post"
+          action="../../../controllers/controlador.php"
+          onsubmit="return validarCorreo('correoRegistro')"
         >
           <h1>Crear cuenta</h1>
           <div class="social-icons">
@@ -31,7 +31,7 @@
 
           <div class="from-group">
             <label>Nombre de usuario</label>
-            <input type="text"name="Nombre_usuario" placeholder="Ejemplo: Santiago Puentes" />
+            <input type="text" placeholder="Ejemplo: Santiago Puentes" />
           </div>
           <div class="correo-contraseña">
             <div class="from-group">
@@ -39,7 +39,6 @@
               <input
                 id="correoRegistr"
                 type="email"
-                name="email"
                 placeholder="Ingrese su correo electronico"
                 required
               />
@@ -47,7 +46,7 @@
 
             <div class="from-group">
               <label>Ingrese su contraseña</label>
-              <input type="password" name="password" placeholder="Contraseña" />
+              <input type="password" placeholder="Contraseña" />
             </div>
           </div>
 
@@ -57,14 +56,13 @@
       <div class="form-container sign-in">
         <!-- This is second form-->
         <form
-          action="../../controllers/Registro_usario/registrar_usuario.php"
+          action="../../../controllers/controlador.php"
           method="post"
-          onsubmit="return validarCorreo('correoRegistro')"
-          
+          onsubmit="return validarCorreo('correoLogin')"
         >
           <h1 class="iniciar_sesion">Iniciar Sesion</h1>
           <div class="social-icons">
-            <a href="../../controllers/Registro_usario/registrar_usuario.php" class="icon"
+            <a href="../../index.html" class="icon"
               ><i class="fa-brands fa-google-plus-g"></i
             ></a>
             <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
