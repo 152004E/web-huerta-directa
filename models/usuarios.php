@@ -6,8 +6,9 @@ class usuarios
     public function Login($email, $password_user) {
     try {
         include "conexion.php";
+        $fk_id_role = 2;
         $consultar = $conexion->prepare("SELECT fk_id_role, email, password_user FROM TB_users WHERE email=? AND password_user=?");
-        $consultar->execute([$email, $password_user]);
+        $consultar->execute([$fk_id_role, $email, $password_user]);
         $lista = $consultar->fetchAll(PDO::FETCH_ASSOC);
         $conexion = null;
         return $lista;
@@ -30,6 +31,7 @@ class usuarios
             echo "Error: ". $e->getMessage();
         }
     }
+
     public function Actualizar($id_product, $name_product, $price, $category, $description_product) {
         try{
         include "conexion.php";
@@ -83,6 +85,20 @@ class usuarios
             return $e;
         }
     }
+    /*
+     public function ObtenerPorEmail($email) {
+        try{
+        include "conexion.php";
+      
+        $ActualizarU = $conexion-> prepare("update usuario set name_product=?, price=?, category=?, description_product where id_product=?");
+        $ActualizarU-> execute([ $email]);
+        $conexion = null;
+        return true;
+        }
+        catch(PDOException $e){
+            echo "Error: ". $e->getMessage();
+        }
+    }*/
 }
 
 

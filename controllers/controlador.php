@@ -17,7 +17,7 @@ if($respuesta instanceof Exception){
 }
 else if(!empty($respuesta)){
     if($respuesta[0]["fk_id_role"]=="1"){
-        header("location:../views/Usuarios/usuarios.php");
+        header("location:../views/DashBoard/Dashboardd.php");
     }
     else if ($respuesta[0]["fk_id_role"]=="2"){
         header("location:../views/index.html");
