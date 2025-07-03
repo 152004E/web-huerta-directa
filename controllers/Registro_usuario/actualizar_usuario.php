@@ -1,6 +1,6 @@
  <?php
  
-include "../models/usuario.php";
+include "../../models/usuario.php";
 
 $objeto = new usuarios();
 $respuesta = $objeto->Actualizar($id_product, $_POST["nombre"],$_POST["precio"],$_POST["categoria-producto"],$_POST["descripcion"]);

@@ -175,6 +175,9 @@ $productos = $producto->ObtenerTodos();
                         </tbody>
                 </table>
                 <a href="#">Mostrar todo</a>
+                <a href="../controllers/reportexls_usuarios.php">Exportar a Excel</a>
+                <hr>
+                <a href="../controllers/reportepdf_usuarios.php">Exportar a Pdf</a>
             </div>
 
         </main>

@@ -11,20 +11,20 @@
 </head>
 <body>
      <section>
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
+        <div class="accordion" class="container-xl" id="accordionExample" class="container text-center">
+            <div class="container-xl" class="accordion-item" class="row align-items-center">
                 <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Consulta de Usuarios
                 </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="container-xl" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
 
-                     <?php
-                        include "../buscador_usuarios/buscador_usuarios.html";
+                    <?php
+                        include "buscador_usuarios.html";
                         echo "<hr>";
-                        
+                        include "../../controllers/Registro_usuario/Consulta_usuarios.php";
                     ?>
         
 

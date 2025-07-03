@@ -48,7 +48,7 @@
 
 <?php
 
-include "../models/usuario.php";
+include "../../models/usuarios.php";
 
 $consultar = new usuarios();
 
