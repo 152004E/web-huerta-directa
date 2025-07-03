@@ -18,7 +18,7 @@ $productos = $producto->ObtenerTodos();
     <link
       rel="icon"
       type="image/png"
-      href="../login/login/logo.png"
+      href="../login/login/logo_huerta.png"
     />
 </head>
 
@@ -27,7 +27,7 @@ $productos = $producto->ObtenerTodos();
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="../images/logo.png" alt="Logo">
+                    <img src="../login/login/logo_huerta.png" alt="Logo">
                     <h2>Huerta<span class="danger">Directa</span></h2>
                 </div>
                 <div class="close" id="close-btn">
