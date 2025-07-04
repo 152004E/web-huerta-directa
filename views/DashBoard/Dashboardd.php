@@ -15,11 +15,7 @@ $productos = $producto->ObtenerTodos();
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
     <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="Dashboarddd.css">
-    <link
-      rel="icon"
-      type="image/png"
-      href="../login/login/logo_huerta.png"
-    />
+    <link rel="icon" type="image/png" href="../login/login/logo_huerta.png" />
 </head>
 
 <body>
@@ -40,7 +36,7 @@ $productos = $producto->ObtenerTodos();
                     <span class="material-symbols-outlined">dashboard</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="#" >
+                <a href="#">
                     <span class="material-symbols-outlined">person</span>
                     <h3>Clientes</h3>
                 </a>
@@ -151,28 +147,36 @@ $productos = $producto->ObtenerTodos();
                 <h2>Ordenes recientes</h2>
                 <table>
                     <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Categoria</th>
-                        <th>Estado</th>
-                        <th>Precio</th>
-                        <th class="acciones">Acciones</th>
-                    </tr>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Categoria</th>
+                            <th>Estado</th>
+                            <th>Precio</th>
+                            <th class="acciones">Acciones</th>
+                        </tr>
                     </thead>
-                        <tbody>
-                            <?php foreach ($productos as $producto): ?>
-                                <tr>
-                                    <td><?= htmlspecialchars($producto['name_product']) ?></td>
-                                    <td><?= htmlspecialchars($producto['category']) ?></td>
-                                    <td><span class="status delivered">Disponible</span></td>
-                                    <td>$<?= number_format($producto['price'], 2) ?></td>
-                                    <td class="acciones">
-                                    <a href="../../controllers/eliminar_producto.php?id=<?= $producto['id_product'] ?>" class="btn-delete" onclick="return confirm('¿Eliminar este producto?')">❌</a>
-                                    <a href="../Actualizar_producto/form_actualizar_producto.php?id=<?= $producto['id_product'] ?>" class="btn-edit">✏️</a>
-                                </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
+                    <tbody>
+                        <?php foreach ($productos as $producto): ?>
+                        <tr>
+                            <td>
+                                <?= htmlspecialchars($producto['name_product']) ?>
+                            </td>
+                            <td>
+                                <?= htmlspecialchars($producto['category']) ?>
+                            </td>
+                            <td><span class="status delivered">Disponible</span></td>
+                            <td>$
+                                <?= number_format($producto['price'], 2) ?>
+                            </td>
+                            <td class="acciones">
+                                <a href="../../controllers/eliminar_producto.php?id=<?= $producto['id_product'] ?>"
+                                    class="btn-delete" onclick="return confirm('¿Eliminar este producto?')">❌</a>
+                                <a href="../Actualizar_producto/form_actualizar_producto.php?id=<?= $producto['id_product'] ?>"
+                                    class="btn-edit">✏️</a>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
                 </table>
                 <a href="#">Mostrar todo</a>
                 <a href="../controllers/reportexls_usuarios.php">Exportar a Excel</a>
@@ -184,7 +188,7 @@ $productos = $producto->ObtenerTodos();
         <!--FIN DEL MAIN 😜😝🤤-->
         <div class="right">
             <div class="top">
-                
+
                 <div class="theme-toggler">
                     <span class="material-symbols-outlined active">light_mode</span>
                     <span class="material-symbols-outlined">dark_mode</span>
@@ -236,53 +240,53 @@ $productos = $producto->ObtenerTodos();
             <div class="sales-analytics">
                 <h2>Analiticas</h2>
                 <div class="item online">
-                   <div class="icon">
+                    <div class="icon">
                         <span class="material-symbols-outlined">shopping_cart</span>
-                   </div> 
-                   <div class="right">
+                    </div>
+                    <div class="right">
                         <div class="info">
                             <h3>ORDENES</h3>
                             <small class="text-muted">Ultimas 24 horas</small>
                         </div>
                         <h5 class="success">+39%</h5>
                         <h3>3849</h3>
-                   </div>
+                    </div>
                 </div>
                 <div class="item offline">
-                   <div class="icon">
+                    <div class="icon">
                         <span class="material-symbols-outlined">local_mall</span>
-                   </div> 
-                   <div class="right">
+                    </div>
+                    <div class="right">
                         <div class="info">
                             <h3>OFFLINE ORDENES</h3>
                             <small class="text-muted">Ultimas 24 horas</small>
                         </div>
                         <h5 class="danger">-17%</h5>
                         <h3>1100</h3>
-                   </div>
+                    </div>
                 </div>
                 <div class="item customers">
-                   <div class="icon">
+                    <div class="icon">
                         <span class="material-symbols-outlined">person</span>
-                   </div> 
-                   <div class="right">
+                    </div>
+                    <div class="right">
                         <div class="info">
                             <h3>NUEVOS CLIENTES</h3>
                             <small class="text-muted">Ultimas 24 horas</small>
                         </div>
                         <h5 class="success">+67%</h5>
                         <h3>849</h3>
-                   </div>
-                </div>
-                <div class="item add-client">
-                    <div>
-                        <span class="material-symbols-outlined">add</span>
-                        <h3>Añadir cliente</h3>
                     </div>
                 </div>
+                <a href="../DashBoard/Registro_nuevo_admin/registro_admin.php" class="item add-client"
+                    style="text-decoration: none; color: inherit;">
+                    <span class="material-symbols-outlined">add</span>
+                    <h3>Añadir administrador</h3>
+                </a>
             </div>
         </div>
     </div>
     <script src="dashboar.js"></script>
 </body>
+
 </html>
