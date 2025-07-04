@@ -4,25 +4,33 @@
         const fila = enlace.closest('tr');
 
         // Obtener celdas por clase
+        const name_userCelda = fila.querySelector('.name_user');
+        const password_userCelda = fila.querySelector('.password_user');
+
+        /*
         const idCelda = fila.querySelector('.id');
-        const documentoCelda = fila.querySelector('.documento');
-        const nombreCelda = fila.querySelector('.nombre');
         const telefonoCelda = fila.querySelector('.telefono');
         const correoCelda = fila.querySelector('.correo');        
-
-        // Obtener valores actuales, se almacenan en variables JS
-        const idActual = idCelda.textContent;
-        const documentoActual = documentoCelda.textContent;
-        const nombreActual = nombreCelda.textContent;
+        */
+        // Obtener valores actuales, se almacenan en variables JS  
+        const name_userActual = name_userCelda.textContent;
+        const password_userActual = password_userCelda.textContent;
+       
+        /*      
+        const idActual = idCelda.textContent;  
         const telefonoActual = telefonoCelda.textContent;
         const correoActual = correoCelda.textContent;
-        
+        */
+
         // Reemplaza el texto de cada celda con un input y asigna el dato para editar
-        idCelda.innerHTML = `<input type="number" name="id" readonly value="${idActual}">`;
-        documentoCelda.innerHTML = `<input type="number" name="documento" value="${documentoActual}">`;
-        nombreCelda.innerHTML = `<input type="text" name="nombre" value="${nombreActual}">`;
+        name_userCelda.innerHTML = `<input type="number" name="name_user" value="${name_userActual}">`;
+        password_userCelda.innerHTML = `<input type="text" name="password_user" value="${password_userActual}">`;
+        
+        /*
+        id_userCelda.innerHTML = `<input type="number" name="id_user" readonly value="${id_userActual}">`;
         telefonoCelda.innerHTML = `<input type="number" name="telefono" value="${telefonoActual}">`;
         correoCelda.innerHTML = `<input type="email" name="correo" readonly value="${correoActual}">`;
+        */
 
         // Reemplaza el primer enlace por un botón Actualizar
         const enlaces = fila.querySelectorAll('a');           
@@ -64,24 +72,24 @@ else{
 //Se define el formulario con id formu para que desde JS se pueda enviar
 //Toda la tabla esta dentro de un form para que al dar clic en el botón Actualizar,
 //los datos sean enviados al controlador actualizar y la lógica se ejecute
-echo "<form id='formu' action='../actualizar_usuario.php' method='post'><table class='table table-hover'><tr>
-    
+echo "<form id='formu' action='../actualizar_usuario.php' method='post'>
+    <table class='table table-striped'><tr>
+
+        <th>ID</th> 
         <th>NOMBRE</th>
-        <th>PRECIO</th>
-        <th>CATEGORIA</th>
-        <th>DESCRIPCION</th>
+        <th>CORREO</th>
+        <th>CONTRASEÑA</th>
+        
         </tr>";
 
 foreach($respuesta as $fila){
-    //Cada celda tiene un id para que el dato sea almacenado desde JS
-    //Al dar clic en el link Editar, se ejecuta la función JS llamada editarFila
-    //Al dar clic en el link Eliminar se comunica el id del usuario para realizar el cambio de estado
-    echo "<tr><td class='id'>$fila[0]</td>
-        <td class='documento'>$fila[1]</td>
-        <td class='nombre'>$fila[2]</td>
-        <td class='telefono'>$fila[3]</td>
-        <td class='correo'>$fila[4]</td>
-        <td class='perfil'>$fila[6]</td>
+   
+    echo "
+    <tr><td class='id_user'>$fila[0]</td>  
+        <td class='name_user'>$fila[1]</td>
+        <td class='email'>$fila[2]</td>
+        <td class='password_user'>$fila[3]</td>
+        
         <td><a href='#' onclick='editarFila(this);'>Editar</a></td>
         <td><a href='../controllers/eliminar_usuarios.php?codigo=$fila[0]'>Eliminar</a></td>
         </tr>";

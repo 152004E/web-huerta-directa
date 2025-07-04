@@ -32,12 +32,12 @@ class usuarios
         }
     }
 
-    public function Actualizar($id_product, $name_product, $price, $category, $description_product) {
+    public function ActualizarUsuario() {
         try{
         include "conexion.php";
       
-        $ActualizarU = $conexion-> prepare("update usuario set name_product=?, price=?, category=?, description_product where id_product=?");
-        $ActualizarU-> execute([ $name_product, $price, $category, $description_product, $id_product,]);
+        $ActualizarU = $conexion-> prepare("update TB_users set name_user = ?, password_user= ? ");
+        $ActualizarU-> execute([ ]);
         $conexion = null;
         return true;
         }
@@ -47,10 +47,10 @@ class usuarios
     }
    
 
-     public function ConsultaGeneral(){
+    public function ConsultaGeneral(){
         try{
             include "conexion.php";
-            $validar = $conexion->prepare("select * from TB_users");
+            $validar = $conexion->prepare(" SELECT id_user, name_user, email, password_user FROM TB_users");
             $validar->execute();
             $lista = $validar->fetchAll(PDO::FETCH_NUM); 
             return $lista;
@@ -64,7 +64,7 @@ class usuarios
     public function ConsultaEspecifica($dato,$valor){
         try{
             include "conexion.php";
-            $validar = $conexion->prepare("select * from Tb_users where $dato = ? ");
+            $validar = $conexion->prepare("select id_user, name_user, email, password_user from Tb_users where $dato = ? ");
             $validar->execute([$valor]);
             $lista = $validar->fetchAll(PDO::FETCH_NUM); 
             return $lista;

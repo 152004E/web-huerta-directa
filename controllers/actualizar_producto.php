@@ -2,12 +2,7 @@
 include "../models/productos.php";
 
 $producto = new productos();
-$respuesta = $producto->Actualizar(
-    $_POST['id_product'],
-    
-    $_POST['price'],
-    
-    $_POST['description_product']
+$respuesta = $producto->ActualizarProducto($_POST['id_product'],$_POST['name_product'], $_POST['price'] , $_POST['category'],$_POST['description_product']
 );
 
 if ($respuesta) {
