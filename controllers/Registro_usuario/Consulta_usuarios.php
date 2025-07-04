@@ -66,10 +66,12 @@ else{
 //los datos sean enviados al controlador actualizar y la lógica se ejecute
 echo "<form id='formu' action='../actualizar_usuario.php' method='post'><table class='table table-hover'><tr>
     
+        <th>ID</th>
         <th>NOMBRE</th>
-        <th>PRECIO</th>
-        <th>CATEGORIA</th>
-        <th>DESCRIPCION</th>
+        <th>DOCUMENTO</th>
+        <th>NUMERO</th>
+        <th>PERFIL</th>
+        <th>CONTRASEÑA</th>
         </tr>";
 
 foreach($respuesta as $fila){

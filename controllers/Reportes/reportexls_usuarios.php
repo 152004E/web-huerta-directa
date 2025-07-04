@@ -17,11 +17,12 @@ $respuesta = $_SESSION["respuesta"];
 echo "<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>";
 echo "<table>
         <tr>
-                <th>CODIGO</th>
-                <th>Producto</th>
-                <th>Categoria</th>
-                <th>Estado</th>
-                <th>Precio</th>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>DOCUMENTO</th>
+                <th>NUMERO</th>
+                <th>PERFIL</th>
+                <th>CONTRASEÑA</th>
         </tr>";
 
 foreach($respuesta as $fila){
@@ -32,6 +33,7 @@ foreach($respuesta as $fila){
                 <td>".utf8_decode($fila[2])."</td>
                 <td>".utf8_decode($fila[3])."</td>
                 <td>".utf8_decode($fila[4])."</td>
+                <td>".utf8_decode($fila[5])."</td>
         </tr>";
 }
 echo "</table>";
