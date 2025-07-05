@@ -24,7 +24,7 @@
                     <?php
                         include "buscador_usuarios.html";
                         echo "<hr>";
-                        include "../../controllers/Registro_usuario/Consulta_usuarios.php";
+                        include "../../controllers/Registro_usuario/Search_usuarios.php";
                     ?>
         
 

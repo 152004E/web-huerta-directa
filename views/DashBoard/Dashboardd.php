@@ -64,7 +64,7 @@ $productos = $producto->ObtenerTodos();
                     <span class="material-symbols-outlined">settings</span>
                     <h3>Configuracion</h3>
                 </a>
-                <a href="../Consulta_usuarios/Consulta_usuarios.php">
+                <a href="../Consulta_usuarios/Consulta_usuario.php">
                     <span class="material-symbols-outlined">add</span>
                     <h3>Consultar Usuario</h3>
                 </a>

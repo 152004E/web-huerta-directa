@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
     $producto->Eliminar($_GET['id']);
 
     // Redirigir de vuelta al dashboard
-    header("Location:../../views/Consulta_usuarios/Consulta_usuarios.php");
+    header("Location:Consulta_usuarios/Consulta_usuario.php");
     exit;
 } else {
     echo "ID de usuario no válido.";
