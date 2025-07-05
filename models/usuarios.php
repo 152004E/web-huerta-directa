@@ -32,19 +32,6 @@ class usuarios
         }
     }
 
-    public function ActualizarUsuario() {
-        try{
-        include "conexion.php";
-      
-        $ActualizarU = $conexion-> prepare("update TB_users set name_user = ?, password_user= ? ");
-        $ActualizarU-> execute([ ]);
-        $conexion = null;
-        return true;
-        }
-        catch(PDOException $e){
-            echo "Error: ". $e->getMessage();
-        }
-    }
    
 
     public function ConsultaGeneral(){
@@ -64,13 +51,31 @@ class usuarios
     public function ConsultaEspecifica($dato,$valor){
         try{
             include "conexion.php";
-            $validar = $conexion->prepare("select id_user, name_user, email, password_user from Tb_users where $dato = ? ");
+            $validar = $conexion->prepare("select id_user, name_user, email, password_user from Tb_users where $dato = ? ");   
             $validar->execute([$valor]);
             $lista = $validar->fetchAll(PDO::FETCH_NUM); 
             return $lista;
         }
         catch(Exception $e){
             return $e;
+        }
+    }
+
+    public function ActualizarUsuario($id_user, $name_user, $password_user) {
+        try{
+        include "conexion.php";
+        $ActualizarU = $conexion-> prepare("UPDATE TB_users SET name_user = ?, password_user = ? WHERE id_user = ? ");
+        $ActualizarU-> execute([$name_user, $password_user, $id_user]);
+        if ($ActualizarU->rowCount() > 0) {
+            return true;
+        } else {
+            return "No se actualizó ninguna fila. ¿El ID existe?";
+        }
+        $conexion = null;
+        return true;
+        }
+        catch(PDOException $e){
+            echo "Error: ". $e->getMessage();
         }
     }
 

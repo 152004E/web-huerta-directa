@@ -1,6 +1,27 @@
 <?php
 include "../../models/administradores.php";
 
+
+$usuario = new usuarios();
+
+//$respuesta = $usuario->RegistrarAdmin( $_POST["nombre_usuario"], $_POST["password"] );
+
+
+if ($respuesta === true) {
+    echo '
+    <script>
+        alert("Usuario actualizado correctamente.");
+        location.href = "../../views/Consulta_usuarios/Consulta_usuario.php";
+    </script>';
+} else {
+    echo '
+    <script>
+        alert("No se pudo actualizar el usuario. Intente nuevamente.");
+        location.href = "../../views/Consulta_usuarios/Consulta_usuario.php";
+    </script>';
+}
+?>
+
 // Crear instancia del modelo
 $admin = new administradores();
 
