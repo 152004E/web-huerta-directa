@@ -1,3 +1,142 @@
-.container {
-    background: #f7efd8;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+:root {
+  --bs-body-font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    background-color: #faf2dd; 
+}
+
+.consulta-container {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 60px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.consulta-container h1 {
+  text-align: center;
+  color: #8dc84b;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.consulta-container select,
+.consulta-container input[type="text"],
+.consulta-container button {
+  border: 1px solid #c9d5c9;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+.consulta-container button {
+  background-color: #8dc84b;
+  color: white;
+  border: none;
+  transition: 0.3s ease all;
+}
+
+.consulta-container button:hover {
+  background-color: #004d00;
+  color: white;
+  border: none;
+  transition: 0.3s ease all;
+}
+
+
+.table-responsive {
+  margin-top: 30px;
+}
+
+.table thead {
+  background-color: #f0f0f0;
+  color: #222;
+  font-weight: 600;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.table a {
+  color: #8dc84b;
+  text-decoration: none;
+}
+
+.table a:hover {
+  text-decoration: underline;
+}
+
+.export-links a {
+  color: #8dc84b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.export-links a:hover {
+  color: #004d00;
+  text-decoration: underline;
+}
+
+.table-custom {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.table-custom thead {
+  background-color: #f3f3f3;
+  color: #222;
+  font-weight: 600;
+  text-align: left;
+}
+
+.table-custom td,
+.table-custom th {
+  padding: 12px 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.table-custom tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-custom a,
+.table-custom button {
+  color: #8cc63f;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  transition: 0.2s ease;
+}
+
+.table-custom a:hover,
+.table-custom button:hover {
+  color: #6ea634;
+  text-decoration: underline;
+}
+
+
+.table-custom input[type="text"],
+.table-custom input[type="number"] {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
