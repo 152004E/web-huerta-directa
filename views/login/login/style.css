@@ -209,7 +209,7 @@ input::placeholder {
 .toggle {
   background-color: #8dc84b;
   height: 100%;
-  background: linear-gradient(to right, #8dc84b, #004d00);
+  background: #8dc84b;
   color: #fff;
   position: relative;
   left: -100%;
