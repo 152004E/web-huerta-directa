@@ -179,7 +179,7 @@ $productos = $producto->ObtenerTodos();
                     </tbody>
                 </table>
                 <a href="#">Mostrar todo</a>
-                <a href="../controllers/reportexls_usuarios.php">Exportar a Excel</a>
+                <a href="../../controllers/Reportes/reportexls_productos.php">Exportar a Excel</a>
                 <hr>
                 <a href="../controllers/reportepdf_usuarios.php">Exportar a Pdf</a>
             </div>
@@ -227,10 +227,10 @@ $productos = $producto->ObtenerTodos();
                     </div>
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="imagesDashBoard/img1.jpg" alt="">
+                            <img src="imagesDashBoard/Yeferson.png" alt="">
                         </div>
                         <div class="message">
-                            <p><b>Rigoberto</b> recibio su orden de un Combo super</p>
+                            <p><b>Yeferson</b> recibio su orden de suero costeño</p>
                             <small class="text-muted">Hace 9 horas</small>
                         </div>
                     </div>
