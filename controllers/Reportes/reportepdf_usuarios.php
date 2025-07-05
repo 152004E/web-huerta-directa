@@ -1,8 +1,10 @@
 <?php
-require('/libreria/fpdf.php'); //Ruta de acceso a la clase fpdf.php, clase externa
+require('libreria/fpdf.php'); //Ruta de acceso a la clase fpdf.php, clase externa
 
-session_start();
-$datos = $_SESSION['respuesta'];    //Se asigna a $datos todos los datos a exportar
+include "../../models/usuarios.php";
+$usuario = new usuarios();
+$respuesta = $usuario->ConsultaGeneral();
+//Se asigna a $datos todos los datos a exportar
 
 class PDF extends FPDF
 {
@@ -34,14 +36,14 @@ $pdf = new PDF();   //Se define el objeto $pdf
 $pdf->AddPage();    //Se le adiciona una página
 $pdf->SetFont('Arial', '', 10);     //Fuente
 
-foreach ($datos as $fila) {     //El ciclo llena la tabla desde la tercera línea
+foreach($respuesta as $fila){    //El ciclo llena la tabla desde la tercera línea
     $pdf->Cell(20, 8, $fila[0], 1);     //Se asigna en la siguiente línea el dato
     $pdf->Cell(30, 8, $fila[1], 1);
     $nombre = utf8_decode($fila[2]);    //Permite que integre caracteres especiales
     $pdf->Cell(40, 8, $nombre, 1);
     $pdf->Cell(30, 8, $fila[3], 1);
     $pdf->Cell(50, 8, $fila[4], 1);
-    $pdf->Cell(25, 8, $fila[6], 1);
+    $pdf->Cell(25, 8, $fila[5], 1);
     $pdf->Ln();
 }
 
