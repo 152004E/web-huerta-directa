@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Consulta usuarios</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -11,6 +12,14 @@
     <section class="container">
         <form action="" method="post">
             <div class="mb-3">
+<<<<<<< HEAD
+                <label for="datos" class="form-label">Seleccione el filtro de búsqueda</label>
+                 <select name="dato" class="form-control">
+                    <option value="id_user">Código</option>
+                    <option value="name_user">Nombre</option>
+                    <option value="email">Correo</option>
+                </select>        
+=======
                 <label for="exampleInputEmail1" class="form-label">Seleccione el filtro de búsqueda</label>
                 <select name="dato" class="form-control">
                     <option value="id">ID</option>
@@ -18,19 +27,29 @@
                     <option value="nombre">Nombre</option>
                     <option value="perfil_usuario">Perfil de usuario</option>
                 </select>            
+>>>>>>> beba6c4008367989e630ff01ba21b813c44853b9
             </div>
 
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Digite el valor a consultar</label>
-                <input name="valor" required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="valores" class="form-label">Digite el valor a consultar</label>
+                <input name="valor"  type="text" class="form-control" id="valores" required >
             </div>
 
             <button type="submit" class="btn btn-primary">Consultar</button>
+<<<<<<< HEAD
+           
+            
+            <!-- Botón para ver todos los usuarios -->
+            <button type="submit" class="btn btn-secundary" onclick="window.location.href=window.location.pathname">Ver Todos</button>
+
+=======
             <hr>
             <a href="../../controllers/Reportes/reportexls_productos.php">Exportar a Excel</a>
             <hr>
             <a href="../../controllers/Reportes/reportepdf_productos.php">Exportar a Pdf</a>
+>>>>>>> beba6c4008367989e630ff01ba21b813c44853b9
         </form>
+        
     </section>
 </body>
 </html>

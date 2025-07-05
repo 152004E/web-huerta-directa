@@ -34,16 +34,20 @@ public function Eliminar($id) {
     }
 }
 
-public function Actualizar($id_product,  $price,  $description_product) {
-    try {
+  public function ActualizarProducto($id_product, $name_product, $price, $category, $description_product) {
+        try{
         include "conexion.php";
-        $Actualizar = $conexion->prepare("UPDATE TB_products SET price=?,  description_product=? WHERE id_product=?");
-        $Actualizar->execute([$price,  $description_product, $id_product]);
+      
+        $ActualizarU = $conexion-> prepare("update TB_products set name_product=?, price=?, category=?, description_product = ? where id_product=?");
+        $ActualizarU-> execute([ $name_product, $price, $category, $description_product, $id_product,]);
+        $conexion = null;
         return true;
-    } catch (Exception $e) {
-        return $e;
+        }
+        catch(PDOException $e){
+            echo "Error: ". $e->getMessage();
+        }
     }
-}
+
 
 public function ConsultaEspecifica($campo, $valor) {
     try {
