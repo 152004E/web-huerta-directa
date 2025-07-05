@@ -6,7 +6,7 @@ if (
     isset($_POST["Nombre_usuario"]) &&
     isset($_POST["email"]) &&
     isset($_POST["password"])
-) {
+) 
 
     $admin = new administradores();
 =======
