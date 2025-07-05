@@ -43,7 +43,7 @@
               <a href="">Log in ▾</a>
               <ul class="dropdown-menu">
                 <li><a href="../views/login/login/Log in.html ">📲 Iniciar Sesion</a></li>
-                <li><a href="../views/DashBoard/Dashboardd.php">📲 Registrarse</a></li>
+                <li><a href="../views/DashBoard/Dashboardd.php">📲 Dashboard</a></li>
               </ul>
               </li>
               <li class="dropdown">
@@ -239,18 +239,16 @@
       
 
       <main class="products container1" id="lista-1">
-        <h2 data-aos="zoom-in" >Productos destacados</h2>
+        <h2 data-aos="zoom-in" >Productos</h2>
          <?php foreach ($productos as $producto): ?>
         <div class="product-content">
           <div class="product" data-aos="zoom-in" data-aos-delay="100">
-            <?php
-            var_dump($producto['image_product'])
-            ?>
-            <img src="../uploads/<?php ($producto['image_product']) ?> " alt=''/>
+            
+            <img src="../uploads/<?php echo $producto['image_product']; ?>" alt="Imagen del producto"/>
             <div class="product-txt">
              
               <h3><?php echo htmlspecialchars($producto['name_product']) ?></h3>
-              <p class="precio"><?php echo number_format($producto['price'], 2) ?></p>
+              <p class="precio"><?php echo number_format($producto['price']) ?></p>
               <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar</a>
             </div>
           </div>
