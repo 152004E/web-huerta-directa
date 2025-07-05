@@ -18,7 +18,7 @@ if (!isset($_SESSION["perfil"]) || $_SESSION["perfil"] != 1) {
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
   />
   <link rel="stylesheet" href="fff.css" />
-  <link rel="icon" type="image/png" href="../../../views/login/login/logo_huerta.png"/>
+  <link rel="icon" type="image/png" href="../../login/login/logo_huerta.png"/>
 </head>
 
 <body>
@@ -29,12 +29,7 @@ if (!isset($_SESSION["perfil"]) || $_SESSION["perfil"] != 1) {
         method="post"
       >
         <h1>Registrar Administrador</h1>
-        <div class="social-icons">
-          <a href="../../index.html" class="icon"
-            ><i class="fa-brands fa-google-plus-g"></i></a>
-          <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
-        <img class="H-logo" src="logo.png" alt="logo" width="100" />
+        <img class="H-logo" src="logo_huerta.png" alt="logo" width="100" />
 
         <div class="from-group">
           <label>Nombre de administrador</label>
@@ -73,7 +68,7 @@ if (!isset($_SESSION["perfil"]) || $_SESSION["perfil"] != 1) {
       </form>
 
       <br />
-      <a href="../../../views/DashBoard/Dashboardd.php" style="text-align:center;">Volver al Dashboard</a>
+      <button class="btn-2" href="../../../views/DashBoard/Dashboardd.php" style="text-align:center;">Volver al Dashboard</button>
     </div>
   </div>
 </body>
