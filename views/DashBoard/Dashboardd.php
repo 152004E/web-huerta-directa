@@ -14,7 +14,7 @@ $productos = $producto->ObtenerTodos();
     <!-- Link para el font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
     <!-- Enlace al archivo CSS -->
-    <link rel="stylesheet" href="Dashboarddd.css">
+    <link rel="stylesheet" href="Style.css">
     <link rel="icon" type="image/png" href="../login/login/logo_huerta.png" />
 </head>
 
@@ -178,10 +178,14 @@ $productos = $producto->ObtenerTodos();
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <a href="#">Mostrar todo</a>
-                <a href="../controllers/reportexls_usuarios.php">Exportar a Excel</a>
+                
+                
+            </div>
+            
+            <div class="export-links">
+                <a href="../../controllers/Reportes/reportexls_usuarios.php">Exportar a Excel</a>
                 <hr>
-                <a href="../controllers/reportepdf_usuarios.php">Exportar a Pdf</a>
+                <a href="../../controllers/Reportes/reportepdf_productos.php">Exportar a Pdf</a>
             </div>
 
         </main>

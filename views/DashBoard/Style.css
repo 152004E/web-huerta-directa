@@ -5,6 +5,9 @@
 }
 
 
+
+
+
  * {
     margin: 0;
     padding: 0;
@@ -41,9 +44,6 @@ body {
 
 }
 
-a {
-    color: black;
-}
 
 img {
     display: block;
@@ -377,7 +377,31 @@ main .recent-orders a {
     text-align: center;
     display: block;
     margin: 1rem auto;
-    color: black;
+    color: #8dc84b;
+}
+
+
+
+main .export-links a {
+  color: #8dc84b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+main .export-links a:hover {
+  color: #004d00;
+  text-decoration: underline;
+}
+
+main .export-links hr {
+  border: none;
+  height: 1px;
+  background: #ccc;
+  margin: 0.5rem 0;
 }
 
 /*Section de la derecha*/
@@ -671,3 +695,6 @@ body.dark-theme button:hover {
   opacity: 0.85;
   cursor: pointer;
 }
+
+
+
