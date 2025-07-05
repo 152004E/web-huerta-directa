@@ -28,7 +28,7 @@ class usuarios
         return true;
         }
         catch(PDOException $e){
-            echo "Error: ". $e->getMessage();
+            return $e;
         }
     }
 
@@ -75,15 +75,15 @@ class usuarios
         return true;
         }
         catch(PDOException $e){
-            echo "Error: ". $e->getMessage();
+           return $e;
         }
     }
 
-    public function Eliminar($id){
+    public function Eliminar($id_user){
         try{
             include "conexion.php";
-            $validar = $conexion->prepare("update TB_users set  where id_product=?");
-            $validar->execute([$id]);
+            $validar = $conexion->prepare("DELETE FROM TB_users  where id_user=?");
+            $validar->execute([$id_user]);
             return true;
         }
         catch(Exception $e){
