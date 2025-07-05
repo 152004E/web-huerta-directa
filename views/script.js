@@ -138,7 +138,7 @@ let toggle = document.querySelector("#menu-btn"); // Este es tu botón para abri
 let sidebar = document.querySelector("aside");
 let main = document.querySelector("main");
 
-toggle.onclick = function() {
+toggle.onclick = function(){
     sidebar.classList.toggle("active");
     main.classList.toggle("active");
     console.log("Sidebar toggled");

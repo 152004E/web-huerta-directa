@@ -19,11 +19,36 @@ button,
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.theme-toggler {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 999;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  background: linear-gradient(to bottom, #fef5dc 90%, #ffffff 100%);
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+  padding: 100px 0;
+}
+
 
 
 
 body.dark-theme {
-  --color-background: linear-gradient(to bottom, #505050 100%, #000000 90%, #000000 20%, #505050 0%);
+  --color-background: linear-gradient(
+    to bottom,
+    #505050 100%,
+    #000000 90%,
+    #000000 20%,
+    #505050 0%
+  );
   --color-white: #ffffff;
   --color-dark: #1e1e1e;
   --color-dark-variant: #1e1e1e;
@@ -51,6 +76,7 @@ body.dark-theme b {
 }
 
 /* Header y menú */
+
 body.dark-theme .header {
   background: var(--color-dark);
 }
@@ -109,7 +135,7 @@ body.dark-theme .oferts {
 }
 
 body.dark-theme .ofert {
-    background: var(--color-dark);
+  background: var(--color-dark);
 }
 
 body.dark-theme .ofert:hover {
@@ -124,7 +150,7 @@ body.dark-theme .slider {
 }
 
 body.dark-theme .text-content {
-    background-color: rgba(63, 63, 63, 0.656);
+  background-color: rgba(63, 63, 63, 0.656);
 }
 
 /* Productos */
@@ -136,7 +162,7 @@ body.dark-theme .products {
 
 body.dark-theme .product,
 body.dark-theme .product-txt {
- background: var(--color-dark);
+  background: var(--color-dark);
 }
 
 body.dark-theme .product:hover {
