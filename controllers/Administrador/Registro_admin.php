@@ -1,8 +1,7 @@
-<?php
+ <?php
 // Incluye el modelo de administradores
 include "../../models/administradores.php";
 
-<<<<<<< HEAD
 // Verifica si los datos llegaron correctamente por POST
 if (
     isset($_POST["Nombre_usuario"]) &&
@@ -11,31 +10,6 @@ if (
 ) {
     // Crear instancia del modelo
     $admin = new administradores();
-=======
-
-$usuario = new usuarios();
-
-//$respuesta = $usuario->RegistrarAdmin( $_POST["nombre_usuario"], $_POST["password"] );
-
-
-if ($respuesta === true) {
-    echo '
-    <script>
-        alert("Usuario actualizado correctamente.");
-        location.href = "../../views/Consulta_usuarios/Consulta_usuario.php";
-    </script>';
-} else {
-    echo '
-    <script>
-        alert("No se pudo actualizar el usuario. Intente nuevamente.");
-        location.href = "../../views/Consulta_usuarios/Consulta_usuario.php";
-    </script>';
-}
-?>
-
-// Crear instancia del modelo
-$admin = new administradores();
->>>>>>> 21a20c89303cea57b840132cfc0875405d2bf02d
 
     // Capturar los datos del formulario
     $nombre = $_POST["Nombre_usuario"];
