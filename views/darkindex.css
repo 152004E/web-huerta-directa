@@ -32,7 +32,7 @@ body.dark-theme {
   --color-sidebar: #1e1e1e;
   --color-card: #000000;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6);
-  background: linear-gradient(to bottom, #505050 0%, #000000 50%, #505050 100%);
+  background: var(--color-background);
   color: var(--color-white);
   color: var(--color-dark);
 }
@@ -173,4 +173,3 @@ body.dark-theme .footer1 a {
 body.dark-theme .footer1 a:hover {
   color: var(--color-accent);
 }
-
