@@ -1,0 +1,176 @@
+/* Transición suave para modo oscuro/claro */
+body,
+.header,
+.menu,
+.navbar a,
+.products,
+.product,
+.product-txt,
+.categories,
+.category,
+.categories__left,
+.categories__right,
+.footer1,
+.btn,
+.btn-1,
+.btn-2,
+button,
+.primary-button {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+body.dark-theme {
+  --color-background: linear-gradient(to bottom, #505050 100%, #000000 90%, #000000 20%, #505050 0%);
+  --color-white: #ffffff;
+  --color-dark: #1e1e1e;
+  --color-dark-variant: #1e1e1e;
+  --color-light: rgba(0, 0, 0, 0);
+  --color-accent: #8dc84b;
+  --color-sidebar: #1e1e1e;
+  --color-card: #000000;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.6);
+  background: linear-gradient(to bottom, #505050 0%, #000000 50%, #505050 100%);
+  color: var(--color-white);
+  color: var(--color-dark);
+}
+
+/* Textos generales */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme p,
+body.dark-theme a,
+body.dark-theme small,
+body.dark-theme b {
+  color: var(--color-white);
+}
+
+/* Header y menú */
+body.dark-theme .header {
+  background: var(--color-dark);
+}
+
+body.dark-theme .menu {
+  background: var(--color-sidebar);
+  color: var(--color-white);
+  border-bottom: 1px solid var(--color-dark-variant);
+}
+
+body.dark-theme .navbar a,
+body.dark-theme .logo {
+  color: var(--color-white);
+}
+
+body.dark-theme .dropdown,
+body.dark-theme .dropdown-menu,
+body.dark-theme .navbar,
+body.dark-theme .navbar a:hover,
+body.dark-theme .navbar .active {
+  background: var(--color-dark-variant);
+  color: var(--color-accent);
+}
+
+/* Botones */
+body.dark-theme .btn,
+body.dark-theme .btn-1,
+body.dark-theme .btn-2,
+body.dark-theme button,
+body.dark-theme .primary-button {
+  background-color: var(--color-accent);
+  color: #111;
+  border: none;
+}
+
+body.dark-theme .btn:hover,
+body.dark-theme .btn-1:hover,
+body.dark-theme .btn-2:hover,
+body.dark-theme button:hover,
+body.dark-theme .primary-button:hover {
+  background-color: #004d00;
+  cursor: pointer;
+}
+
+/* Section: information */
+body.dark-theme .information,
+body.dark-theme .information-1 {
+  background: var(--color-dark-variant);
+  color: var(--color-white);
+}
+
+/* Ofertas */
+body.dark-theme .oferts {
+  background: #505050;
+  color: var(--color-white);
+}
+
+body.dark-theme .ofert {
+    background: var(--color-dark);
+}
+
+body.dark-theme .ofert:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 12px rgba(111, 255, 87, 0.2);
+}
+
+/* Slider */
+body.dark-theme .slider {
+  background: var(--color-dark-variant);
+  color: var(--color-white);
+}
+
+body.dark-theme .text-content {
+    background-color: rgba(63, 63, 63, 0.656);
+}
+
+/* Productos */
+body.dark-theme .products {
+  background: #505050;
+  color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+body.dark-theme .product,
+body.dark-theme .product-txt {
+ background: var(--color-dark);
+}
+
+body.dark-theme .product:hover {
+  box-shadow: 0 0 12px rgba(111, 255, 87, 0.2);
+}
+
+body.dark-theme .precio {
+  color: var(--color-accent);
+}
+
+/* Categorías */
+body.dark-theme .categories,
+body.dark-theme .category,
+body.dark-theme .categories__left,
+body.dark-theme .categories__right {
+  background: var(--color-dark-variant);
+  color: var(--color-white);
+}
+
+body.dark-theme .category:hover {
+  box-shadow: 0 0 12px rgba(111, 255, 87, 0.2);
+}
+
+/* Footer */
+body.dark-theme .footer1 {
+  background-color: #222;
+  color: var(--color-white);
+}
+
+body.dark-theme .footer1 a {
+  color: var(--color-white);
+}
+
+body.dark-theme .footer1 a:hover {
+  color: var(--color-accent);
+}
+

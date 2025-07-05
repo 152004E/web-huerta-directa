@@ -123,3 +123,23 @@ const swiper = new Swiper('.swiper', {
   },
 
 });
+
+const themeToggler = document.querySelector(".ajustar .theme-toggler");
+
+// cambio de color
+themeToggler.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+
+    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
+    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
+})
+
+let toggle = document.querySelector("#menu-btn"); // Este es tu botón para abrir el menú
+let sidebar = document.querySelector("aside");
+let main = document.querySelector("main");
+
+toggle.onclick = function() {
+    sidebar.classList.toggle("active");
+    main.classList.toggle("active");
+    console.log("Sidebar toggled");
+};
