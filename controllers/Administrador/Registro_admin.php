@@ -3,7 +3,7 @@
 include "../../models/administradores.php";
 
 $admin = new administradores();{
-
+                                                                                                                                    
     
     // Registrar administrador en la base de datos
     $respuesta = $admin->RegistrarAdmin($_POST["Nombre_usuario"], $_POST["email"], $_POST["password"]);
