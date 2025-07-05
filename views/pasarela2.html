@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pasarela de pagos || huerta directa</title>
+
+    <!--Insercion de logo-->
+    <link rel="icon" type="image/png" href="../login/login/logo.png" />
+
+    <!-- instalacion de las fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="Pasarela.css" />
+    <!--<link rel="stylesheet" href="../style.css">-->
+
+    <!--instalacion bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container1">
+      <form action="" class="rounded-5">
+  <div class="row-contenido d-flex gap-2">
+    <div class="column1">
+      <h3 class="title">
+        Dirección de <br />
+        facturación
+      </h3>
+      <div class="input-box">
+        <span>Nombre completo:</span>
+        <input type="text" placeholder="Emerson reyes" required />
+      </div>
+      <div class="input-box">
+        <span>Correo electrónico:</span>
+        <input type="email" placeholder="ejem@ejem.com" required />
+      </div>
+      <div class="input-box">
+        <span>Domicilio</span>
+        <input type="text" placeholder="Calle 72 # 11‑45,Chapinero" required />
+      </div>
+      <div class="input-box">
+        <span>Ciudad</span>
+        <select class="rounded-3" id="Select-ciudad" name="opciones" required>
+          <option value="">Selecciona tu Ciudad</option>
+          <option value="zipaquira">Zipaquirá</option>
+          <option value="madrid">Madrid (Cundinamarca)</option>
+          <option value="mosquera">Mosquera</option>
+          <option value="chia">Chía</option>
+          <option value="soacha">Soacha</option>
+          <option value="bogota">Bogotá D.C.</option>
+        </select>
+      </div>
+      <div class="input-box">
+        <span id="localSpan">Localidad</span>
+        <select class="rounded-3" id="localidades" name="localidad" required>
+          <option value="">Selecciona tu localidad</option>
+          <option value="usaquen">Usaquén</option>
+          <option value="chapinero">Chapinero</option>
+          <option value="santa_fe">Santa Fe</option>
+          <option value="san_cristobal">San Cristóbal</option>
+          <option value="usme">Usme</option>
+          <option value="tunjuelito">Tunjuelito</option>
+          <option value="bosa">Bosa</option>
+          <option value="kennedy">Kennedy</option>
+          <option value="fontibon">Fontibón</option>
+          <option value="engativa">Engativá</option>
+          <option value="suba">Suba</option>
+          <option value="barrios_unidos">Barrios Unidos</option>
+          <option value="teusaquillo">Teusaquillo</option>
+          <option value="los_martires">Los Mártires</option>
+          <option value="antonio_narino">Antonio Nariño</option>
+          <option value="puente_aranda">Puente Aranda</option>
+          <option value="la_candelaria">La Candelaria</option>
+          <option value="rafael_uribe_uribe">Rafael Uribe Uribe</option>
+          <option value="ciudad_bolivar">Ciudad Bolívar</option>
+          <option value="sumapaz">Sumapaz</option>
+        </select>
+      </div>
+
+      <div class="input-box d-flex align-items-center gap-4">
+        <span class="codigo">Código postal</span>
+        <input class="codigoI" type="number" placeholder=" 110111" required />
+      </div>
+    </div>
+    <span class="border"></span>
+    <div class="column1">
+      <h3 class="title px-2">
+        Datos para <br />
+        el Pago
+      </h3>
+      <div class="input-box">
+        <span>Método de pago</span>
+        <input type="text" placeholder="Emerson reyes" required />
+      </div>
+      <div class="input-box">
+        <span>Titular de la tarjeta:</span>
+        <input type="text" placeholder="Emerson reyes" required />
+      </div>
+      <div class="input-box">
+        <span>Número de la tarjeta</span>
+        <input type="number" placeholder=" 1111 2222 3333" required />
+      </div>
+
+      <div class="expedicion d-flex gap-3">
+        <div class="input-box">
+          <span>Mes de expedición</span>
+          <input type="text" placeholder=" junio" required />
+        </div>
+        <div class="input-box">
+          <span>Año de expedición</span>
+          <input type="number" placeholder=" 2026" required />
+        </div>
+      </div>
+
+      <div class="input-box d-flex gap-4">
+        <span class="codigoPdin">CVC</span>
+        <input class="codigoI" type="number" placeholder=" 111" required />
+      </div>
+    </div>
+  </div>
+  <div
+    class="container-button d-flex justify-content-center align-items-center m-3 gap-5"
+  >
+    <button type="submit" class="btn-2">pagar</button>
+    
+    <a class="btn-2 d-flex justify-content-center align-items-center" href="../index.html">volver</a>
+  </div>
+</form>
+
+    </div>
+    <script src="Pasarela.js"></script>
+  </body>
+</html>

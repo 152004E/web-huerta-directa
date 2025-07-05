@@ -4,6 +4,7 @@ $producto = new productos();
 $productos = $producto->ObtenerTodos();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +69,7 @@ $productos = $producto->ObtenerTodos();
                     <span class="material-symbols-outlined">add</span>
                     <h3>Consultar Usuario</h3>
                 </a>
-                <a href="../index.html">
+                <a href="../index.php">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
@@ -142,6 +143,9 @@ $productos = $producto->ObtenerTodos();
                 <!---FIN DE INGRESOS--->
             </div>
             <!---------- fin de insights ------------->
+           
+            
+           
 
             <div class="recent-orders">
                 <h2>Ordenes recientes</h2>

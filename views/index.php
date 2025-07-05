@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
   <html lang="es">
     <head>
       <meta charset="UTF-8" />
@@ -235,76 +235,30 @@
         </div>
       </section>
 
-      
+    <?php include '../controllers/consultar_productos.php';?>
       
 
       <main class="products container1" id="lista-1">
         <h2 data-aos="zoom-in" >Productos destacados</h2>
-        
+         <?php foreach ($productos as $producto): ?>
         <div class="product-content">
           <div class="product" data-aos="zoom-in" data-aos-delay="100">
-            <img src="images/pr1.png" alt="" />
+            <?php
+            var_dump($producto['image_product'])
+            ?>
+            <img src="../uploads/<?php ($producto['image_product']) ?> " alt=''/>
             <div class="product-txt">
-              <h3>manzana</h3>
-              <p class="precio">$700</p>
+             
+              <h3><?php echo htmlspecialchars($producto['name_product']) ?></h3>
+              <p class="precio"><?php echo number_format($producto['price'], 2) ?></p>
               <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar</a>
             </div>
           </div>
-          <div class="product" data-aos="zoom-in" data-aos-delay="200">
-            <img src="images/pr2.png" alt="" />
-            <div class="product-txt">
-              <h3>producto</h3>
-              <p class="precio">$800</p>
-              <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar</a>
-            </div>
-          </div>
-          <div class="product" data-aos="zoom-in" data-aos-delay="300">
-            <img src="images/pr3.png" alt="" />
-            <div class="product-txt">
-              <h3>producto</h3>
-              <p class="precio">$900</p>
-              <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar</a>
-            </div>
-          </div>
-          <div class="product" data-aos="zoom-in" data-aos-delay="400">
-            <img src="images/pr4.png" alt="" />
-            <div class="product-txt">
-              <h3>producto</h3>
-              <p class="precio">$1200</p>
-              <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar</a>
-            </div>
-          </div>
-          <div class="product" data-aos="zoom-in" data-aos-delay="100">
-            <img src="images/pr5.png" alt="" />
-            <div class="product-txt">
-              <h3>producto</h3>
-              <p class="precio">$2300</p>
-              <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar</a>
-            </div>
-          </div>
-          <div class="product" data-aos="zoom-in" data-aos-delay="200">
-            <img src="images/pr6.png" alt="" />
-            <div class="product-txt">
-              <h3>producto</h3>
-              <p class="precio">$300</p>
-              <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar</a>
-            </div>
-          </div>
-          <div class="product" data-aos="zoom-in" data-aos-delay="300">
-            <img src="images/pr7.png" alt="" />
-            <div class="product-txt">
-              <h3>producto</h3>
-              <p class="precio">$1600</p>
-              <a href="#" class="agregar-carrito btn-2" data-id="7">Agregar</a>
-            </div>
-          </div>
-          <div class="product" data-aos="zoom-in" data-aos-delay="400">
-            <img src="images/pr8.png" alt="" />
-            <div class="product-txt">
-              <h3>producto</h3>
-              <p class="precio">$1100</p>
-              <a href="#" class="agregar-carrito btn-2" data-id="8">Agregar</a>
-            </div>
+
+
+             <?php endforeach; ?>
+
+
           </div>
         </div>
       </main>
