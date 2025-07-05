@@ -1,16 +1,12 @@
 <?php
 
+include "../../models/administradores.php";
 
 $admin = new administradores();{
 
-
-
-    $nombre = $_POST["Nombre_usuario"];
-    $correo = $_POST["email"];
-    $clave = $_POST["password"];
-
+    
     // Registrar administrador en la base de datos
-    $respuesta = $admin->RegistrarAdmin($nombre, $correo, $clave);
+    $respuesta = $admin->RegistrarAdmin($_POST["Nombre_usuario"], $_POST["email"], $_POST["password"]);
 
     if ($respuesta === true) {
         echo "
