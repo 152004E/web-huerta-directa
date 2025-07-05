@@ -85,3 +85,58 @@ body {
   color: #004d00;
   text-decoration: underline;
 }
+
+.table-custom {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.table-custom thead {
+  background-color: #f3f3f3;
+  color: #222;
+  font-weight: 600;
+  text-align: left;
+}
+
+.table-custom td,
+.table-custom th {
+  padding: 12px 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.table-custom tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-custom a,
+.table-custom button {
+  color: #8cc63f;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  transition: 0.2s ease;
+}
+
+.table-custom a:hover,
+.table-custom button:hover {
+  color: #6ea634;
+  text-decoration: underline;
+}
+
+
+.table-custom input[type="text"],
+.table-custom input[type="number"] {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}

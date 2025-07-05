@@ -50,7 +50,7 @@
     //Función que envía el formulario al controlador de Actualizar
     function Enviar(){
         //El formulario tiene el id formu
-        document.getElemetById("formu").submit();
+        document.getElementById("formu").submit();
     }
 </script>
 
@@ -73,15 +73,19 @@ else{
 //Toda la tabla esta dentro de un form para que al dar clic en el botón Actualizar,
 //los datos sean enviados al controlador actualizar y la lógica se ejecute
 echo "<form id='formu' action='../actualizar_usuario.php' method='post'>
-    <table class='table table-striped'><tr>
-
-        <th>ID</th> 
-        <th>NOMBRE</th>
-        <th>CORREO</th>
-        <th>CONTRASEÑA</th>
-        
-        </tr>";
-
+    <div class='table-responsive'>
+        <table class='table-custom'>
+            <thead>
+                <tr>
+                    <th>ID</th> 
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                    <th>CONTRASEÑA</th>
+                    <th colspan='2'>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>";
+    
 foreach($respuesta as $fila){
    
     echo "
@@ -94,4 +98,4 @@ foreach($respuesta as $fila){
         <td><a href='../controllers/eliminar_usuarios.php?codigo=$fila[0]'>Eliminar</a></td>
         </tr>";
 }
-echo "</table></form>";
+echo "</tbody></table></div></form>";
