@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>login Huerta Directa</title>
+    <link rel="icon" type="image/png" href="../login/logo_huerta.png" />
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <!-- This is first from -->
+        <form
+          action="../../../controllers/Registro_usuario/registrar_usuario.php"
+          method="post"
+        >
+          <h1>Crear cuenta</h1>
+          <img class="H-logo" src="logo.png" alt="logo" width="100" />
+
+          <div class="from-group">
+            <label>Nombre de usuario</label>
+            <input type="text" name="Nombre_usuario" placeholder="Ejemplo: Santiago Puentes" />
+          </div>
+          <div class="correo-contraseña">
+            <div class="from-group">
+              <label>Ingrese su correo electronico</label>
+              <input
+                id="correoRegistr"
+                type="email"
+                name="email"
+                placeholder="Ingrese su correo electronico"
+                required
+              />
+            </div>
+
+            <div class="from-group">
+              <label>Ingrese su contraseña</label>
+              <input type="password" name="password" placeholder="Contraseña" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-1">Registrar</button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <!-- This is second form-->
+        <form
+          action="../../DashBoard/Dashboardd.php"
+          method="post"
+          onsubmit="return validarCorreo('correoRegistro')"
+          
+        >
+          <h1 class="iniciar_sesion">Iniciar Sesion</h1>
+          <img src="logo.png" alt="logo" width="100" />
+          <span>Usa tu correo y contraseña</span>
+          
+
+          <div class="from-group">
+            <label>Ingrese su correo electronico</label>
+            <input
+              id="correoRegistro"
+              type="email"
+              name="email"
+              placeholder="Ingrese su correo electronico"
+              required
+            />
+          </div>
+
+          <div class="from-group">
+            <label>Ingrese su contraseña</label>
+            <input
+              type="password"
+              name="password_user"
+              placeholder="ingrese su contraseña"
+              required
+            />
+          </div>
+
+          <a class="forget" href="#">Olvidaste tu contraseña?</a>
+          <button type="submit" class="btn-1">Ingresar</button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Bienvenido de vuelta!</h1>
+            <p>Usa tu informacion para ingresar</p>
+            <button class="hidden btn-1" id="login">Iniciar Sesion</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Hola!</h1>
+            <p>Registrate con tu informacion para ingresar</p>
+            <button class="hidden btn-1" id="register">Registrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

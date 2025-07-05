@@ -8,13 +8,25 @@
     <link
       rel="icon"
       type="image/png"
-      href="login/login/logo.png"
+      href="login/login/logo_huerta.png"
     />
+    <!--link para el slider y css del slider-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
+
+    
     <link rel="stylesheet" href="slider.css" />
+    <!--agregacion para los iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--  Animacion al hacer scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Link para el font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
+
+
   </head>
 
   <body>
@@ -26,14 +38,39 @@
           <img src="images/menu.png" class="menu-icon" alt="menu" />
         </label>
         <nav class="navbar">
-          <ul>
-            <li><a href="login/login/pagina.html">Inicio</a></li>
-            <li><a href="Errores/error404.html">Servicios</a></li>
-            <li><a href="Errores/error500.html">Contactos</a></li>
-            <li><a href="./pagina_principal/landing.html">Nosotros</a></li>
-            <li><a href="Quienes_somos/quienes_somos.html">Somos</a></li>
+          <ul class="nav-menu">
+            <li class="dropdown">
+            <a href="">Log in ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="../views/login/login/Log in.html ">📲 Iniciar Sesion</a></li>
+              <li><a href="../views/DashBoard/Dashboardd.php">📲 Registrarse</a></li>
+            </ul>
+            </li>
+            <li class="dropdown">
+            <a href="">Servicios ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="Errores/error404.html">🚚 Entrega a domicilio</a></li>
+              <li><a href="Errores/error404.html">📦 Venta al por mayor</a></li>
+              <li><a href="Errores/error404.html">🌱 Asesoría agrícola</a></li>
+            </ul>
+            </li>
+            <li><a href="#categorias">Categorias</a></li>
+            <li class="dropdown">
+            <a href="">Conocenos ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./pagina_principal/landing.html">🔗 Unete</a></li>
+              <li><a href="Quienes_somos/quienes_somos.html">🔎 Quienes somos</a></li>
+              <li><a href="Errores/error500.html">🎛️ Contactanos</a></li>
+            </ul>
+            </li>
+            <li><a href="#lista-1">Productos</a></li>
           </ul>
         </nav>
+        <div class="agragar_producto">
+          <a class="Producto btn-2 " href="./Agreagar_producto/Agregar_producto.html">Agregar <br> Producto</a>
+          
+        
+        </div>
         <div class="ajustar">
           <ul>
             <li class="submenu">
@@ -51,16 +88,12 @@
                   <tbody></tbody>
                 </table>
                 <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
-                <a
-                  href="/views/Pasarela_Pagos/Pasarela.html"
-                  id="miBoton"
-                  class="btn-2"
-                  >Ir a pagar</a
-                >
+                <a href="/views/Pasarela_Pagos/Pasarela.html" id="miBoton" class="btn-2">Ir a pagar</a>
               </div>
             </li>
           </ul>
-        </div>
+        </div>  
+        
       </div>
       <div class="header-content container1">
         <div class="header-txt">
@@ -121,11 +154,11 @@
         <p>Premium</p>
       </div>
     </section>
+
     <section class="slider-section">
       <!-- carrusel-jesus,santiago -->
-      <!-- Slider en proceso, aun con errores visual -->
       <div class="slider">
-        <div class="container">
+        <div class="container1">
           <div class="wrapper">
             <div class="myslider swiper">
               <div class="swiper-wrapper">
@@ -202,9 +235,9 @@
     </section>
 
     <main class="products container1" id="lista-1">
-      <h2>Productos destacados</h2>
+      <h2 data-aos="zoom-in" >Productos destacados</h2>
       <div class="product-content">
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="100">
           <img src="images/pr1.png" alt="" />
           <div class="product-txt">
             <h3>manzana</h3>
@@ -212,7 +245,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="200">
           <img src="images/pr2.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -220,7 +253,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="300">
           <img src="images/pr3.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -228,7 +261,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="400">
           <img src="images/pr4.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -236,7 +269,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="100">
           <img src="images/pr5.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -244,7 +277,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="200">
           <img src="images/pr6.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -252,7 +285,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="300">
           <img src="images/pr7.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -260,7 +293,7 @@
             <a href="#" class="agregar-carrito btn-2" data-id="7">Agregar</a>
           </div>
         </div>
-        <div class="product">
+        <div class="product" data-aos="zoom-in" data-aos-delay="400">
           <img src="images/pr8.png" alt="" />
           <div class="product-txt">
             <h3>producto</h3>
@@ -271,12 +304,75 @@
       </div>
     </main>
 
-    <section class="contanct container">
-      <form>
-        <input type="email" placeholder="correo" />
-        <input type="submit" class="btn-3" />
-      </form>
-    </section>
+
+      <!--Ctegorias-->
+  <section class="categories" id="categorias">
+    <div class="container container1 categories__container">
+      <div class="categories__left">
+        <h1 data-aos="fade-right">Categorias</h1>
+        <p data-aos="fade-right" data-aos-delay="200">
+          Los productos de mejor calidad y mas frecos del mercado, de la granja a tu mesa. 
+          Explora tu producto favorito en la cateogoria indicada, y descubre los maravillosos precios que maneja el campo para tu bolsillo 🤩🤩🤩
+        </p>
+        <a href="#" class="btn" data-aos="fade-right" data-aos-delay="400" >Saber más</a>
+      </div>
+
+      <div class="categories__right">
+        <article class="category" data-aos="zoom-in" data-aos-delay="100">
+          <span class="category__icon green2"><i class="fa-solid fa-apple-whole"></i></span>
+          <h5>Frutas</h5>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="200">
+          <span class="category__icon green"><i class="fa-solid fa-carrot"></i></span>
+          <h5>Verduras Y hortalizas</h5>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="300">
+          <span class="category__icon green2"><i class="fa-solid fa-cow"></i></span>
+          <h5>Lacteos</h5>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="100">
+          <span class="category__icon green"><i class="fa-solid fa-drumstick-bite"></i></span>
+          <h5>Carnes y Proteinas</h5>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="200">
+          <span class="category__icon green2"><i class="fa-solid fa-bowl-food"></i></span>
+          <h5>Cereales y granos</h5>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="300">
+          <span class="category__icon green"><i class="fa-solid fa-cookie"></i></span>
+          <h5>Productos organicos</h5>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="100">
+          <span class="category__icon green2"><i class="fa-solid fa-plate-wheat"></i></span>
+          <h5>Miel y derivados</h5>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="200">
+          <span class="category__icon green"><i class="fa-solid fa-glass-water"></i></span>
+          <h5>Bebidas naturales</h5>
+        </article>
+
+        <article class="category" data-aos="zoom-in" data-aos-delay="300">
+          <span class="category__icon green2"><i class="fa-solid fa-box-open"></i></span>
+          <h5>Cajas mixtas o combos</h5>
+        </article>
+
+      </div>
+    </div>
+
+
+
+
+
+  </section>
+
+
     <footer
       class="footer1"
       style="background-color: #8bc34a; padding: 40px 0; color: white"
@@ -360,5 +456,14 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <!-- scrit para animaciones al scrollear -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // duración en ms
+        offset: 100,     // cuándo se empieza a activar
+        once: true       // solo una vez por scroll
+      });
+    </script>
   </body>
 </html>
