@@ -90,7 +90,7 @@ body {
   border-color: #fff;
 }
 .container button.hidden:hover {
-  background-color: #b6b5b5;
+  background-color: #004d00;
   border-color: #fff;
 }
 
@@ -109,7 +109,7 @@ body {
   width: 90%;
   padding-left: 15px;
   margin: 5px 0px;
-  border: 2px solid #75ca7a;
+  border: 2px solid #8dc84b;
   border-radius: 30px;
   outline: none;
   font-size: 16px;
@@ -207,9 +207,9 @@ input::placeholder {
 }
 
 .toggle {
-  background-color: #75ca7a;
+  background-color: #8dc84b;
   height: 100%;
-  background: linear-gradient(to right, #a7ffa9, #75ca7a);
+  background: linear-gradient(to right, #8dc84b, #004d00);
   color: #fff;
   position: relative;
   left: -100%;
