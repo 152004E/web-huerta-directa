@@ -154,8 +154,8 @@ $productos = $producto->ObtenerTodos();
                         <tr>
                             <th>Producto</th>
                             <th>Categoria</th>
-                            <th>Estado</th>
                             <th>Precio</th>
+                            <th>Descripcion</th>
                             <th class="acciones">Acciones</th>
                         </tr>
                     </thead>
@@ -167,10 +167,12 @@ $productos = $producto->ObtenerTodos();
                             </td>
                             <td>
                                 <?= htmlspecialchars($producto['category']) ?>
+                            </td>                           
+                            <td>
+                                <?= number_format($producto['price']) ?>
                             </td>
-                            <td><span class="status delivered">Disponible</span></td>
-                            <td>$
-                                <?= number_format($producto['price'], 2) ?>
+                            <td>
+                                <?= htmlspecialchars($producto['description_product']) ?>
                             </td>
                             <td class="acciones">
                                 <a href="../../controllers/eliminar_producto.php?id=<?= $producto['id_product'] ?>"
