@@ -1,35 +1,80 @@
 <?php
-session_start();
+/*session_start();
 if (!isset($_SESSION["perfil"]) || $_SESSION["perfil"] != 1) {
     header("location:../Errores/error403.html");
     exit;
-}
+}*/
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Registrar Administrador</title>
-    <link rel="stylesheet" href="../dashboard/Dashboarddd.css">
+  <meta charset="UTF-8" />
+  <title>Registrar Administrador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="fff.css" />
+  <link rel="icon" type="image/png" href="../../../views/login/login/logo_huerta.png"/>
 </head>
+
 <body>
-    <h2>Registrar nuevo administrador</h2>
+  <div class="container" id="container">
+    <div class="form-container sign-up">
+      <form
+        action="../../../controllers/Administrador/registro_admin.php"
+        method="post"
+      >
+        <h1>Registrar Administrador</h1>
+        <div class="social-icons">
+          <a href="../../index.html" class="icon"
+            ><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+        <img class="H-logo" src="logo.png" alt="logo" width="100" />
 
-    <form action="../../../controllers/Administrador/registro_admin.php" method="POST">
-        <label for="Nombre_usuario">Nombre:</label>
-        <input type="text" name="Nombre_usuario" required><br><br>
+        <div class="from-group">
+          <label>Nombre de administrador</label>
+          <input
+            type="text"
+            name="Nombre_usuario"
+            placeholder="Ej: Carlos Pérez"
+            required
+          />
+        </div>
 
-        <label for="email">Correo:</label>
-        <input type="email" name="email" required><br><br>
+        <div class="correo-contraseña">
+          <div class="from-group">
+            <label>Correo electrónico</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Ej: admin@correo.com"
+              required
+            />
+          </div>
 
-        <label for="password">Contraseña:</label>
-        <input type="password" name="password" required><br><br>
+          <div class="from-group">
+            <label>Contraseña</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Ingrese contraseña"
+              required
+            />
+          </div>
+        </div>
 
-        <button type="submit">Registrar administrador</button>
-    </form>
+        <button type="submit" class="btn-1">Registrar Administrador</button>
+      </form>
 
-    <br>
-    <a href="../dashboard/Dashboardd.php">Volver al Dashboard</a>
+      <br />
+      <a href="../../../views/DashBoard/Dashboardd.php" style="text-align:center;">Volver al Dashboard</a>
+    </div>
+  </div>
 </body>
 </html>

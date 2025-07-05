@@ -1,3 +1,27 @@
+<?php
+
+if (isset($_GET["codigo"])) {
+    $id_user = $_GET["codigo"];
+    include "../../models/usuarios.php";
+    $usuario = new usuarios();
+    $respuesta = $usuario->Eliminar($id_user);
+
+    if ($respuesta === true) {
+        echo "<script>
+            window.location.href = 'Consulta_usuario.php';
+        </script>";
+        exit();
+    } else {
+        echo "<script>
+            alert('❌ No se pudo eliminar el usuario.');
+            window.location.href = 'Consulta_usuario.php';
+        </script>";
+        exit();
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
