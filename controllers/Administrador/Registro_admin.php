@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 <?php
-=======
- <?php
-// Incluye el modelo de administradores
->>>>>>> a30a0d13a0daa02a933a3fd0aa109dcbf758e2fd
 include "../../models/administradores.php";
 
 // Verifica si los datos llegaron correctamente por POST
