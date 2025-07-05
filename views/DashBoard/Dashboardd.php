@@ -278,7 +278,7 @@ $productos = $producto->ObtenerTodos();
                         <h3>849</h3>
                     </div>
                 </div>
-                <a href="../DashBoard/Registro_nuevo_admin/registro_admin.php" class="item add-client"
+                <a href="../../views/DashBoard/Registro_nuevo_admin/form_registro_admin.php" class="item add-client"
                     style="text-decoration: none; color: inherit;">
                     <span class="material-symbols-outlined">add</span>
                     <h3>Añadir administrador</h3>
