@@ -19,9 +19,7 @@ echo "<table>
         <tr>
                 <th>ID</th>
                 <th>NOMBRE</th>
-                <th>DOCUMENTO</th>
-                <th>NUMERO</th>
-                <th>PERFIL</th>
+                <th>CORREO</th>
                 <th>CONTRASEÑA</th>
         </tr>";
 
@@ -32,8 +30,6 @@ foreach($respuesta as $fila){
                 <td>".utf8_decode($fila[1])."</td>
                 <td>".utf8_decode($fila[2])."</td>
                 <td>".utf8_decode($fila[3])."</td>
-                <td>".utf8_decode($fila[4])."</td>
-                <td>".utf8_decode($fila[5])."</td>
         </tr>";
 }
 echo "</table>";
