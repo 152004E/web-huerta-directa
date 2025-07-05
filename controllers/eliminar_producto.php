@@ -1,4 +1,4 @@
- <?php
+<?php
 include "../models/productos.php";
 
 if (isset($_GET['id'])) {
@@ -11,3 +11,4 @@ if (isset($_GET['id'])) {
 } else {
     echo "ID de producto no válido.";
 }
+?>
