@@ -13,9 +13,9 @@ function editarFila(enlace) {
     const password_userActual = password_userCelda.textContent.trim();
 
     // Reemplazar con inputs para edición
-    name_userCelda.innerHTML = `<input type="text" name="name_user" value="${name_userActual}" required>`;
+    name_userCelda.innerHTML = `<input style="width: 150px" type="text" name="name_user" value="${name_userActual}" required>`;
     emailCelda.innerHTML = `<input type="text" name="email" value="${emailActual}" required>`;
-    password_userCelda.innerHTML = `<input type="text" name="password_user" value="${password_userActual}" required>`;
+    password_userCelda.innerHTML = `<input style="width: 100px" type="text" name="password_user" value="${password_userActual}" required>`;
 
     // Obtener ID desde el atributo data-iduser
     const id_user = fila.dataset.iduser;

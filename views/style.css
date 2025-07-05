@@ -403,6 +403,32 @@ input {
   color: #004d00;
   text-decoration: underline;
 }
+
+.ajustar .theme-toggler {
+    background: rgba(132, 139, 200, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+}
+
+.ajustar .theme-toggler span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ajustar .theme-toggler span.active {
+    background: #8dc84b;
+    color: white;
+    border-radius: 0.4rem;
+}
 @media (max-width: 991px) {
   .menu {
     padding: 30px;

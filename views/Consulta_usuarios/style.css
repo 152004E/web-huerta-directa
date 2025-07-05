@@ -13,8 +13,8 @@ body {
 .consulta-container {
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 400px;
-  max-width: 900px;
+  padding: 40px;
+  max-width: 1000px;
   margin: 60px auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -141,6 +141,3 @@ body {
   border: 1px solid #ccc;
 }
 
-.table table-striped {
-  margin-top: 30px;
-  }
