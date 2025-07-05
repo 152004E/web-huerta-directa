@@ -65,8 +65,8 @@ foreach ($respuesta as $fila) {
         <td class='name_user'>$fila[1]</td>
         <td class='email'>$fila[2]</td>
         <td class='password_user'>$fila[3]</td>
-        <td><a href='#' onclick='editarFila(this);'>Editar</a></td>
-        <td><a href='Consulta_usuario.php?codigo=$fila[0]'>Borrar</a></td>
+        <td><a href='#' onclick='editarFila(this);'>Actualizar</a></td>
+       <td><a href='Consulta_usuario.php?codigo=$fila[0]' onclick=\"return confirm('¿Seguro que quieres eliminar este usuario?');\">Eliminar</a></td>
     </tr>";
 }
 
