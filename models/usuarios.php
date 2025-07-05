@@ -61,11 +61,11 @@ class usuarios
         }
     }
 
-    public function ActualizarUsuario($id_user, $name_user, $password_user) {
+    public function ActualizarUsuario($id_user, $name_user, $email, $password_user) {
         try{
         include "conexion.php";
-        $ActualizarU = $conexion-> prepare("UPDATE TB_users SET name_user = ?, password_user = ? WHERE id_user = ? ");
-        $ActualizarU-> execute([$name_user, $password_user, $id_user]);
+        $ActualizarU = $conexion-> prepare("UPDATE TB_users SET name_user = ?, email = ?, password_user = ? WHERE id_user = ? ");
+        $ActualizarU-> execute([$name_user, $email, $password_user, $id_user]);
         if ($ActualizarU->rowCount() > 0) {
             return true;
         } else {
