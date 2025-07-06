@@ -59,7 +59,7 @@ $productos = $producto->ObtenerTodos();
                 </a>
                 <a href="#">
                     <span class="material-symbols-outlined">report</span>
-                    <h3>Reportes</h3>
+                    <h3>Novedades</h3>
                 </a>
                 <a href="#">
                     <span class="material-symbols-outlined">settings</span>
