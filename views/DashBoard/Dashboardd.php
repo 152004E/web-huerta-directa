@@ -4,6 +4,7 @@ $producto = new productos();
 $productos = $producto->ObtenerTodos();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@ $productos = $producto->ObtenerTodos();
     <!-- Link para el font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
     <!-- Enlace al archivo CSS -->
-    <link rel="stylesheet" href="Dashboarddd.css">
+    <link rel="stylesheet" href="Style.css">
     <link rel="icon" type="image/png" href="../login/login/logo_huerta.png" />
 </head>
 
@@ -58,17 +59,17 @@ $productos = $producto->ObtenerTodos();
                 </a>
                 <a href="#">
                     <span class="material-symbols-outlined">report</span>
-                    <h3>Reportes</h3>
+                    <h3>Novedades</h3>
                 </a>
                 <a href="#">
                     <span class="material-symbols-outlined">settings</span>
                     <h3>Configuracion</h3>
                 </a>
-                <a href="../Consulta_usuarios/Consulta_usuarios.php">
+                <a href="../Consulta_usuarios/Consulta_usuario.php">
                     <span class="material-symbols-outlined">add</span>
                     <h3>Consultar Usuario</h3>
                 </a>
-                <a href="../index.html">
+                <a href="../index.php">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
@@ -142,6 +143,9 @@ $productos = $producto->ObtenerTodos();
                 <!---FIN DE INGRESOS--->
             </div>
             <!---------- fin de insights ------------->
+           
+            
+           
 
             <div class="recent-orders">
                 <h2>Ordenes recientes</h2>
@@ -150,8 +154,8 @@ $productos = $producto->ObtenerTodos();
                         <tr>
                             <th>Producto</th>
                             <th>Categoria</th>
-                            <th>Estado</th>
                             <th>Precio</th>
+                            <th>Descripcion</th>
                             <th class="acciones">Acciones</th>
                         </tr>
                     </thead>
@@ -163,10 +167,12 @@ $productos = $producto->ObtenerTodos();
                             </td>
                             <td>
                                 <?= htmlspecialchars($producto['category']) ?>
+                            </td>                           
+                            <td>
+                                <?= number_format($producto['price']) ?>
                             </td>
-                            <td><span class="status delivered">Disponible</span></td>
-                            <td>$
-                                <?= number_format($producto['price'], 2) ?>
+                            <td>
+                                <?= htmlspecialchars($producto['description_product']) ?>
                             </td>
                             <td class="acciones">
                                 <a href="../../controllers/eliminar_producto.php?id=<?= $producto['id_product'] ?>"
@@ -178,10 +184,16 @@ $productos = $producto->ObtenerTodos();
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <a href="#">Mostrar todo</a>
-                <a href="../controllers/reportexls_usuarios.php">Exportar a Excel</a>
+
+                
+                
+            </div>
+            
+            <div class="export-links">
+                <a href="../../controllers/Reportes/reportexls_productos.php">Exportar a Excel</a>
+
                 <hr>
-                <a href="../controllers/reportepdf_usuarios.php">Exportar a Pdf</a>
+                <a href="../../controllers/Reportes/reportepdf_productos.php">Exportar a Pdf</a>
             </div>
 
         </main>
@@ -227,10 +239,10 @@ $productos = $producto->ObtenerTodos();
                     </div>
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="imagesDashBoard/img1.jpg" alt="">
+                            <img src="imagesDashBoard/Yeferson.png" alt="">
                         </div>
                         <div class="message">
-                            <p><b>Rigoberto</b> recibio su orden de un Combo super</p>
+                            <p><b>Yeferson</b> recibio su orden de suero costeño</p>
                             <small class="text-muted">Hace 9 horas</small>
                         </div>
                     </div>
@@ -278,7 +290,7 @@ $productos = $producto->ObtenerTodos();
                         <h3>849</h3>
                     </div>
                 </div>
-                <a href="../DashBoard/Registro_nuevo_admin/registro_admin.php" class="item add-client"
+                <a href="../../views/DashBoard/Registro_nuevo_admin/form_registro_admin.php" class="item add-client"
                     style="text-decoration: none; color: inherit;">
                     <span class="material-symbols-outlined">add</span>
                     <h3>Añadir administrador</h3>

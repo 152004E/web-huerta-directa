@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+}
+
+body {
+  background-color: #f7efd8;
+  background: #f7efd8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  width: 908px;
+  height: auto;
+  max-width: 100%;
+  padding: 40px;
+}
+
+.container p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+
+.from-group label {
+  font-weight: 400;
+  padding-left: 15px;
+  margin: 10px 0px;
+}
+
+.container span {
+  font-size: 12px;
+}
+
+.container a {
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+
+.container .forget {
+  font-weight: 300px;
+}
+
+.container .forget:hover {
+  font-weight: 400px;
+  color: #8dc84b;
+}
+
+.container button {
+  background-color: #8dc84b;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn-1 {
+  font-size: 17px !important;
+  display: inline-block;
+  padding: 13px 25px;
+  color: #ffff !important;
+  background-color: #8dc84b;
+  border-radius: 15px;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-1:hover {
+  background-color: #004d00;
+}
+
+.btn-2 {
+  font-size: 17px !important;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffff !important;
+  background-color: #8dc84b;
+  border-radius: 15px;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-2:hover {
+  background-color: #004d00;
+}
+
+.container form {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.container input {
+  padding: 9px 90px;
+  width: 90%;
+  padding-left: 15px;
+  margin: 5px 0px;
+  border: 2px solid #8dc84b;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+  color: #333128;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder {
+  color: #888;
+  font-size: 16px;
+  font-style: italic;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.container input:focus {
+  border-color: #004d00;
+  box-shadow: 0 0 5px rgba(0, 77, 0, 0.5);
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sign-up {
+  width: 100%;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  border: 1px solid #ccc;
+  border-radius: 20%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icons a:hover {
+  background-color: #ebebeb;
+}
+
+section {
+  background-image: url("logo_huerta.png");
+  background-position: 70px 50px;
+  background-position: right center;
+}
