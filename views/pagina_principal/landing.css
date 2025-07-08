@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #f6f1dd;
+  background-color: #FEF5DC;
   font-size: 18px; /* tamaño general de letra aumentado */
   display: flex;
   justify-content: center;
@@ -16,6 +16,7 @@ body {
   box-sizing: border-box;
 }
 .container {
+  color: #FEF5DC;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -33,14 +34,20 @@ body {
   font-size: 25px;
   font-weight: 600;
   text-transform: uppercase;
-  transition: color 0.5s ease, color 0.5s ease;
+  transition: color 0.4s ease, transform 0.9s ease;
+  letter-spacing: 1px;
 }
+
 .logo:hover {
   color: #028602;
+  transform: scale(1.1);
 }
 .menu .navbar ul li {
   position: relative;
   float: left;
+}
+.menu .navbar  {
+ background-color: #FEF5DC;
 }
 .menu .navbar ul li a {
   font-size: 18px;
@@ -48,11 +55,11 @@ body {
   display: block !important;
   color: #333128;
   font-weight: 600;
-  transition: color 0.3s ease, color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 .menu .navbar ul li a:hover {
-  color: #807f7f;
+  color: #5aaa37;
 }
 
 #menu {
@@ -93,7 +100,7 @@ td {
 }
 
 .invitacion {
-  background-color: #f6f1dd;
+  background-color: #FEF5DC;
   padding: 4rem 2rem;
   text-align: center;
   width: 100%;
@@ -112,7 +119,8 @@ td {
   transition: transform 0.3s ease;
 }
 .logo-huerta:hover{
-    transform: translateY(-10px); 
+    transform: translateY(-2px); 
+    transform: scale(1.1);
 }
 
 .invitacion h2 {
@@ -138,9 +146,12 @@ td {
   border-radius: 30px;
   text-decoration: none;
   font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease ,transform 0.3s ease;
 }
 
 .boton-invitacion:hover {
-  background-color: #66c03f;
+  background-color: #5aaa37;
+  transform: scale(1.05);
 }

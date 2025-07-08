@@ -111,7 +111,7 @@ function vaciarCarrito() {
 }
 
 document.getElementById("miBoton").addEventListener("click", function() {
-  window.location.href = "/views/Pasarela_Pagos/Pasarela.html";
+  window.location.href = "Pasarela_Pagos/Pasarela.html";
 });
 
 //slider     lo modifique porque no se ha terminado y me da error en consola 
@@ -134,12 +134,14 @@ themeToggler.addEventListener('click', () => {
     themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
 })
 
-let toggle = document.querySelector("#menu-btn"); // Este es tu botón para abrir el menú
+let toggle = document.querySelector("#menu-btn");
 let sidebar = document.querySelector("aside");
 let main = document.querySelector("main");
 
-toggle.onclick = function(){
+if (toggle && sidebar && main) {
+  toggle.onclick = function () {
     sidebar.classList.toggle("active");
     main.classList.toggle("active");
     console.log("Sidebar toggled");
-};
+  };
+}
