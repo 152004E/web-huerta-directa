@@ -18,7 +18,7 @@
 
 
   <main class="products container1" id="lista-1">
-    <h2 data-aos="zoom-in">Frutas</h2>
+    <h2 data-aos="zoom-in">Verduras y hortalizas</h2>
 
     <div class="products-container">
       <?php foreach ($productos as $producto): ?>

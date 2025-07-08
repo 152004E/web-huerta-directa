@@ -88,13 +88,13 @@
                  <tbody></tbody>
                </table>
                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
-               <a href="#" id="miBoton"  class="btn-2">Ir a pagar</a>
+               <a href="#" id="miBoton" class="btn-2">Ir a pagar</a>
 
              </div>
 
            </li>
          </ul>
-         <div class="theme-toggler" >
+         <div class="theme-toggler">
            <span class="material-symbols-outlined active">light_mode</span>
            <span class="material-symbols-outlined">dark_mode</span>
          </div>
@@ -269,53 +269,87 @@
          <a href="#" class="btn" data-aos="fade-right" data-aos-delay="400">Saber más</a>
        </div>
 
-        <div class="categories__right">
-          <a href="Productos/Frutas.php">
-          <article class="category" data-aos="zoom-in" data-aos-delay="100" href="./Productos/Frutas.php">
-            <span class="category__icon green2"><i class="fa-solid fa-apple-whole"></i></span>
-            <h5>Frutas</h5>
-          </article>
-          </a>
+       <div class="categories__right">
 
-         <article class="category" data-aos="zoom-in" data-aos-delay="200">
-           <span class="category__icon green"><i class="fa-solid fa-carrot"></i></span>
-           <h5>Verduras Y hortalizas</h5>
-         </article>
+         <!--primer categoria de productos-->
 
-         <article class="category" data-aos="zoom-in" data-aos-delay="300">
-           <span class="category__icon green2"><i class="fa-solid fa-cow"></i></span>
-           <h5>Lacteos</h5>
-         </article>
+         <a href="ProductosCategorias/Frutas.php">
+           <article class="category" data-aos="zoom-in" data-aos-delay="100" href="./Productos/Frutas.php">
+             <span class="category__icon green2"><i class="fa-solid fa-apple-whole"></i></span>
+             <h5>Frutas</h5>
+           </article>
+         </a>
+         <!--Segunda categoria de productos-->
 
-         <article class="category" data-aos="zoom-in" data-aos-delay="100">
-           <span class="category__icon green"><i class="fa-solid fa-drumstick-bite"></i></span>
-           <h5>Carnes y Proteinas</h5>
-         </article>
+         <a href="ProductosCategorias/VerdurasYHortalizas.php">
+           <article class="category" data-aos="zoom-in" data-aos-delay="200">
+             <span class="category__icon green"><i class="fa-solid fa-carrot"></i></span>
+             <h5>Verduras Y hortalizas</h5>
+           </article>
+         </a>
 
-         <article class="category" data-aos="zoom-in" data-aos-delay="200">
-           <span class="category__icon green2"><i class="fa-solid fa-bowl-food"></i></span>
-           <h5>Cereales y granos</h5>
-         </article>
+         <!--tercera categoria de productos-->
 
-         <article class="category" data-aos="zoom-in" data-aos-delay="300">
-           <span class="category__icon green"><i class="fa-solid fa-cookie"></i></span>
-           <h5>Productos organicos</h5>
-         </article>
 
-         <article class="category" data-aos="zoom-in" data-aos-delay="100">
-           <span class="category__icon green2"><i class="fa-solid fa-plate-wheat"></i></span>
-           <h5>Miel y derivados</h5>
-         </article>
+         <a href="ProductosCategorias/Lacteos.php">
+           <article class="category" data-aos="zoom-in" data-aos-delay="300">
+             <span class="category__icon green2"><i class="fa-solid fa-cow"></i></span>
+             <h5>Lacteos</h5>
+           </article>
+         </a>
+         <!--Cuarta categoria de productos-->
 
-         <article class="category" data-aos="zoom-in" data-aos-delay="200">
-           <span class="category__icon green"><i class="fa-solid fa-glass-water"></i></span>
-           <h5>Bebidas naturales</h5>
-         </article>
 
-         <article class="category" data-aos="zoom-in" data-aos-delay="300">
-           <span class="category__icon green2"><i class="fa-solid fa-box-open"></i></span>
-           <h5>Cajas mixtas o combos</h5>
-         </article>
+         <a href="ProductosCategorias/CarnesYProteinas.php">
+           <article class="category" data-aos="zoom-in" data-aos-delay="100">
+             <span class="category__icon green"><i class="fa-solid fa-drumstick-bite"></i></span>
+             <h5>Carnes y Proteinas</h5>
+           </article>
+         </a>
+         <!--Quinto categoria de productos-->
+
+
+         <a href="ProductosCategorias/CerealesYGranos.php">
+           <article class="category" data-aos="zoom-in" data-aos-delay="200">
+             <span class="category__icon green2"><i class="fa-solid fa-bowl-food"></i></span>
+             <h5>Cereales y granos</h5>
+           </article>
+         </a>
+         <!--Sexta categoria de productos-->
+
+         <a href="ProductosCategorias/Organicos.php">
+           <article class="category" data-aos="zoom-in" data-aos-delay="300">
+             <span class="category__icon green"><i class="fa-solid fa-cookie"></i></span>
+             <h5>Productos organicos</h5>
+           </article>
+         </a>
+         <!--Setmima categoria de productos-->
+
+
+         <a href="ProductosCategorias/MielYDerivados.php">
+           <article class="category" data-aos="zoom-in" data-aos-delay="100">
+             <span class="category__icon green2"><i class="fa-solid fa-plate-wheat"></i></span>
+             <h5>Miel y derivados</h5>
+           </article>
+         </a>
+         <!--Octava categoria de productos-->
+
+         <a href="ProductosCategorias/BebidasNaturales.php">
+           <article class="category" data-aos="zoom-in" data-aos-delay="200">
+             <span class="category__icon green"><i class="fa-solid fa-glass-water"></i></span>
+             <h5>Bebidas naturales</h5>
+           </article>
+         </a>
+
+         <!--Novena categoria de productos-->
+
+
+         <a href="ProductosCategorias/CajasMixtas.php">
+           <article class="category" data-aos="zoom-in" data-aos-delay="300">
+             <span class="category__icon green2"><i class="fa-solid fa-box-open"></i></span>
+             <h5>Cajas mixtas o combos</h5>
+           </article>
+         </a>
 
        </div>
      </div>
