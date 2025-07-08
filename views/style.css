@@ -304,32 +304,37 @@ h3 {
   padding: 0 0 100px 0;
   width: 500px;
 }
-.products  .container1 h2 {
+.products .container1 h2 {
   color: #333128;
   text-transform: capitalize;
   margin-bottom: 55px;
   font-size: 40px;
 }
 
-.product-content {
+/*.product-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
   margin: 0;
-}
+}*/
 
-.product  {
+.product {
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   padding: 35px 55px;
-  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50px; /* Ajusta según altura deseada */
 }
 .product img {
   width: 150px;
   height: 130px;
   margin-bottom: 10px;
 }
-.product  h3 {
+.product h3 {
   color: #8dc84b;
 }
 .product p {
@@ -339,14 +344,13 @@ h3 {
   font-weight: 600;
 }
 
-.products-container {
+.products-container{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px; /* Reduce espacio horizontal y vertical */
+  gap: 25px; /* Reduce espacio horizontal y vertical */
   justify-items: center;
-  padding: 35px; /* También reduce espacio vertical si hace falta */
+  padding: 10px; /* También reduce espacio vertical si hace falta */
 }
-
 
 .btn-2 {
   display: inline-block;
@@ -433,29 +437,29 @@ input {
 }
 
 .ajustar .theme-toggler {
-    background: rgba(132, 139, 200, 0.18);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1.6rem;
-    width: 4.2rem;
-    cursor: pointer;
-    border-radius: 0.4rem;
+  background: rgba(132, 139, 200, 0.18);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.6rem;
+  width: 4.2rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
 }
 
 .ajustar .theme-toggler span {
-    font-size: 1.2rem;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ajustar .theme-toggler span.active {
-    background: #8dc84b;
-    color: white;
-    border-radius: 0.4rem;
+  background: #8dc84b;
+  color: white;
+  border-radius: 0.4rem;
 }
 @media (max-width: 991px) {
   .menu {
@@ -544,7 +548,13 @@ input {
 
 /*Categorias */
 .categories {
-  background: linear-gradient(to bottom, #ffffff 0%, #fef5dc 20%, #fef5dc 90%, #ffffff 100%);
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #fef5dc 20%,
+    #fef5dc 90%,
+    #ffffff 100%
+  );
   color: rgb(0, 0, 0);
   padding: 5rem 0;
 }
@@ -616,12 +626,24 @@ input {
 }
 
 /* Colores diferentes por categoría*/
-.purple { background: #a084dc; }
-.red { background: #ff6b6b; }
-.green { background: #8dc84b; }
-.green2 { background: #ddfacc; }
-.blue { background: #4fc3f7; }
-.violet { background: #c084fc; }
+.purple {
+  background: #a084dc;
+}
+.red {
+  background: #ff6b6b;
+}
+.green {
+  background: #8dc84b;
+}
+.green2 {
+  background: #ddfacc;
+}
+.blue {
+  background: #4fc3f7;
+}
+.violet {
+  background: #c084fc;
+}
 
 .category h5 {
   margin: 0.5rem 0;
