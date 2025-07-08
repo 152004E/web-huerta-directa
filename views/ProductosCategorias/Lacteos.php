@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Categoria Lacteos || Huerta directa</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
+
 </head>
 
 <body>
   <?php
   include_once(__DIR__ . '/../../models/productos.php');
   $producto = new productos();
-  $productos = $producto->ConsultaEspecifica('category', 'Frutas');
+  $productos = $producto->ConsultaEspecifica('category', 'lacteos');
   ?>
 
 
