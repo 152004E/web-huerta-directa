@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Huerta directa</title>
       <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="darkindex.css" />
       <link
         rel="icon"
         type="image/png"
@@ -93,6 +94,10 @@
                 </div>
               </li>
             </ul>
+            <div class="theme-toggler">
+            <span class="material-symbols-outlined active">light_mode</span>
+            <span class="material-symbols-outlined">dark_mode</span>
+          </div>
           </div>  
           
         </div>
