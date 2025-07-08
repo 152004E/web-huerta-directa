@@ -14,7 +14,7 @@
   <?php
   include_once(__DIR__ . '/../../models/productos.php');
   $producto = new productos();
-  $productos = $producto->ConsultaEspecifica('category', 'Frutas');
+  $productos = $producto->ConsultaEspecifica('category', 'carnes-proteinas');
   ?>
 
 

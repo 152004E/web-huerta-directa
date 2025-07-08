@@ -362,9 +362,10 @@ h3 {
   background-color: #8dc84b;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 3s ease, color 3s ease, transform 1s ease;
 }
 .btn-2:hover {
+  transform: scale(1.05);
   background-color: #004d00;
 }
 .service {
@@ -602,16 +603,17 @@ input {
 }
 
 .category {
+  min-height: 200px;
   background-color: #ffffff;
   padding: 2rem 1rem;
   border-radius: 1.5rem;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  transition: all 4s ease;
 }
 
 .category:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(2);
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
 }
 
