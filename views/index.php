@@ -248,7 +248,7 @@
   
           <div class="products-container">
             <?php foreach ($productos as $producto): ?>
-              <div class="product-content" data-aos="zoom-in" data-aos-delay="100">
+              <div data-aos="zoom-in" data-aos-delay="100">
                 <div class="product">
                   <img src="../uploads/<?php echo $producto['image_product']; ?>" alt="Imagen de <?php echo htmlspecialchars($producto['name_product']) ?>" />
                   <div class="product-txt">
@@ -276,10 +276,12 @@
         </div>
 
         <div class="categories__right">
-          <article class="category" data-aos="zoom-in" data-aos-delay="100">
+          <a href="Productos/Frutas.php">
+          <article class="category" data-aos="zoom-in" data-aos-delay="100" href="./Productos/Frutas.php">
             <span class="category__icon green2"><i class="fa-solid fa-apple-whole"></i></span>
             <h5>Frutas</h5>
           </article>
+          </a>
 
           <article class="category" data-aos="zoom-in" data-aos-delay="200">
             <span class="category__icon green"><i class="fa-solid fa-carrot"></i></span>
