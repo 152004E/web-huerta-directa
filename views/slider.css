@@ -47,19 +47,29 @@
   color: #8dc84b;
   font-size: 36px;
 }
-.slider .primary-button {
+@keyframes botonHover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+    background-color: #004d00;
+  }
+}
+
+ .primary-button {
   display: inline-block;
   padding: 15px 30px;
-  color: #ffff;
+  color: #fff;
   background-color: #8dc84b;
   border-radius: 50px;
   text-transform: uppercase;
   font-weight: 600;
-  transition: background-color 0.3s ease;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
-.slider .primary-button:hover {
-  background-color: #004d00;
+.primary-button:hover {
+  animation: botonHover 0.5s forwards;
 }
 
 .slider-section {

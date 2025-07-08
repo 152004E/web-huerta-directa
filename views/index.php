@@ -266,7 +266,7 @@
            Los productos de mejor calidad y mas frecos del mercado, de la granja a tu mesa.
            Explora tu producto favorito en la cateogoria indicada, y descubre los maravillosos precios que maneja el campo para tu bolsillo 🤩🤩🤩
          </p>
-         <a href="#" class="btn" data-aos="fade-right" data-aos-delay="400">Saber más</a>
+         <a href="#" class="btn-2" data-aos="fade-right" data-aos-delay="400">Saber más</a>
        </div>
 
        <div class="categories__right">
