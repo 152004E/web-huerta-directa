@@ -4,17 +4,17 @@ function editarFila(enlace) {
 
     // Obtener las celdas a editar
     const name_userCelda = fila.querySelector('.name_user');
-    const emailCelda = fila.querySelector('.email');
+  
     const password_userCelda = fila.querySelector('.password_user');
 
     // Obtener los valores actuales
     const name_userActual = name_userCelda.textContent.trim();
-    const emailActual = emailCelda.textContent.trim();
+   
     const password_userActual = password_userCelda.textContent.trim();
 
     // Reemplazar con inputs para edición
     name_userCelda.innerHTML = `<input style="width: 150px" type="text" name="name_user" value="${name_userActual}" required>`;
-    emailCelda.innerHTML = `<input type="text" name="email" value="${emailActual}" required>`;
+   
     password_userCelda.innerHTML = `<input style="width: 100px" type="text" name="password_user" value="${password_userActual}" required>`;
 
     // Obtener ID desde el atributo data-iduser

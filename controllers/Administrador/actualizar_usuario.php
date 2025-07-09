@@ -3,7 +3,7 @@ include "../../models/usuarios.php";
 
 $usuario = new usuarios();
 
-$respuesta = $usuario->ActualizarUsuario( $_POST["id_user"], $_POST["name_user"], $_POST["email"], $_POST["password_user"]);
+$respuesta = $usuario->ActualizarUsuario( $_POST["id_user"], $_POST["name_user"], $_POST["password_user"]);
 
 
 if ($respuesta === true) {

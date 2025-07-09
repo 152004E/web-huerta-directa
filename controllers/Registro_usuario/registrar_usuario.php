@@ -23,7 +23,7 @@ if($respuesta instanceof Exception){
     header("location:../views/Errores/error500.html");
 }
 else if($respuesta == true){
- header("location:../../views/index.html");
+ header("location:../../views/index.php");
     
    
 }

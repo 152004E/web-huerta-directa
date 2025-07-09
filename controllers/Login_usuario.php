@@ -4,7 +4,7 @@
 
 include "../models/usuarios.php";
 
-//var_dump($_POST);
+///var_dump($_POST);
 
 
 $usuario = new usuarios();
@@ -17,17 +17,17 @@ if($respuesta instanceof Exception){
 }
 else if(!empty($respuesta)){
     if($respuesta[0]["fk_id_role"]=="1"){
-        header("location:../views/DashBoard/Dashboardd.php");
+        header("location:../views/dashboard/dashboardd.php");
     }
     else if ($respuesta[0]["fk_id_role"]=="2"){
-        header("location:../views/index.html");
+        header("location:../views/index.php");
     }
 }
 else{
     echo "
         <script>
             alert('Datos incorrectos, vuelva a intentar');
-            location.href='../views/login/login/pagina.html';
+            location.href='../views/login/login/Log in.html';
         </script>
     ";
 }

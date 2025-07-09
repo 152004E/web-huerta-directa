@@ -53,7 +53,7 @@ $productos = $producto->ObtenerTodos();
                     <span class="material-symbols-outlined">mail</span>
                     <h3>Mensajes</h3>
                 </a>
-                <a href="#">
+                <a href="../index.php">
                     <span class="material-symbols-outlined">inventory</span>
                     <h3>Productos</h3>
                 </a>
@@ -71,7 +71,7 @@ $productos = $producto->ObtenerTodos();
                 </a>
                 <a href="../index.php">
                     <span class="material-symbols-outlined">logout</span>
-                    <h3>Logout</h3>
+                    <h3>Volver al Inicio</h3>
                 </a>
             </div>
         </aside>
