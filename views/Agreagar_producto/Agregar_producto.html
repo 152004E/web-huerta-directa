@@ -28,7 +28,6 @@
     />
   </head>
   <body>
-    
     <!--congigurar los links-->
     <!--nombre del producto, descripcion,precio,categoria -->
     <div
@@ -49,7 +48,7 @@
 
         <div class="nombre-producto d-flex">
           <label class="" for="nombre">Nombre del producto:</label><br />
-          <input type="text" id="nombre" name="nombre" required />
+          <input type="text" id="nombre" name="nombre" required uppercase/>
         </div>
 
         <span class="border border-1"></span>
@@ -66,6 +65,24 @@
             />
           </div>
           <br />
+          <div class="unidad-medida">
+            <label for="unidad">Unidad de medida:</label><br />
+            <select id="unidad" name="unidad" class="rounded">
+              <option value="">Medida</option>
+              <option value="kg">Kilogramos (kg)</option>
+              <option value="g">Gramos (g)</option>
+              <option value="lb">Libras (lb)</option>
+              <option value="unidad">Unidad (u)</option>
+              <option value="litro">Litros (L)</option>
+              <option value="ml">Mililitros (ml)</option>
+              <option value="docena">Docena</option>
+              <option value="paq">Paquete</option>
+              <option value="caja">Caja</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <br />
+          
           <span class="border border-1"></span>
 
           <div class="cotegoria-producto">
@@ -120,7 +137,7 @@
           <span id="file-name">Ningún archivo seleccionado</span>
         </div>
 
-        <span class="border border-2 d-flex"></span>
+        <span class="border border-1 d-flex"></span>
 
         <br />
         <div class="descripcion-producto d-flex gap-3">
@@ -154,17 +171,19 @@
           <!--<span class="cerrar" id="cerrarModal">&times;</span>-->
           <div class="product">
             <h3>Vista previa</h3>
-            <img id="prev-imagen" src="images/pr1.png" alt="Vista previa" />
+            <img id="prev-imagen" class="imagenAgregarProducto" src="../images/ImgenAgregarProducto1.png" alt="Vista previa" />
             <div class="product-txt">
-              <h3 id="prev-nombre">—</h3>
-              <br>
-              <p class="precio" id="prev-precio">$0.00</p>
-              <br>
+              <h3 id="prev-nombre">Nombre del producto</h3>
+              <br />
+              <p class="precio" id="prev-precio">Precio $0.00</p>
+              <br />
+              <p id="prev-unidad">Medida: —</p>
+              <br />
               <p id="prev-categoria">Categoría: —</p>
-              <br>
-              <p id="prev-descripcion">Descripcion: —</p>
+              <br />
+              <p id="prev-descripcion">Descripción: —</p>
             </div>
-            <br>
+            <br />
             <button class="cerrar btn-2" id="cerrarModal">Cerrar</button>
           </div>
         </div>
@@ -190,6 +209,7 @@
       const categoria = document.querySelector('[name="categoria-producto"]');
       const descripcion = document.querySelector('[name="descripcion"]');
       const imagen = document.querySelector('[name="image_product"]');
+      const unidad = document.querySelector('[name="unidad"]');
 
       // Referencias al modal y sus contenidos
       const modal = document.getElementById("modalVistaPrevia");
@@ -199,18 +219,19 @@
       const prevCategoria = document.getElementById("prev-categoria");
       const prevDescripcion = document.getElementById("prev-descripcion");
       const prevImagen = document.getElementById("prev-imagen");
+      const prevUnidad = document.getElementById("prev-unidad");
 
       // Evento al hacer clic en visualizar
       btnVisualizar.addEventListener("click", () => {
         // Llenar los datos
-        prevNombre.textContent = nombre.value || "—";
-        prevPrecio.textContent = precio.value ? `$${precio.value}` : "$0.00";
+        prevNombre.textContent = nombre.value || "Nombre del producto";
+        prevPrecio.textContent = precio.value ? `Precio: $${precio.value}` : "Precio: $0.00";
+        prevUnidad.textContent =
+          "Medida: " + (unidad.options[unidad.selectedIndex].text || "—");
         prevCategoria.textContent =
           "Categoría: " +
           (categoria.options[categoria.selectedIndex].text || "—");
-        prevDescripcion.textContent = 
-          "Descripción: " +
-        descripcion.value || "—";
+        prevDescripcion.textContent = "Descripción: " + (descripcion.value || "Descripción del producto");
 
         const file = imagen.files[0];
         if (file) {
@@ -220,7 +241,7 @@
           };
           reader.readAsDataURL(file);
         } else {
-          prevImagen.src = "images/pr1.png"; // Imagen por defecto
+          prevImagen.src = "../images/ImgenAgregarProducto1.png"; // Imagen por defecto
         }
 
         // Mostrar el modal
