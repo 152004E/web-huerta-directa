@@ -5,7 +5,7 @@ include "../../models/usuarios.php";
 $usuario = new usuarios();
 $respuesta = $usuario->ConsultaGeneral();
 //Se asigna a $datos todos los datos a exportar
-
+//var_dump($respuesta);
 class PDF extends FPDF
 {
     // Cabecera
@@ -19,7 +19,7 @@ class PDF extends FPDF
         $this->Cell(20, 10, 'Codigo', 1);   //Se define el alto, ancho y contenido de la celda
         $this->Cell(40, 10, 'Nombre', 1);
         $this->Cell(50, 10, 'Correo', 1);
-        $this->Cell(25, 10, 'Contraseña', 1);
+        $this->Cell(25, 10, 'Clave', 1);
         $this->Ln();    //Se asigna al documento la línea
     }
 
@@ -38,12 +38,12 @@ $pdf->SetFont('Arial', '', 10);     //Fuente
 
 foreach($respuesta as $fila){    //El ciclo llena la tabla desde la tercera línea
     $pdf->Cell(20, 8, $fila[0], 1);     //Se asigna en la siguiente línea el dato
-    $pdf->Cell(30, 8, $fila[1], 1);
+    $pdf->Cell(40, 8, $fila[1], 1);
     $nombre = utf8_decode($fila[2]);    //Permite que integre caracteres especiales
-    $pdf->Cell(40, 8, $nombre, 1);
-    $pdf->Cell(30, 8, $fila[3], 1);
-    $pdf->Cell(50, 8, $fila[4], 1);
-    $pdf->Cell(25, 8, $fila[5], 1);
+    $pdf->Cell(50, 8, $nombre, 1);
+    $pdf->Cell(25, 8, $fila[3], 1);
+  //  $pdf->Cell(50, 8, $fila[4], 1);
+  //  $pdf->Cell(25, 8, $fila[5], 1);
     $pdf->Ln();
 }
 

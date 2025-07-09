@@ -30,7 +30,9 @@
   <body>
     <!--congigurar los links-->
     <!--nombre del producto, descripcion,precio,categoria -->
-    <div class="container1 d-flex align-items-center justify-content-center">
+    <div
+      class="container1 d-flex align-items-center justify-content-center gap-5"
+    >
       <form
         class="input-box categoria-form border p-4 border-2 rounded-5 px-5"
         action="../../controllers/ControladorP.php"
@@ -46,7 +48,7 @@
 
         <div class="nombre-producto d-flex">
           <label class="" for="nombre">Nombre del producto:</label><br />
-          <input type="text" id="nombre" name="nombre" required />
+          <input type="text" id="nombre" name="nombre" required uppercase/>
         </div>
 
         <span class="border border-1"></span>
@@ -63,11 +65,33 @@
             />
           </div>
           <br />
+          <div class="unidad-medida">
+            <label for="unidad">Unidad de medida:</label><br />
+            <select id="unidad" name="unidad" class="rounded">
+              <option value="">Medida</option>
+              <option value="kg">Kilogramos (kg)</option>
+              <option value="g">Gramos (g)</option>
+              <option value="lb">Libras (lb)</option>
+              <option value="unidad">Unidad (u)</option>
+              <option value="litro">Litros (L)</option>
+              <option value="ml">Mililitros (ml)</option>
+              <option value="docena">Docena</option>
+              <option value="paq">Paquete</option>
+              <option value="caja">Caja</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <br />
+          
           <span class="border border-1"></span>
 
           <div class="cotegoria-producto">
-            <label for="categoria">Categoría:</label><br/>
-            <select class="rounded" name="categoria-producto" id="categoria-producto">
+            <label for="categoria">Categoría:</label><br />
+            <select
+              class="rounded"
+              name="categoria-producto"
+              id="categoria-producto"
+            >
               <option value="">Seleccione la categoria</option>
               <option value="frutas">Frutas</option>
               <option value="verduras-hortalizas">Verduras y Hortalizas</option>
@@ -78,7 +102,9 @@
               <option value="productos-organicos">Productos Orgánicos</option>
               <option value="hierbas-especias">Hierbas y Especias</option>
               <option value="miel-derivados">Miel y Derivados</option>
-              <option value="procesados-artesanales">Productos Procesados Artesanales</option>
+              <option value="procesados-artesanales">
+                Productos Procesados Artesanales
+              </option>
               <option value="bebidas-naturales">Bebidas Naturales</option>
               <option value="plantas-semillas">Plantas y Semillas</option>
               <option value="cajas-combos">Cajas Mixtas o Combos</option>
@@ -97,14 +123,21 @@
           class="form-group d-flex align-items-center justify-content-between"
         >
           <label for="imagen">Imagen del producto:</label>
-          <input type="file" id="imagen" name="image_product" accept="image/*" required hidden />
+          <input
+            type="file"
+            id="imagen"
+            name="image_product"
+            accept="image/*"
+            required
+            hidden
+          />
           <label for="imagen" class="custom-file-label"
             >📁 Seleccionar imagen
           </label>
           <span id="file-name">Ningún archivo seleccionado</span>
         </div>
 
-        <span class="border border-2 d-flex"></span>
+        <span class="border border-1 d-flex"></span>
 
         <br />
         <div class="descripcion-producto d-flex gap-3">
@@ -120,9 +153,12 @@
         <br />
 
         <div
-          class="container-button d-flex align-items-center justify-content-center gap-3" 
+          class="container-button d-flex align-items-center justify-content-center gap-3"
         >
-         <button type="submit" class="btn-2">Registrar</button>
+          <button type="submit" class="btn-2">Agregar</button>
+          <button type="button" id="btn-visualizar" class="btn-2">
+            Visualizar
+          </button>
           <a
             class="btn-2 d-flex justify-content-center align-items-center"
             href="../index.html"
@@ -130,18 +166,99 @@
           >
         </div>
       </form>
+      <div id="modalVistaPrevia" class="modal">
+        <div class="modal-contenido">
+          <!--<span class="cerrar" id="cerrarModal">&times;</span>-->
+          <div class="product">
+            <h3>Vista previa</h3>
+            <img id="prev-imagen" class="imagenAgregarProducto" src="../images/ImgenAgregarProducto1.png" alt="Vista previa" />
+            <div class="product-txt">
+              <h3 id="prev-nombre">Nombre del producto</h3>
+              <br />
+              <p class="precio" id="prev-precio">Precio $0.00</p>
+              <br />
+              <p id="prev-unidad">Medida: —</p>
+              <br />
+              <p id="prev-categoria">Categoría: —</p>
+              <br />
+              <p id="prev-descripcion">Descripción: —</p>
+            </div>
+            <br />
+            <button class="cerrar btn-2" id="cerrarModal">Cerrar</button>
+          </div>
+        </div>
+      </div>
     </div>
-  <script>
-  const inputImagen = document.getElementById('imagen');
-  const fileNameSpan = document.getElementById('file-name');
 
-  inputImagen.addEventListener('change', function () {
-    if (inputImagen.files.length > 0) {
-      fileNameSpan.textContent = inputImagen.files[0].name;
-    } else {
-      fileNameSpan.textContent = "Ningún archivo seleccionado";
-    }
-    });
-  </script>
+    <script>
+      const inputImagen = document.getElementById("imagen");
+      const fileNameSpan = document.getElementById("file-name");
+
+      inputImagen.addEventListener("change", function () {
+        if (inputImagen.files.length > 0) {
+          fileNameSpan.textContent = inputImagen.files[0].name;
+        } else {
+          fileNameSpan.textContent = "Ningún archivo seleccionado";
+        }
+      });
+
+      // Referencias al formulario
+      const btnVisualizar = document.getElementById("btn-visualizar"); // botón de visualizar
+      const nombre = document.querySelector('[name="nombre"]');
+      const precio = document.querySelector('[name="precio"]');
+      const categoria = document.querySelector('[name="categoria-producto"]');
+      const descripcion = document.querySelector('[name="descripcion"]');
+      const imagen = document.querySelector('[name="image_product"]');
+      const unidad = document.querySelector('[name="unidad"]');
+
+      // Referencias al modal y sus contenidos
+      const modal = document.getElementById("modalVistaPrevia");
+      const cerrarBtn = document.getElementById("cerrarModal");
+      const prevNombre = document.getElementById("prev-nombre");
+      const prevPrecio = document.getElementById("prev-precio");
+      const prevCategoria = document.getElementById("prev-categoria");
+      const prevDescripcion = document.getElementById("prev-descripcion");
+      const prevImagen = document.getElementById("prev-imagen");
+      const prevUnidad = document.getElementById("prev-unidad");
+
+      // Evento al hacer clic en visualizar
+      btnVisualizar.addEventListener("click", () => {
+        // Llenar los datos
+        prevNombre.textContent = nombre.value || "Nombre del producto";
+        prevPrecio.textContent = precio.value ? `Precio: $${precio.value}` : "Precio: $0.00";
+        prevUnidad.textContent =
+          "Medida: " + (unidad.options[unidad.selectedIndex].text || "—");
+        prevCategoria.textContent =
+          "Categoría: " +
+          (categoria.options[categoria.selectedIndex].text || "—");
+        prevDescripcion.textContent = "Descripción: " + (descripcion.value || "Descripción del producto");
+
+        const file = imagen.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            prevImagen.src = e.target.result;
+          };
+          reader.readAsDataURL(file);
+        } else {
+          prevImagen.src = "../images/ImgenAgregarProducto1.png"; // Imagen por defecto
+        }
+
+        // Mostrar el modal
+        modal.style.display = "block";
+      });
+
+      // Cerrar modal al hacer clic en la X
+      cerrarBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      // Cerrar modal al hacer clic fuera de él
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>

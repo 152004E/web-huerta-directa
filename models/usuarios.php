@@ -6,9 +6,9 @@ class usuarios
     public function Login($email, $password_user) {
     try {
         include "conexion.php";
-        $fk_id_role = 2;
-        $consultar = $conexion->prepare("SELECT fk_id_role, email, password_user FROM TB_users WHERE email=? AND password_user=?");
-        $consultar->execute([$fk_id_role, $email, $password_user]);
+       
+        $consultar = $conexion->prepare("SELECT  id_user, fk_id_role, email, password_user FROM TB_users WHERE email=? AND password_user=?");
+        $consultar->execute([ $email, $password_user]);
         $lista = $consultar->fetchAll(PDO::FETCH_ASSOC);
         $conexion = null;
         return $lista;
@@ -37,7 +37,7 @@ class usuarios
     public function ConsultaGeneral(){
         try{
             include "conexion.php";
-            $validar = $conexion->prepare(" SELECT id_user, name_user, email, password_user FROM TB_users");
+            $validar = $conexion->prepare("SELECT id_user, name_user, email, password_user FROM TB_users");
             $validar->execute();
             $lista = $validar->fetchAll(PDO::FETCH_NUM); 
             return $lista;
@@ -61,10 +61,10 @@ class usuarios
         }
     }
 
-    public function ActualizarUsuario($id_user, $name_user, $password_user) {
+    public function ActualizarUsuario($id_user, $name_user,  $password_user) {
         try{
         include "conexion.php";
-        $ActualizarU = $conexion-> prepare("UPDATE TB_users SET name_user = ?, password_user = ? WHERE id_user = ? ");
+        $ActualizarU = $conexion-> prepare("UPDATE TB_users SET name_user = ?,  password_user = ? WHERE id_user = ? ");
         $ActualizarU-> execute([$name_user, $password_user, $id_user]);
         if ($ActualizarU->rowCount() > 0) {
             return true;

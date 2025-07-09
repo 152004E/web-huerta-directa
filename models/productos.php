@@ -5,11 +5,11 @@
 class productos
 {
 
-    public function Registrar($name_product, $price, $category, $image_product, $description_product) {
+    public function Registrar($name_product, $price, $category, $unidad, $image_product, $description_product) {
     try {
         include "conexion.php";
-        $registrar = $conexion->prepare("INSERT INTO TB_products (name_product, price, category, image_product, description_product) VALUES (?, ?, ?, ?, ?)");
-        $resultado = $registrar->execute([$name_product, $price, $category, $image_product, $description_product]);
+        $registrar = $conexion->prepare("INSERT INTO TB_products (name_product, price, category, unidad, image_product, description_product) VALUES (?, ?, ?, ?, ?, ?)");
+        $resultado = $registrar->execute([$name_product, $price, $category,$unidad, $image_product, $description_product]);
         return $resultado;
     } catch (Exception $e) {
         return false;
@@ -49,7 +49,8 @@ public function Eliminar($id) {
     }
 
 
-public function ConsultaEspecifica($campo, $valor) {
+
+  public function ConsultaEspecifica($campo, $valor) {
     try {
         include "conexion.php";
         $sql = "SELECT * FROM TB_products WHERE $campo = ?";
@@ -63,7 +64,34 @@ public function ConsultaEspecifica($campo, $valor) {
         return [];
     }
 }
+    
+/*
+public function ConsultaEspecificaxls($campo, $valor) {
+    try {
+        include "conexion.php";
 
+        // ✅ Solo permitimos estos campos para consultar
+        $permitidos = ['name_product', 'category', 'price'];
+        if (!in_array($campo, $permitidos)) {
+            throw new Exception("Campo no permitido");
+        }
+
+        $sql = "SELECT * FROM TB_products WHERE $campo LIKE ?";
+        $Cespecifica = $conexion->prepare($sql);
+        $Cespecifica->execute(["%$valor%"]);
+        $resultado = $Cespecifica->fetchAll(PDO::FETCH_ASSOC);
+        $conexion = null;
+        return $resultado;
+
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+        return [];
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+        return [];
+    }
+}
+*/
 }
 
 /*

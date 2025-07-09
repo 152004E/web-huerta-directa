@@ -5,8 +5,6 @@ const vaciarCarritoBtn = document.querySelector("#vaciar-carrito");
 
 cargarEvenetListeners();
 
-
-
 function cargarEvenetListeners() {
   elementos1.addEventListener("click", comprarElemento);
   carrito.addEventListener("click", eliminarElemento);
@@ -64,11 +62,14 @@ function mostrarAlerta(mensaje) {
   alerta.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
   alerta.style.zIndex = "9999";
   alerta.style.fontFamily = "sans-serif";
+  alerta.style.transition = "opacity 0.5s ease";
+  alerta.style.opacity = "1";
 
   document.body.appendChild(alerta);
 
   setTimeout(() => {
-    alerta.remove();
+    alerta.style.opacity = "0";
+    setTimeout(() => alerta.remove(), 500);
   }, 2000);
 }
 
@@ -85,11 +86,14 @@ function mostrarAlertaEliminacion(mensaje) {
   alerta.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
   alerta.style.zIndex = "9999";
   alerta.style.fontFamily = "sans-serif";
+  alerta.style.transition = "opacity 0.5s ease";
+  alerta.style.opacity = "1";
 
   document.body.appendChild(alerta);
 
   setTimeout(() => {
-    alerta.remove();
+    alerta.style.opacity = "0";
+    setTimeout(() => alerta.remove(), 500);
   }, 2000);
 }
 
@@ -102,6 +106,20 @@ function eliminarElemento(e) {
     elementoId = elemento.querySelector("a").getAttribute("data-id");
   }
 }
+const iconoCarrito = document.getElementById("icono-carrito");
+
+
+iconoCarrito.addEventListener("click", function (e) {
+  e.stopPropagation(); // evita que se cierre al hacer clic en el ícono
+  carrito.classList.toggle("activo");
+});
+
+// Si haces clic fuera del carrito, se cierra
+document.addEventListener("click", function (e) {
+  if (!carrito.contains(e.target) && !iconoCarrito.contains(e.target)) {
+    carrito.classList.remove("activo");
+  }
+});
 
 function vaciarCarrito() {
   while (lista.firstChild) {
@@ -110,16 +128,37 @@ function vaciarCarrito() {
   mostrarAlertaEliminacion("Productos eliminados del carrito");
 }
 
-document.getElementById("miBoton").addEventListener("click", function() {
-  window.location.href = "/views/Pasarela_Pagos/Pasarela.html";
+document.getElementById("miBoton").addEventListener("click", function () {
+  window.location.href = "Pasarela_Pagos/Pasarela.html";
 });
 
-//slider     lo modifique porque no se ha terminado y me da error en consola 
-const swiper = new Swiper('.swiper', {
+//slider     lo modifique porque no se ha terminado y me da error en consola
+const swiper = new Swiper(".swiper", {
   loop: true,
 
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
   },
-
 });
+
+const themeToggler = document.querySelector(".ajustar .theme-toggler");
+
+// cambio de color
+themeToggler.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+
+  themeToggler.querySelector("span:nth-child(1)").classList.toggle("active");
+  themeToggler.querySelector("span:nth-child(2)").classList.toggle("active");
+});
+
+let toggle = document.querySelector("#menu-btn");
+let sidebar = document.querySelector("aside");
+let main = document.querySelector("main");
+
+if (toggle && sidebar && main) {
+  toggle.onclick = function () {
+    sidebar.classList.toggle("active");
+    main.classList.toggle("active");
+    console.log("Sidebar toggled");
+  };
+}

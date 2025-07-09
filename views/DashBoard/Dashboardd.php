@@ -4,6 +4,7 @@ $producto = new productos();
 $productos = $producto->ObtenerTodos();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,13 +53,13 @@ $productos = $producto->ObtenerTodos();
                     <span class="material-symbols-outlined">mail</span>
                     <h3>Mensajes</h3>
                 </a>
-                <a href="#">
+                <a href="../Agreagar_producto/Agregar_producto.html">
                     <span class="material-symbols-outlined">inventory</span>
-                    <h3>Productos</h3>
+                    <h3> Agregar Producto</h3>
                 </a>
                 <a href="#">
                     <span class="material-symbols-outlined">report</span>
-                    <h3>Reportes</h3>
+                    <h3>Novedades</h3>
                 </a>
                 <a href="#">
                     <span class="material-symbols-outlined">settings</span>
@@ -68,9 +69,9 @@ $productos = $producto->ObtenerTodos();
                     <span class="material-symbols-outlined">add</span>
                     <h3>Consultar Usuario</h3>
                 </a>
-                <a href="../index.html">
+                <a href="../index.php">
                     <span class="material-symbols-outlined">logout</span>
-                    <h3>Logout</h3>
+                    <h3>Volver al Inicio</h3>
                 </a>
             </div>
         </aside>
@@ -142,6 +143,9 @@ $productos = $producto->ObtenerTodos();
                 <!---FIN DE INGRESOS--->
             </div>
             <!---------- fin de insights ------------->
+           
+            
+           
 
             <div class="recent-orders">
                 <h2>Ordenes recientes</h2>
@@ -150,8 +154,9 @@ $productos = $producto->ObtenerTodos();
                         <tr>
                             <th>Producto</th>
                             <th>Categoria</th>
-                            <th>Estado</th>
                             <th>Precio</th>
+                            <th>Unidad</th>
+                            <th>Descripcion</th>
                             <th class="acciones">Acciones</th>
                         </tr>
                     </thead>
@@ -163,11 +168,18 @@ $productos = $producto->ObtenerTodos();
                             </td>
                             <td>
                                 <?= htmlspecialchars($producto['category']) ?>
+                            </td>                           
+                            <td>
+                                <?= number_format($producto['price']) ?>
                             </td>
-                            <td><span class="status delivered">Disponible</span></td>
-                            <td>$
-                                <?= number_format($producto['price'], 2) ?>
+                            <td>
+                                <?= htmlspecialchars($producto['unidad']) ?>
                             </td>
+                            <td>
+                                <?= htmlspecialchars($producto['description_product']) ?>
+                            </td>
+
+
                             <td class="acciones">
                                 <a href="../../controllers/eliminar_producto.php?id=<?= $producto['id_product'] ?>"
                                     class="btn-delete" onclick="return confirm('¿Eliminar este producto?')">❌</a>

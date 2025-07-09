@@ -19,9 +19,11 @@ if (!file_exists("../uploads")) {
 move_uploaded_file($temporal, $rutaDestino);
 
 
+
+
 $producto = new productos();
 
-$respuesta = $producto->Registrar($_POST["nombre"], $_POST["precio"], $_POST["categoria-producto"], $nombreImagen, $_POST["descripcion"]);
+$respuesta = $producto->Registrar($_POST["nombre"], $_POST["precio"], $_POST["categoria-producto"],$_POST["unidad"], $nombreImagen, $_POST["descripcion"]);
 
 
 
