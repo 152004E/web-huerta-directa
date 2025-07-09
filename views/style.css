@@ -135,30 +135,30 @@ img {
 
   bottom: 0;
 }
-.ajustar {
-  gap: 17px;
-  display: flex;
-  margin: 0%;
-}
-.ajustar a {
-  margin: 0%;
-}
-.submenu {
-  position: relative;
-}
-.submenu #carrito {
-  display: none;
-}
-.submenu:hover #carrito {
-  display: block;
-  padding: 20px;
+
+
+#carrito {
   position: absolute;
   right: 0;
-  backdrop-filter: blur(10px);
-  top: 100%;
-  z-index: 1;
+  
   background-color: #4e4b5076;
-  min-width: 400px;
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 10px;
+  width: 400px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+#carrito.activo {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 table {

@@ -73,9 +73,9 @@
        </div>
        <div class="ajustar">
          <ul>
-           <li class="submenu">
-             <img class="enlace" src="images/car.svg" alt="" />
-             <div id="carrito">
+           <li class="submenu carrito-container">
+             <img class="enlace" id="icono-carrito" src="images/car.svg" alt="carrito de compra" />
+             <div id="carrito" class="dropdown-carrito">
                <table id="lista-carrito">
                  <thead>
                    <tr>
@@ -89,9 +89,7 @@
                </table>
                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
                <a href="#" id="miBoton" class="btn-2">Ir a pagar</a>
-
              </div>
-
            </li>
          </ul>
          <div class="theme-toggler">
@@ -116,14 +114,14 @@
        <!--  <div class="header-img">
          <img class="imagen-hover" src="images/rigth.png" alt="" />
        </div>  -->
-       
-         <div class="header-img">
-           <div class="imagen-hover-container">
-             <img class="front" src="images/rigth.png" alt="imagen original" />
-             <img class="back" src="images/ImagenHover-modified.png" alt="imagen al hacer hover" />
-           </div>
+
+       <div class="header-img">
+         <div class="imagen-hover-container">
+           <img class="front" src="images/rigth.png" alt="imagen original" />
+           <img class="back" src="images/ImagenHover-modified.png" alt="imagen al hacer hover" />
          </div>
-       
+       </div>
+
 
      </div>
    </header>
