@@ -7,6 +7,10 @@
   <title>Categoria Verduras y Hortalizas | Huerta directa</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../style.css">
+  <link
+     rel="icon"
+     type="image/png"
+     href="../login/login/logo_huerta.png" />
 
 </head>
 
