@@ -16,6 +16,7 @@ if($respuesta instanceof Exception){
     header("location:../views/Errores/error500.html");
 }
 else if(!empty($respuesta)){
+    session_start();  
     if($respuesta[0]["fk_id_role"]=="1"){
         header("location:../views/dashboard/dashboardd.php");
     }

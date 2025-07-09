@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <script>
 function editarFila(enlace) {
     const fila = enlace.closest('tr');
@@ -48,12 +52,15 @@ function Enviar() {
 </script>
 
 <?php
+
 include "../../models/usuarios.php";
 $consultar = new usuarios();
 
 $respuesta = isset($_POST["dato"])
     ? $consultar->ConsultaEspecifica($_POST["dato"], $_POST["valor"])
     : $consultar->ConsultaGeneral();
+
+    $_SESSION["respuesta"] = $respuesta;
 
 echo "<form id='formu' action='../../controllers/Administrador/actualizar_usuario.php' method='post'>
 <table class='table table-striped'>

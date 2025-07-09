@@ -1,5 +1,13 @@
-<?php
-include "../models/productos.php";
+
+
+session_start();
+include "../../models/productos.php";
 $producto = new productos();
-$productos = $producto->ObtenerTodos();
-?>
+
+if (isset($_POST["dato"]) && isset($_POST["valor"])) {
+    $productos = $producto->ConsultaEspecificaxls($_POST["dato"], $_POST["valor"]);
+} else {
+    $productos = $producto->ObtenerTodos();
+}
+
+$_SESSION["productos_filtrados"] = $productos;
