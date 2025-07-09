@@ -91,7 +91,7 @@ input::placeholder {
   display: none;
   position: fixed;
   z-index: 9999;
-  padding-top: 100px;
+  padding-top: 50px;
   left: 0;
   top: 0;
   width: 100%;
@@ -144,6 +144,9 @@ input::placeholder {
 .btn-2.disabled {
   pointer-events: none;
   opacity: 0.6;
+}
+.imagenAgregarProducto{
+  width: 200px !important;
 }
 
 @keyframes fadeIn {

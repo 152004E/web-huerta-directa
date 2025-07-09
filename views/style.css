@@ -388,6 +388,10 @@ h3 {
 .btn-2:hover {
   animation: agrandarBoton 0.5s forwards;
 }
+
+.Producto{
+  padding: 2px 5px !important;
+}
 .service {
   display: flex;
   padding-bottom: 100px;
