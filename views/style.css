@@ -186,12 +186,44 @@ td {
 .header-txt {
   flex-basis: 50%;
 }
-.imagen-hover {
-  transition: transform 0.3s ease;
+.imagen-hover{
+  margin-right: 50px;
 }
 
-.imagen-hover:hover {
-  transform: translateY(-10px); /* Mueve la imagen 10px hacia arriba */
+.imagen-hover-container {
+  position: relative;
+  width: 400px; /* Ajustá al tamaño de tus imágenes */
+  height: 400px;
+  perspective: 1000px;
+}
+
+.imagen-hover-container img {
+  
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.7s ease;
+  border-radius: 8px; /* opcional para suavizar bordes */
+}
+
+/* Imagen frontal */
+.imagen-hover-container .front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+/* Imagen de reverso */
+.imagen-hover-container .back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+/* Al hacer hover, giramos el contenedor */
+.imagen-hover-container:hover .front {
+  transform: rotateY(180deg);
+}
+
+.imagen-hover-container:hover .back {
+  transform: rotateY(0deg);
 }
 
 .header-txt span {
@@ -242,8 +274,10 @@ p {
 }
 
 .header-img {
-  flex-basis: 50%;
-  text-align: center;
+  display: flex;
+  justify-content: start;
+  margin-left: 100px;
+  
 }
 
 .header-img img {
