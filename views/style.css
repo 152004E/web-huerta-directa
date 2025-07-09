@@ -370,7 +370,7 @@ h3 {
 
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  padding: 35px 55px;
+  padding: 35px 45px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -653,6 +653,13 @@ input {
 .btn:hover {
   background-color: #004d00;
 }
+.btnProducto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
 
 .categories__right {
   display: grid;
