@@ -5,11 +5,11 @@
 class productos
 {
 
-    public function Registrar($name_product, $price, $category, $image_product, $description_product) {
+    public function Registrar($name_product, $price, $category, $unidad, $image_product, $description_product) {
     try {
         include "conexion.php";
-        $registrar = $conexion->prepare("INSERT INTO TB_products (name_product, price, category, image_product, description_product) VALUES (?, ?, ?, ?, ?)");
-        $resultado = $registrar->execute([$name_product, $price, $category, $image_product, $description_product]);
+        $registrar = $conexion->prepare("INSERT INTO TB_products (name_product, price, category, unidad, image_product, description_product) VALUES (?, ?, ?, ?, ?, ?)");
+        $resultado = $registrar->execute([$name_product, $price, $category,$unidad, $image_product, $description_product]);
         return $resultado;
     } catch (Exception $e) {
         return false;

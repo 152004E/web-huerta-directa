@@ -53,9 +53,9 @@ $productos = $producto->ObtenerTodos();
                     <span class="material-symbols-outlined">mail</span>
                     <h3>Mensajes</h3>
                 </a>
-                <a href="../index.php">
+                <a href="../Agreagar_producto/Agregar_producto.html">
                     <span class="material-symbols-outlined">inventory</span>
-                    <h3>Productos</h3>
+                    <h3> Agregar Producto</h3>
                 </a>
                 <a href="#">
                     <span class="material-symbols-outlined">report</span>
@@ -155,6 +155,7 @@ $productos = $producto->ObtenerTodos();
                             <th>Producto</th>
                             <th>Categoria</th>
                             <th>Precio</th>
+                            <th>Unidad</th>
                             <th>Descripcion</th>
                             <th class="acciones">Acciones</th>
                         </tr>
@@ -172,8 +173,13 @@ $productos = $producto->ObtenerTodos();
                                 <?= number_format($producto['price']) ?>
                             </td>
                             <td>
+                                <?= htmlspecialchars($producto['unidad']) ?>
+                            </td>
+                            <td>
                                 <?= htmlspecialchars($producto['description_product']) ?>
                             </td>
+
+
                             <td class="acciones">
                                 <a href="../../controllers/eliminar_producto.php?id=<?= $producto['id_product'] ?>"
                                     class="btn-delete" onclick="return confirm('¿Eliminar este producto?')">❌</a>
