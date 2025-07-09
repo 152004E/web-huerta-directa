@@ -215,17 +215,30 @@ p {
   font-size: 18px;
 }
 
+@keyframes botonHoverVerde {
+  from {
+    background-color: #8dc84b;
+    transform: scale(1);
+  }
+  to {
+    background-color: #004d00;
+    transform: scale(1.05);
+  }
+}
+
 .btn-1 {
   display: inline-block;
   padding: 15px 25px;
-  color: #ffff;
+  color: #fff;
   background-color: #8dc84b;
   border-radius: 50px;
   text-transform: capitalize;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  transition: transform 0.5s ease;
 }
+
 .btn-1:hover {
-  background-color: #004d00;
+  animation: botonHoverVerde 0.5s forwards;
 }
 
 .header-img {
@@ -354,18 +367,26 @@ h3 {
   padding: 10px; /* También reduce espacio vertical si hace falta */
 }
 
+@keyframes agrandarBoton {
+  to {
+    transform: scale(1.05);
+    background-color: #004d00;
+  }
+}
+
 .btn-2 {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  color: #ffff;
+  color: #fff;
   background-color: #8dc84b;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
+
 .btn-2:hover {
-  background-color: #004d00;
+  animation: agrandarBoton 0.5s forwards;
 }
 .service {
   display: flex;
@@ -600,30 +621,52 @@ input {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
+/*
 .category {
+  min-height: 200px;
   background-color: #ffffff;
   padding: 2rem 1rem;
   border-radius: 1.5rem;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  transition: all 4s ease;
 }
 
 .category:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(2);
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
+}
+*/
+@keyframes levantarYEscalar {
+  to {
+    transform:  scale(1.05);
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
+  }
+}
+
+.category {
+  min-height: 220px;
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.category:hover {
+  animation: levantarYEscalar 0.5s forwards;
 }
 
 .category__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   color: rgb(0, 0, 0);
 }
 
@@ -648,8 +691,9 @@ input {
 }
 
 .category h5 {
+  letter-spacing: 1px;
   margin: 0.5rem 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: rgb(0, 0, 0);
 }

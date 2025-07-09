@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Categoria Miel y derivados || Huerta directa</title>
+  <title>Categoria Lacteos || Huerta directa</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../style.css">
 
@@ -14,13 +14,13 @@
   <?php
   include_once(__DIR__ . '/../../models/productos.php');
   $producto = new productos();
-  $productos = $producto->ConsultaEspecifica('category', 'miel-derivados');
+  $productos = $producto->ConsultaEspecifica('category', 'lacteos');
   ?>
 
 
 
   <main class="products container1" id="lista-1">
-    <h2 data-aos="zoom-in">Miel y Derivados</h2>
+    <h2 data-aos="zoom-in">Lacteos</h2>
 
     <div class="products-container">
       <?php foreach ($productos as $producto): ?>
