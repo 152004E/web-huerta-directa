@@ -40,6 +40,7 @@
       <?php endforeach; ?>
     </div>
   </main>
+  <?php include '../models/footer.php'; ?>
 </body>
 
 </html>
