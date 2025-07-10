@@ -44,7 +44,7 @@
       <?php endforeach; ?>
     </div>
   </main>
-  <?php include '../models/footer.php'; ?>
+ <?php include '../modelosFront/footer.php'; ?>
 </body>
 
 </html>
