@@ -51,7 +51,7 @@ class usuarios
     public function ConsultaEspecifica($dato,$valor){
         try{
             include "conexion.php";
-            $validar = $conexion->prepare("select id_user, name_user, email, password_user from Tb_users where $dato = ? ");   
+            $validar = $conexion->prepare("SELECT id_user, name_user, email, password_user from Tb_users where $dato = ? ");   
             $validar->execute([$valor]);
             $lista = $validar->fetchAll(PDO::FETCH_NUM); 
             return $lista;
@@ -90,20 +90,6 @@ class usuarios
             return $e;
         }
     }
-    /*
-     public function ObtenerPorEmail($email) {
-        try{
-        include "conexion.php";
-      
-        $ActualizarU = $conexion-> prepare("update usuario set name_product=?, price=?, category=?, description_product where id_product=?");
-        $ActualizarU-> execute([ $email]);
-        $conexion = null;
-        return true;
-        }
-        catch(PDOException $e){
-            echo "Error: ". $e->getMessage();
-        }
-    }*/
 }
 
 

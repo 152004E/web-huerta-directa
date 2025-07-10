@@ -143,14 +143,13 @@ $productos = $producto->ObtenerTodos();
                 <!---FIN DE INGRESOS--->
             </div>
             <!---------- fin de insights ------------->
-           
-            
-           
 
-            <div class="recent-orders">
-                <h2>Ordenes recientes</h2>
+             
+            <div class="recent-orders" >
+                <h2>Ordenes recientes</h2>                 
                 <table>
                     <thead>
+                        
                         <tr>
                             <th>Producto</th>
                             <th>Categoria</th>
@@ -162,39 +161,35 @@ $productos = $producto->ObtenerTodos();
                     </thead>
                     <tbody>
                         <?php foreach ($productos as $producto): ?>
-                        <tr>
-                            <td>
-                                <?= htmlspecialchars($producto['name_product']) ?>
-                            </td>
-                            <td>
-                                <?= htmlspecialchars($producto['category']) ?>
-                            </td>                           
-                            <td>
-                                <?= number_format($producto['price']) ?>
-                            </td>
-                            <td>
-                                <?= htmlspecialchars($producto['unidad']) ?>
-                            </td>
-                            <td>
-                                <?= htmlspecialchars($producto['description_product']) ?>
-                            </td>
+                            <tr>
+                                <td>
+                                    <?= htmlspecialchars($producto['name_product']) ?>
+                                </td>
+                                <td>
+                                    <?= htmlspecialchars($producto['category']) ?>
+                                </td>
+                                <td>
+                                    <?= number_format($producto['price']) ?>
+                                </td>
+                                <td>
+                                    <?= htmlspecialchars($producto['unidad']) ?>
+                                </td>
+                                <td>
+                                    <?= htmlspecialchars($producto['description_product']) ?>
+                                </td>
 
 
-                            <td class="acciones">
-                                <a href="../../controllers/eliminar_producto.php?id=<?= $producto['id_product'] ?>"
-                                    class="btn-delete" onclick="return confirm('¿Eliminar este producto?')">❌</a>
-                                <a href="../Actualizar_producto/form_actualizar_producto.php?id=<?= $producto['id_product'] ?>"
-                                    class="btn-edit">✏️</a>
-                            </td>
-                        </tr>
+                                <td class="acciones">
+                                    <a href="../../controllers/eliminar_producto.php?id=<?= $producto['id_product'] ?>"
+                                        class="btn-delete" onclick="return confirm('¿Eliminar este producto?')">❌</a>
+                                    <a href="../Actualizar_producto/form_actualizar_producto.php?id=<?= $producto['id_product'] ?>"
+                                        class="btn-edit">✏️</a>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-
-                
-                
             </div>
-            
             <div class="export-links">
                 <a href="../../controllers/Reportes/reportexls_productos.php">Exportar a Excel</a>
 

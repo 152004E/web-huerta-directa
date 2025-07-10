@@ -70,7 +70,7 @@ public function ConsultaEspecificaxls($campo, $valor) {
     try {
         include "conexion.php";
 
-        // ✅ Solo permitimos estos campos para consultar
+        //Solo permitimos estos campos para consultar
         $permitidos = ['name_product', 'category', 'price'];
         if (!in_array($campo, $permitidos)) {
             throw new Exception("Campo no permitido");

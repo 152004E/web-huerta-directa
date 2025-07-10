@@ -40,3 +40,18 @@ sidebarLinks.forEach(link => {
         this.classList.add("active");
     });
 });
+
+
+/*
+// filtro del dashboard
+function toggleFiltro() {
+    const filtro = document.getElementById('bloque-filtro');
+    filtro.classList.toggle('d-none');
+}
+
+function cerrarFiltro() {
+    const filtro = document.getElementById('bloque-filtro');
+    filtro.classList.add('d-none');
+    // Aquí puedes agregar código para limpiar los inputs si lo deseas
+}
+*/
