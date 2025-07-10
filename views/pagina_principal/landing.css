@@ -2,10 +2,8 @@ body {
   margin: 0;
   font-family: "Arial", sans-serif;
   background-color: #FEF5DC;
-  font-size: 18px; /* tamaño general de letra aumentado */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 18px; 
+  
   min-height: 100vh;
 }
 * {

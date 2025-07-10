@@ -22,9 +22,9 @@
   ?>
 
 
-
+<?php include '../modelosFront/navPagina.php'; ?>
   <main class="products container1" id="lista-1">
-    <h2 data-aos="zoom-in">Carnes y Proteinas</h2>
+    <h2 class="productosCatePhp" data-aos="zoom-in">Carnes y Proteinas</h2>
 
     <div class="products-container">
       <?php foreach ($productos as $producto): ?>
@@ -44,7 +44,7 @@
       <?php endforeach; ?>
     </div>
   </main>
-  <?php include '../models/footer.php'; ?>
+  <?php include '../modelosFront/footer.php'; ?>
 </body>
 
 </html>

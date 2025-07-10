@@ -75,6 +75,9 @@ img {
   min-height: 50px; /* Ajusta según altura deseada */
   background: #fff;
 }
+.productosCatePhp{
+  margin-top: 80px !important;
+}
 .product img {
   width: 150px;
   height: 130px;
