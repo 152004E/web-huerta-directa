@@ -181,15 +181,18 @@ $productos = $producto->ObtenerTodos();
                                 <option value="cajas-combos">Cajas Mixtas o Combos</option>
                             </select>
                             <div class="icon-container">
-                            <i class="fa-solid fa-caret-down"></i>
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
                         </div>
-                        </div>
-                        
+
 
                         <!-- Botón de consultar -->
                         <!-- <button type="submit" class="consultar-btn">Consultar</button> -->
 
-                        <a href="#" class="consultar-btn" id="consultar-link">Consultar</a>
+                        <a href="#" class="consultar-btn" id="consultar-link">
+                            Consultar
+                            <span class="material-symbols-outlined icono_search">search</span>
+                        </a>
 
                     </div>
                 </form>

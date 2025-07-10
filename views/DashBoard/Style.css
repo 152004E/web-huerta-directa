@@ -420,6 +420,10 @@ main .recent-orders a {
   color: white;
   font-size: 15px;
   letter-spacing: 1px;
+  transition: all 0.7s;
+}
+select:hover{
+    background-color: #388e3c;
 }
 .categoriaSelect {
   position: relative;
@@ -478,10 +482,15 @@ main .recent-orders a {
   cursor: pointer;
   font-size: 15px;
   letter-spacing: 1px;
+  transition: all 0.7s;
 }
 
 .consultar-btn:hover {
   background-color: #388e3c;
+}
+.icono_search{
+    padding: 0  3px;
+    font-size: 20px;
 }
 
 /*Fin de la barra de busqueda*/
