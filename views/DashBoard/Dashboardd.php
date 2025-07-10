@@ -1,7 +1,24 @@
 <?php
 include "../../models/productos.php";
 $producto = new productos();
-$productos = $producto->ObtenerTodos();
+//$productos = $producto->ObtenerTodos();
+$campo = '';
+$valor = '';
+
+if (!empty($_POST['buscar'])) {
+    $campo = 'name_product';
+    $valor = $_POST['buscar'];
+} elseif (!empty($_POST['categoria']) && $_POST['categoria'] != "Por categoría") {
+    $campo = 'category';
+    $valor = $_POST['categoria'];
+}
+
+if ($campo && $valor) {
+    $productos = $producto->ConsultaEspecifica($campo, $valor);
+} else {
+    $productos = $producto->ObtenerTodos();
+}
+
 ?>
 
 
@@ -189,10 +206,10 @@ $productos = $producto->ObtenerTodos();
                         <!-- Botón de consultar -->
                         <!-- <button type="submit" class="consultar-btn">Consultar</button> -->
 
-                        <a href="#" class="consultar-btn" id="consultar-link">
+                        <button type="submit" class="consultar-btn">
                             Consultar
                             <span class="material-symbols-outlined icono_search">search</span>
-                        </a>
+                        </button>
 
                     </div>
                 </form>

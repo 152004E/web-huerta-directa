@@ -82,6 +82,5 @@ foreach ($respuesta as $fila) {
        <td><a href='Consulta_usuario.php?codigo=$fila[0]' onclick=\"return confirm('¿Seguro que quieres eliminar este usuario?');\">Eliminar</a></td>
     </tr>";
 }
-
 echo "</table></form>";
 ?>
