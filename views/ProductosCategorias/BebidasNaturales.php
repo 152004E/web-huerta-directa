@@ -25,8 +25,8 @@
 
 
 <?php include '../modelosFront/navPagina.php'; ?>
-  <main class="products container1" id="lista-1">
-    <h2 data-aos="zoom-in">Bebidas Naturales</h2>
+  <main class="products container1 " id="lista-1">
+    <h2 class="productosCatePhp" data-aos="zoom-in">Bebidas Naturales</h2>
 
     <div class="products-container">
       <?php foreach ($productos as $producto): ?>
