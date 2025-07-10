@@ -239,7 +239,7 @@ $productos = $producto->ObtenerTodos();
                                         class="btn-delete" onclick="return confirm('¿Eliminar este producto?')">❌</a>
                                     <a href="../Actualizar_producto/form_actualizar_producto.php?id=<?= $producto['id_product'] ?>"
                                         class="btn-edit">✏️</a>
-                                </td>
+                                </td> 
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

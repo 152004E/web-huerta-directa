@@ -15,8 +15,8 @@
         
         <nav class="navbar">
           <ul>
-            <li><a href="#">inicio</a></li>
-            <li><a href="#">Servicios</a></li>
+            <li><a href="../index.php">inicio</a></li>
+            <li><a href="../index.php#categorias">Servicios</a></li>
             <li><a href="#">Contactos</a></li>
             <li><a href="#">Nosotros</a></li>
           </ul>
