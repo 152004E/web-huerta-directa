@@ -14,6 +14,10 @@ $productos = $producto->ObtenerTodos();
     <title>Dashboard</title>
     <!-- Link para el font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="Style.css">
     <link rel="icon" type="image/png" href="../login/login/logo_huerta.png" />
@@ -144,12 +148,58 @@ $productos = $producto->ObtenerTodos();
             </div>
             <!---------- fin de insights ------------->
 
-             
-            <div class="recent-orders" >
-                <h2>Ordenes recientes</h2>                 
-                <table>
-                    <thead>
+
+            <div class="recent-orders">
+                <h2>Ordenes recientes</h2>
+
+                <!--barra de busqueda-->
+                <form class="busqueda-filtros" method="POST" action="">
+                    <!-- Barra de búsqueda larga -->
+                    <div class="barra-busqueda">
+                        <input type="text" name="buscar" placeholder="Buscar producto..." />
+
+                    </div>
+
+                    <!-- Selects y botón -->
+                    <div class="filtros">
+                        <div class="categoriaSelect">
+
+                            <select class="CategoriaS" id="categoria" name="categoria">
+                                <option>Por categoría</option>
+                                <option value="frutas">Frutas</option>
+                                <option value="verduras-hortalizas">Verduras y Hortalizas</option>
+                                <option value="lacteos">Lácteos</option>
+                                <option value="carnes-proteinas">Carnes y Proteínas</option>
+                                <option value="cereales-granos">Cereales y Granos</option>
+                                <option value="legumbres-secas">Legumbres Secas</option>
+                                <option value="productos-organicos">Productos Orgánicos</option>
+                                <option value="hierbas-especias">Hierbas y Especias</option>
+                                <option value="miel-derivados">Miel y Derivados</option>
+                                <option value="procesados-artesanales">ProductosArtesanales</option>
+                                <option value="bebidas-naturales">Bebidas Naturales</option>
+                                <option value="plantas-semillas">Plantas y Semillas</option>
+                                <option value="cajas-combos">Cajas Mixtas o Combos</option>
+                            </select>
+                            <div class="icon-container">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                        </div>
                         
+
+                        <!-- Botón de consultar -->
+                        <!-- <button type="submit" class="consultar-btn">Consultar</button> -->
+
+                        <a href="#" class="consultar-btn" id="consultar-link">Consultar</a>
+
+                    </div>
+                </form>
+
+
+                <table>
+
+                    <thead>
+
+
                         <tr>
                             <th>Producto</th>
                             <th>Categoria</th>
@@ -161,6 +211,8 @@ $productos = $producto->ObtenerTodos();
                     </thead>
                     <tbody>
                         <?php foreach ($productos as $producto): ?>
+
+
                             <tr>
                                 <td>
                                     <?= htmlspecialchars($producto['name_product']) ?>
