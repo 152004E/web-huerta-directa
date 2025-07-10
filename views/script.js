@@ -15,7 +15,8 @@ function cargarEvenetListeners() {
 function comprarElemento(e) {
   e.preventDefault();
   if (e.target.classList.contains("agregar-carrito")) {
-    const elemento = e.target.parentElement.parentElement;
+    console.log("¡Click en botón agregar!");
+    const elemento = e.target.closest(".product");
     leerDatosElemento(elemento);
   }
 }

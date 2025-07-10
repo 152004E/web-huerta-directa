@@ -256,7 +256,7 @@
                <h3><?php echo htmlspecialchars($producto['name_product']) ?></h3>
                <p class="precio"><?php echo number_format($producto['price'], 0, ',', '.') ?></p>
                <div class="btnProducto">
-                 <a href="#" class="agregar-carrito btn-2" data-id="1" data-aos="fade-right" data-aos-delay="400">Agregar</a>
+                 <a href="#" class="agregar-carrito btn-2" >Agregar</a>
                  <a href="#" class="btn-2" data-aos="fade-right" data-aos-delay="400">Info</a>
                </div>
 
