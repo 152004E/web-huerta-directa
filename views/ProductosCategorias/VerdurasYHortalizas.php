@@ -22,7 +22,10 @@
   ?>
 
 
+<div class="menu container1">
 <?php include '../modelosFront/navPagina.php'; ?>
+<?php include '../modelosFront/carritoProducto.php'; ?>
+</div>
   <main class="products container1" id="lista-1">
     <h2 class="productosCatePhp" data-aos="zoom-in">Verduras y hortalizas</h2>
 

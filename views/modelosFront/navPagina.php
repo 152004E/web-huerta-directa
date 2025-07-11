@@ -15,15 +15,15 @@
         
         <nav class="navbar">
           <ul>
-            <li><a href="../index.php">inicio</a></li>
-            <li><a href="../index.php#categorias">Servicios</a></li>
-            <li><a href="#">Contactos</a></li>
-            <li><a href="#">Nosotros</a></li>
+          <li><a href="../index.php">Inicio</a></li>
+            <li><a href="../index.php#categorias">Categorias</a></li>
+            <li><a href="../Quienes_somos/quienes_somos.html">Quienes somos</a></li>
+            <li><a href="../index.php#lista-1">Productos</a></li>
           </ul>
         </nav>
         
       </div>
-  
+    
 
 </body>
 </html>
