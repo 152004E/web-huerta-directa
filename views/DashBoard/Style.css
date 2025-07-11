@@ -399,21 +399,24 @@ main .recent-orders a {
   border: none;
   outline: none;
   font-size: 16px;
+ transition: all 0.7s;
+}
+input:hover {
+  border: #388e3c;
 }
 
 .filtros {
   display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 
-  gap: 0.5rem;
-}
-.strong {
-  font-size: 17px;
 }
 
 .filtros select {
   appearance: none;
   border: none;
-  width: 230px;
+  width: 190px;
   padding: 13px;
   border-radius: 5px;
   background-color: #8dc84b;
@@ -425,41 +428,31 @@ main .recent-orders a {
 select:hover {
   background-color: #388e3c;
 }
+
 .categoriaSelect {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 7px 0px;
-  overflow: hidden;
-  width: 240px;
+  width: auto; /* Quitar el fijo que estaba estrecho */
 }
 
 .CategoriaS {
-  padding: 15px;
-
-  width: 100%;
+  width: 190px;
+  padding: 10px 35px 10px 15px; /* Espacio para el ícono a la derecha */
   background-color: #8cc63f;
   color: white;
   border: none;
   border-radius: 8px;
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  font-size: 16px;
-  box-sizing: border-box;
+  font-size: 15px;
   cursor: pointer;
-  overflow: hidden;
 }
 
 .icon-container {
   position: absolute;
-  width: 80px;
-  height: 100%;
-  right: 0;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
 }
 
@@ -467,25 +460,27 @@ select:hover {
   color: white;
   font-size: 16px;
 }
-.ContainerButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.ContainerButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
 .consultar-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 12px; 
-  height: 43px; 
+  padding: 8px 15px;
+  height: 40px;
   border-radius: 5px;
   background-color: #8dc84b;
   color: white !important;
   border: none;
   font-weight: bold;
   cursor: pointer;
-  font-size: 17px;
-  letter-spacing: 0.3px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease-in-out;
 }
 
