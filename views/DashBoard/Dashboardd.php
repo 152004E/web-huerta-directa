@@ -205,14 +205,15 @@ if ($campo && $valor) {
 
                         <!-- Botón de consultar -->
                         <!-- <button type="submit" class="consultar-btn">Consultar</button> -->
-                         <div class="ContainerButton">
-                                <button type="submit" class="consultar-btn">
-                            Consultar
-                            <span class="material-symbols-outlined icono_search">search</span>
-                        </button>
-                            </div>
+                        <div class="ContainerButton">
+                            <button type="submit" class="consultar-btn">
+                                Consultar
+                                <span class="material-symbols-outlined icono_search">search</span>
+                            </button>
+                            <button type="submit" class="btn btn-secundary consultar-btn" onclick="window.location.href=window.location.pathname">Ver Todos <span class="material-symbols-outlined icono_search">search</span></button>
+                        </div>
 
-                        
+
 
                     </div>
                 </form>
@@ -259,7 +260,7 @@ if ($campo && $valor) {
                                         class="btn-delete" onclick="return confirm('¿Eliminar este producto?')">❌</a>
                                     <a href="../Actualizar_producto/form_actualizar_producto.php?id=<?= $producto['id_product'] ?>"
                                         class="btn-edit">✏️</a>
-                                </td> 
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
