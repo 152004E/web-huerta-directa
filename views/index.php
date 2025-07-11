@@ -241,7 +241,7 @@
      </div>
    </section>
 
-   <?php include '../controllers/consultar_productos.php'; ?>
+   <?php include '../controllers/productos_pagina.php'; ?>
 
 
    <main class="products container1" id="lista-1">
