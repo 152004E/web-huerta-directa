@@ -72,7 +72,7 @@
 
        </div>
        <div class="ajustar">
-         <ul>
+         <ul class="ajustaCarrito">
            <li class="submenu carrito-container">
              <img class="enlace" id="icono-carrito" src="images/car.svg" alt="carrito de compra" />
              <div id="carrito" class="dropdown-carrito">

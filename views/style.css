@@ -785,3 +785,27 @@ td.acciones {
 .btn-delete:hover {
   background-color: #c9302c;
 }
+
+.navbar-wrapper,
+.menu,
+.navbar {
+  background-color: inherit !important;
+}
+
+.ajustaCarrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    padding-right: 10px;
+    border-radius: 10px;
+    background-color: #FEF5DC;
+    position: fixed;
+    top: 80px;
+    right: 60px;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+.ajustaCarrito:hover{
+background-color: #496826 ;
+}

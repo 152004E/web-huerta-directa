@@ -113,3 +113,21 @@ img {
   gap: 50px;
   margin: 0;
 }*/
+
+.navbar-wrapper,
+.menu,
+.navbar {
+  background-color: inherit !important;
+}
+
+/* Elimina cualquier borde o subrayado que esté causando la línea */
+body.dark-theme nav,
+body.dark-theme .navbar,
+body.dark-theme .navbar ul,
+body.dark-theme .navbar li,
+body.dark-theme .navbar a {
+  border: none !important;
+  outline: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}

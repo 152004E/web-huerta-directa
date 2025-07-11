@@ -49,13 +49,7 @@ button,
 }
 
 body.dark-theme {
-  --color-background: linear-gradient(
-    to bottom,
-    #505050 100%,
-    #000000 90%,
-    #000000 20%,
-    #505050 0%
-  );
+  --color-background: #1e1e1e;
   --color-white: #ffffff;
   --color-dark: #1e1e1e;
   --color-dark-variant: #1e1e1e;
@@ -88,32 +82,32 @@ body.dark-theme .header {
   background: var(--color-dark);
 }
 
-body.dark-theme .menu {
-  background: var(--color-sidebar);
+body.dark-theme .navbar-wrapper {
+  background-color: var(--color-dark);
+}
+
+body.dark-theme .navbar,
+body.dark-theme .menu,
+body.dark-theme .navbar a:hover,
+body.dark-theme .navbar .active {
+  background-color: var(--color-background) !important;
   color: var(--color-white);
-  border-bottom: 1px solid var(--color-dark-variant);
 }
 
 body.dark-theme .navbar a,
+body.dark-theme .navbar li a,
 body.dark-theme .logo {
   color: var(--color-white);
 }
 
 body.dark-theme .dropdown,
-body.dark-theme .dropdown-menu,
-body.dark-theme .navbar a:hover,
-body.dark-theme .navbar .active {
-  background: var(--color-dark-variant);
+body.dark-theme .dropdown-menu {
+  background: #1e1e1e;
   color: var(--color-accent);
 }
 
-body.dark-theme .navbar {
-  color: #1e1e1e;
-  background: #1e1e1e;
-}
-
 body.dark-theme .ajustaCarrito {
-    background-color: gray !important;
+    background-color: var(--color-background) !important;
 }
 
 body.dark-theme .ajustaCarrito:hover {
@@ -223,6 +217,17 @@ body.dark-theme .footer1 a:hover {
     top: 100px;
     right: 20px;
   }
+}
+
+/* 🔥 Elimina posibles líneas visuales en el menú y contenedores */
+body.dark-theme .menu,
+body.dark-theme .menu.container,
+body.dark-theme .menu.container1,
+body.dark-theme .navbar-wrapper {
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 
