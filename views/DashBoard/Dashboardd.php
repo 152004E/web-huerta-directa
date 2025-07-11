@@ -205,11 +205,14 @@ if ($campo && $valor) {
 
                         <!-- Botón de consultar -->
                         <!-- <button type="submit" class="consultar-btn">Consultar</button> -->
-
-                        <button type="submit" class="consultar-btn">
+                         <div class="ContainerButton">
+                                <button type="submit" class="consultar-btn">
                             Consultar
                             <span class="material-symbols-outlined icono_search">search</span>
                         </button>
+                            </div>
+
+                        
 
                     </div>
                 </form>

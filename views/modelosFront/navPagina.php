@@ -19,6 +19,7 @@
       <nav class="navbar">
         <ul>
           <li><a href="../index.php">Inicio</a></li>
+<<<<<<< HEAD
           <li><a href="../index.php#categorias">Categorias</a></li>
           <li><a href="../Quienes_somos/quienes_somos.html">Quienes somos</a></li>
           <li><a href="../index.php#lista-1">Productos</a></li>
@@ -27,6 +28,17 @@
 
     </div>
   </div>
+=======
+          <li><a href="../index.php#lista-1">Productos</a></li>
+            <li><a href="../index.php#categorias">Categorias</a></li>
+            <li><a href="../Quienes_somos/quienes_somos.html">Quienes somos</a></li>
+            
+          </ul>
+        </nav>
+        
+      </div>
+    
+>>>>>>> 121c544d3d0e8037da4ed6ba2623187c75d7fbed
 
 </body>
 
