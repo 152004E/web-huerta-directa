@@ -422,27 +422,27 @@ main .recent-orders a {
   letter-spacing: 1px;
   transition: all 0.7s;
 }
-select:hover{
-    background-color: #388e3c;
+select:hover {
+  background-color: #388e3c;
 }
 .categoriaSelect {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 15px 0px;
+  padding: 7px 0px;
   overflow: hidden;
-  width: 250px; 
+  width: 240px;
 }
 
 .CategoriaS {
   padding: 15px;
-   
+
   width: 100%;
   background-color: #8cc63f;
   color: white;
   border: none;
   border-radius: 8px;
-  appearance: none; 
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   font-size: 16px;
@@ -452,7 +452,6 @@ select:hover{
 }
 
 .icon-container {
-    
   position: absolute;
   width: 80px;
   height: 100%;
@@ -460,37 +459,43 @@ select:hover{
   top: 0;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   pointer-events: none;
 }
 
 .icon-container i {
-    
   color: white;
   font-size: 16px;
 }
+.ContainerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .consultar-btn {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 5px 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px; 
+  height: 43px; 
   border-radius: 5px;
   background-color: #8dc84b;
   color: white !important;
   border: none;
   font-weight: bold;
   cursor: pointer;
-  font-size: 15px;
-  letter-spacing: 1px;
-  transition: all 0.7s;
+  font-size: 17px;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease-in-out;
 }
 
 .consultar-btn:hover {
   background-color: #388e3c;
 }
-.icono_search{
-    padding: 0  3px;
-    font-size: 20px;
+
+.icono_search {
+  margin-left: 5px;
+  font-size: 16px;
 }
 
 /*Fin de la barra de busqueda*/
