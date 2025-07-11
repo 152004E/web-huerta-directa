@@ -68,7 +68,7 @@ if (!isset($_SESSION["perfil"]) || $_SESSION["perfil"] != 1) {
       </form>
 
       <br />
-      <button class="btn-2" href="../../../views/DashBoard/Dashboardd.php" style="text-align:center;">Volver al Dashboard</button>
+      <a class="btn-1" href="../Dashboardd.php" style="text-align:center;">Volver al Dashboard</a>
     </div>
   </div>
 </body>

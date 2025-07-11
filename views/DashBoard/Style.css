@@ -791,7 +791,9 @@ body.dark-theme main,
 body.dark-theme .container,
 body.dark-theme .recent-orders table,
 body.dark-theme .sales-analytics .item,
-body.dark-theme .recent-updates .updates {
+body.dark-theme .recent-updates .updates,
+body.dark-theme .busqueda-filtros,
+body.dark-theme .barra-busqueda{
   background: var(--color-dark-variant);
   box-shadow: var(--box-shadow);
   color: var(--color-white);
@@ -799,14 +801,23 @@ body.dark-theme .recent-updates .updates {
 
 /* Botones y hover */
 body.dark-theme .btn,
-body.dark-theme button {
-  background-color: var(--color-accent);
-  color: #111;
+body.dark-theme button,
+body.dark-theme .consultar-btn,
+body.dark-theme .CategoriaS {
+  background-color: #8dc84b !important;
+  color: #ffffff;
   border: none;
 }
 
 body.dark-theme .btn:hover,
-body.dark-theme button:hover {
+body.dark-theme button:hover,
+body.dark-theme .consultar-btn:hover,
+body.dark-theme .CategoriaS:hover {
   opacity: 0.85;
   cursor: pointer;
+  background-color: #004d00 !important;
+}
+
+body.dark-theme .export-links a {
+color: #8dc84b !important;
 }
