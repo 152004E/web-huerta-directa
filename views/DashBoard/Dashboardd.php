@@ -1,6 +1,6 @@
 
 <?php
-//Controlador de consultar productos
+//Consultar productos
 include "../../models/productos.php";
 $producto = new productos();
 //$productos = $producto->ObtenerTodos();
