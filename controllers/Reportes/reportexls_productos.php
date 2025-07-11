@@ -1,31 +1,47 @@
 <?php
-session_start();
 include "../../models/productos.php";
 $producto = new productos();
 
-$productos = $_SESSION["productos_filtrados"] ?? $producto->ObtenerTodos();
+$campo = '';
+$valor = '';
 
-header("Content-Type: application/vnd.ms-excel; charset=ISO-8859-1");
-header("Content-Disposition: attachment; filename=reporte_productos.xls");
-header("Pragma: no-cache");
-header("Expires: 0");
-
-echo "<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>";
-echo "<table>
-        <tr>
-            <th>PRODUCTO</th>
-            <th>CATEGORiA</th>
-            <th>PRECIO</th>
-            <th>DESCRIPCION</th>
-            </tr>";
-
-foreach ($productos as $fila) {
-    echo "<tr>
-        <td>" . utf8_decode($fila["name_product"]) . "</td>
-        <td>" . utf8_decode($fila["category"]) . "</td>
-        <td>" . utf8_decode($fila["price"]) . "</td>
-        <td>" . utf8_decode($fila["description_product"]) . "</td>
-    </tr>";
+// Revisar si se envió búsqueda por nombre o por categoría (desde POST o GET por compatibilidad)
+if (!empty($_GET['buscar'])) {
+    $campo = 'name_product';
+    $valor = $_GET['buscar'];
+} elseif (!empty($_GET['categoria']) && $_GET['categoria'] != "Por categoría") {
+    $campo = 'category';
+    $valor = $_GET['categoria'];
 }
 
+if ($campo && $valor) {
+    $productos = $producto->ConsultaEspecifica($campo, $valor);
+} else {
+    $productos = $producto->ObtenerTodos();
+}
+
+// Encabezados para forzar descarga como archivo Excel
+header("Content-Type: application/vnd.ms-excel");
+header("Content-Disposition: attachment; filename=productos.xls");
+
+// Crear tabla
+echo "<table border='1'>";
+echo "<tr>
+        <th>Producto</th>
+        <th>Categoría</th>
+        <th>Precio</th>
+        <th>Unidad</th>
+        <th>Descripción</th>
+      </tr>";
+
+foreach ($productos as $p) {
+    echo "<tr>";
+    echo "<td>" . htmlspecialchars($p['name_product']) . "</td>";
+    echo "<td>" . htmlspecialchars($p['category']) . "</td>";
+    echo "<td>" . number_format($p['price'], 0, ',', '.') . "</td>";
+    echo "<td>" . htmlspecialchars($p['unidad']) . "</td>";
+    echo "<td>" . htmlspecialchars($p['description_product']) . "</td>";
+    echo "</tr>";
+}
 echo "</table>";
+?>
