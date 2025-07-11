@@ -387,22 +387,24 @@ main .recent-orders a {
 .barra-busqueda {
   flex: 1;
   display: flex;
-  border: 2px solid #4caf50;
-  border-radius: 5px;
-  overflow: hidden;
+ 
+  border-radius: 55px;
+
   max-width: 100%;
 }
 
-.barra-busqueda input {
+.BuscarProInp{
+  border: #8DC84B 2px solid;
   flex: 1;
   padding: 10px;
-  border: none;
+  border-radius: 7px;
   outline: none;
   font-size: 16px;
- transition: all 0.7s;
+
 }
-input:hover {
-  border: #388e3c;
+.BuscarProInp:focus {
+  border: 2px solid #8DC84B; /* borde visible al hacer focus */
+  box-shadow: 0 0 3px rgba(56, 142, 60, 0.9); /* opcional: sombra sutil */
 }
 
 .filtros {
@@ -416,14 +418,15 @@ input:hover {
 .filtros select {
   appearance: none;
   border: none;
-  width: 190px;
-  padding: 13px;
+  width: 135px;
+  padding: 11px 5px;
   border-radius: 5px;
   background-color: #8dc84b;
   color: white;
   font-size: 15px;
   letter-spacing: 1px;
   transition: all 0.7s;
+  font-weight: bold;
 }
 select:hover {
   background-color: #388e3c;
@@ -450,7 +453,7 @@ select:hover {
 
 .icon-container {
   position: absolute;
-  right: 10px;
+  right: 7px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
@@ -471,7 +474,7 @@ select:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 15px;
+  padding: 8px 5px;
   height: 40px;
   border-radius: 5px;
   background-color: #8dc84b;
@@ -485,6 +488,7 @@ select:hover {
 }
 
 .consultar-btn:hover {
+ transform: scale(1.06);
   background-color: #388e3c;
 }
 
@@ -492,6 +496,8 @@ select:hover {
   margin-left: 5px;
   font-size: 16px;
 }
+
+
 
 /*Fin de la barra de busqueda*/
 main .export-links a {

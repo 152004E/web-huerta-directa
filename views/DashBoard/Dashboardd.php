@@ -1,4 +1,3 @@
-
 <?php
 //Consultar productos
 include "../../models/productos.php";
@@ -175,7 +174,7 @@ if ($campo && $valor) {
                 <form class="busqueda-filtros" method="POST" action="">
                     <!-- Barra de búsqueda larga -->
                     <div class="barra-busqueda">
-                        <input type="text" name="buscar" placeholder="Buscar producto..." />
+                        <input class="BuscarProInp" type="text" name="buscar" placeholder="Buscar producto..." />
 
                     </div>
 
@@ -212,7 +211,10 @@ if ($campo && $valor) {
                                 Consultar
                                 <span class="material-symbols-outlined icono_search">search</span>
                             </button>
-                            <button type="submit" class="btn btn-secundary consultar-btn" onclick="window.location.href=window.location.pathname">Ver Todos <span class="material-symbols-outlined icono_search">search</span></button>
+                            <button type="submit" class="btn btn-secundary consultar-btn" onclick="window.location.href=window.location.pathname">
+                                Ver Todos
+                                	<span class="material-symbols-outlined icono_search">view_list</span>
+                            </button>
                         </div>
 
 
