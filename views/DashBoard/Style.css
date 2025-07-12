@@ -537,6 +537,22 @@ main .export-links hr {
   display: none;
 }
 
+.theme-toggler {
+  top: 40px;
+  right: 40px;
+  z-index: 999;
+  border-radius: 10px;
+  padding: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s, transform 0.2s;
+}
+
+.theme-toggler:hover {
+  color: white;
+  background-color: #496826 !important;
+  transform: scale(1.05);
+}
+
 .right .theme-toggler {
   background: rgba(132, 139, 200, 0.18);
   display: flex;
