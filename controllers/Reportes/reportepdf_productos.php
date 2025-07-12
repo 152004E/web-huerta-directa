@@ -1,51 +1,59 @@
 <?php
-require('libreria/fpdf.php'); //Ruta de acceso a la clase fpdf.php, clase externa
-
+require('libreria/fpdf.php');
 include "../../models/productos.php";
 $producto = new productos();
-$respuesta = $producto->ObtenerTodos();
-//Se asigna a $datos todos los datos a exportar
-//var_dump($respuesta);
-class PDF extends FPDF
-{
-    // Cabecera
-    function Header()   //Se define el encabezado de la tabla
-    {
-        $this->SetFont('Arial', 'B', 14);   //Fuente
-        $this->Cell(0, 10, 'Reporte de productos', 0, 1, 'C');   //Ubicación de la celda
-        $this->Ln(5);   //Se asigna al documento la línea
 
-        $this->SetFont('Arial', 'B', 10);   //Fuente
-        $this->Cell(20, 10, 'Nombre', 1);   //Se define el alto, ancho y contenido de la celda
+$campo = '';
+$valor = '';
+
+if (!empty($_GET['buscar'])) {
+    $campo = 'name_product';
+    $valor = $_GET['buscar'];
+} elseif (!empty($_GET['categoria']) && $_GET['categoria'] != "Por categoría") {
+    $campo = 'category';
+    $valor = $_GET['categoria'];
+}
+
+if ($campo && $valor) {
+    $respuesta = $producto->ConsultaEspecifica($campo, $valor);
+} else {
+    $respuesta = $producto->ObtenerTodos();
+}
+
+class PDF extends FPDF {
+    function Header() {
+        $this->SetFont('Arial', 'B', 14);
+        $this->Cell(0, 10, 'Reporte de productos', 0, 1, 'C');
+        $this->Ln(5);
+
+        $this->SetFont('Arial', 'B', 10);
+        $this->Cell(40, 10, 'Nombre', 1);
         $this->Cell(40, 10, 'Categoria', 1);
-        $this->Cell(50, 10, 'Precio', 1);
-        $this->Ln();    //Se asigna al documento la línea
+        $this->Cell(30, 10, 'Precio', 1);
+        $this->Cell(30, 10, 'Unidad', 1);
+        $this->Cell(50, 10, 'Descripcion', 1);
+        $this->Ln();
     }
 
-    // Pie de página
-    function Footer()
-    {
-        $this->SetY(-15);   //Antes de finalizar la página
-        $this->SetFont('Arial', 'I', 8);    //Fuente
-        $this->Cell(0, 10, 'Pagina ' . $this->PageNo(), 0, 0, 'C'); //Número de la página
+    function Footer() {
+        $this->SetY(-15);
+        $this->SetFont('Arial', 'I', 8);
+        $this->Cell(0, 10, 'Pagina ' . $this->PageNo(), 0, 0, 'C');
     }
 }
 
-$pdf = new PDF();   //Se define el objeto $pdf
-$pdf->AddPage();    //Se le adiciona una página
-$pdf->SetFont('Arial', '', 10);     //Fuente
+$pdf = new PDF();
+$pdf->AddPage();
+$pdf->SetFont('Arial', '', 10);
 
-foreach($respuesta as $fila){    //El ciclo llena la tabla desde la tercera línea
-    $pdf->Cell(20, 8, $fila["name_product"], 1);     //Se asigna en la siguiente línea el dato
-    $pdf->Cell(40, 8, $fila["category"], 1);
-    $nombre = utf8_decode($fila["price"]);    //Permite que integre caracteres especiales
-    $pdf->Cell(50, 8, $nombre, 1);
-   // $pdf->Cell(25, 8, $fila[3], 1);
-  //  $pdf->Cell(50, 8, $fila[4], 1);
-  //  $pdf->Cell(25, 8, $fila[5], 1);
+foreach ($respuesta as $fila) {
+    $pdf->Cell(40, 8, utf8_decode($fila["name_product"]), 1);
+    $pdf->Cell(40, 8, utf8_decode($fila["category"]), 1);
+    $pdf->Cell(30, 8, number_format($fila["price"]), 1);
+    $pdf->Cell(30, 8, utf8_decode($fila["unidad"]), 1);
+    $descripcion = substr($fila["description_product"], 0, 30); // por si es muy larga
+    $pdf->Cell(50, 8, utf8_decode($descripcion), 1);
     $pdf->Ln();
 }
 
-$pdf->Output('D', 'reporte_prodcutos.pdf'); // 'D' = descarga directa con nombre reporte_usuarios.pdf
-
-?>
+$pdf->Output('D', 'reporte_roductos.pdf');
