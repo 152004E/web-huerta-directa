@@ -22,16 +22,16 @@ if ($campo && $valor) {
 
 // Encabezados para forzar descarga como archivo Excel
 header("Content-Type: application/vnd.ms-excel");
-header("Content-Disposition: attachment; filename=productos.xls");
+header("Content-Disposition: attachment; filename=reporte_productos.xls");
 
 // Crear tabla
 echo "<table border='1'>";
 echo "<tr>
         <th>Producto</th>
-        <th>Categoría</th>
+        <th>".utf8_decode("Categoria")."</th>
         <th>Precio</th>
         <th>Unidad</th>
-        <th>Descripción</th>
+        <th>".utf8_decode("Descripción")."</th>
       </tr>";
 
 foreach ($productos as $p) {

@@ -274,7 +274,7 @@ if ($campo && $valor) {
                 <a href="../../controllers/Reportes/reportexls_productos.php?buscar=<?= urlencode($_POST['buscar'] ?? '') ?>&categoria=<?= urlencode($_POST['categoria'] ?? '') ?>">Exportar a Excel</a>
 
                 <hr>
-                <a href="../../controllers/Reportes/reportepdf_productos.php">Exportar a Pdf</a>
+                <a href="../../controllers/Reportes/reportepdf_productos.php?buscar=<?= urlencode($_POST['buscar'] ?? '') ?>&categoria=<?= urlencode($_POST['categoria'] ?? '') ?>">Exportar a Pdf</a>
             </div>
 
         </main>
