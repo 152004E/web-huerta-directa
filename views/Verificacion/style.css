@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 
-/* Fondo general */
+
 body {
     font-family: "Poppins", sans-serif !important;
     background: #f7efd8;
@@ -16,7 +16,7 @@ body {
     text-align: center;
 }
 
-/* Contenedor del formulario */
+
 form {
     background: #fff;
     padding: 25px 30px;
@@ -27,19 +27,19 @@ form {
     margin: 0 auto;
 }
 
-/* Título */
+
 h2 {
     margin-bottom: 400px;
     color: #000000;
 }
 
-/* Mensaje de error */
+
 p {
     margin: 10px 0;
     font-weight: bold;
 }
 
-/* Etiquetas */
+
 label {
     display: block;
     font-weight: bold;
@@ -47,7 +47,7 @@ label {
     color: #333;
 }
 
-/* Input */
+
 input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -59,7 +59,7 @@ input[type="text"] {
     letter-spacing: 3px;
 }
 
-/* Botón */
+
 button {
     background: #4caf50;
     color: white;
