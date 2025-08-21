@@ -1,36 +1,30 @@
 <?php
+session_start();
+require_once '../models/usuarios.php';
 
-//var_dump($_POST);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $correo = $_POST['email'];
+    $password = $_POST['password_user'];
 
-include "../models/usuarios.php";
+    $usuarioModel = new usuarios(); // con minúscula
+    $resultado = $usuarioModel->Login($correo, $password);
 
-///var_dump($_POST);
+    if ($resultado && count($resultado) > 0) {
+        // Guardar datos del usuario en sesión
+        $_SESSION['usuario'] = $resultado[0];
 
+        // Generar código 2FA
+        $codigo_2fa = rand(100000, 999999);
+        $_SESSION['codigo_2fa'] = $codigo_2fa;
 
-$usuario = new usuarios();
-$respuesta = $usuario->Login($_POST["email"], $_POST["password_user"]);
-
-//Var_dump($respuesta);
-
-if($respuesta instanceof Exception){
-    header("location:../views/Errores/error500.html");
-}
-else if(!empty($respuesta)){
-    session_start();  
-    if($respuesta[0]["fk_id_role"]=="1"){
-        header("location:../views/dashboard/dashboardd.php");
+        // Mostrar el código como simulación
+        echo "<p>Código de verificación (simulación): <strong>$codigo_2fa</strong></p>";
+        echo "<p>Redirigiendo a verificación...</p>";
+        header('refresh:3;url=../views/Verificacion/verificar_codigo.php');
+        exit();
+    } else {
+        echo "Correo o contraseña incorrectos.";
     }
-    else if ($respuesta[0]["fk_id_role"]=="2"){
-        header("location:../views/index.php");
-    }
 }
-else{
-    echo "
-        <script>
-            alert('Datos incorrectos, vuelva a intentar');
-            location.href='../views/login/login/Log in.html';
-        </script>
-    ";
-}
-
 ?>
+
