@@ -36,6 +36,7 @@
         </div>
       <?php endforeach; ?>
     </div>
+    
   </main>
 </body>
 

@@ -61,7 +61,6 @@ publication_date date null
 );
 
 select * from TB_products;
-delete from TB_products;
 
 CREATE TABLE TB_sales(
 id_sale int auto_increment primary key unique,
