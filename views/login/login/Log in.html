@@ -19,13 +19,18 @@
         <form
           action="../../../controllers/Registro_usuario/registrar_usuario.php"
           method="post"
+          onsubmit="return validarRegistro()"
         >
           <h1>Crear cuenta</h1>
           <img class="H-logo" src="logo.png" alt="logo" width="100" />
 
           <div class="from-group">
             <label>Nombre de usuario</label>
-            <input type="text" name="Nombre_usuario" placeholder="Ejemplo: Santiago Puentes" />
+            <input
+              type="text"
+              name="Nombre_usuario"
+              placeholder="Ejemplo: Santiago Puentes"
+            />
           </div>
           <div class="correo-contraseña">
             <div class="from-group">
@@ -41,7 +46,7 @@
 
             <div class="from-group">
               <label>Ingrese su contraseña</label>
-              <input type="password" name="password" placeholder="Contraseña" />
+              <input type="password" id="passwordRegistro" name="password" placeholder="Contraseña" required />
             </div>
           </div>
 
@@ -54,12 +59,10 @@
           action="../../../controllers/Login_usuario.php"
           method="post"
           onsubmit="return validarCorreo('correoRegistro')"
-          
         >
           <h1 class="iniciar_sesion">Iniciar Sesion</h1>
           <img src="logo.png" alt="logo" width="100" />
           <span>Usa tu correo y contraseña</span>
-          
 
           <div class="from-group">
             <label>Ingrese su correo electronico</label>

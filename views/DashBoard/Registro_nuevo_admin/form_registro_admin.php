@@ -27,6 +27,7 @@ if (!isset($_SESSION["perfil"]) || $_SESSION["perfil"] != 1) {
       <form
         action="../../../controllers/Administrador/registro_admin.php"
         method="post"
+        onsubmit="return validarRegistro()"
       >
         <h1>Registrar Administrador</h1>
         <img class="H-logo" src="logo_huerta.png" alt="logo" width="100" />
@@ -55,12 +56,7 @@ if (!isset($_SESSION["perfil"]) || $_SESSION["perfil"] != 1) {
 
           <div class="from-group">
             <label>Contraseña</label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Ingrese contraseña"
-              required
-            />
+            <input type="password" id="passwordRegistro" name="password" placeholder="Contraseña" required />
           </div>
         </div>
 
@@ -71,5 +67,6 @@ if (!isset($_SESSION["perfil"]) || $_SESSION["perfil"] != 1) {
       <a class="btn-1" href="../Dashboardd.php" style="text-align:center;">Volver al Dashboard</a>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

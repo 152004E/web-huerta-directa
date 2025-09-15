@@ -218,10 +218,10 @@ body.dark-theme .footer1 a {
 body.dark-theme .footer1 a:hover {
   color: var(--color-accent);
 }
-@media (max-width: 1400px) {
+@media (min-width: 1370px) {
   .theme-toggler {
-    top: 100px;
-    right: 20px;
+    top: 50px;
+    right: 36px;
   }
 }
 

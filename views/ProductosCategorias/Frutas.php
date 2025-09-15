@@ -7,6 +7,7 @@
   <title>Categoria Frutas | Huerta directa</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="darkindex.css">
+  <link rel="stylesheet" href="../style.css">
   <link
      rel="icon"
      type="image/png"
@@ -24,6 +25,7 @@
  <div class="menu container1">
 <?php include '../modelosFront/navPagina.php'; ?>
 <?php include '../modelosFront/carritoProducto.php'; ?>
+ 
 </div>
 
   <main class="products container1" id="lista-1">
@@ -47,7 +49,11 @@
       <?php endforeach; ?>
     </div>
   </main>
+
+  
   <?php include '../modelosFront/footer.php'; ?>
+ 
+
 </body>
 
 </html>

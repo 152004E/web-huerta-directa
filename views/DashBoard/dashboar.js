@@ -1,23 +1,47 @@
-const themeToggler = document.querySelector(".theme-toggler");
+const themeToggler = document.querySelector('.theme-toggler');
 
-// cambio de color
-themeToggler.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
+// Función para aplicar el tema guardado
+function applySavedTheme() {
+    const savedTheme = localStorage.getItem('theme'); // Intenta obtener el tema guardado
 
-    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
-    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
-})
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        // Asegúrate de que los íconos también reflejen el tema oscuro
+        if (themeToggler) { // Verifica si themeToggler existe antes de intentar acceder a sus hijos
+            themeToggler.querySelector('span:nth-child(1)').classList.remove('active');
+            themeToggler.querySelector('span:nth-child(2)').classList.add('active');
+        }
+    } else {
+        document.body.classList.remove('dark-theme');
+        // Asegúrate de que los íconos también reflejen el tema claro
+        if (themeToggler) { // Verifica si themeToggler existe
+            themeToggler.querySelector('span:nth-child(1)').classList.add('active');
+            themeToggler.querySelector('span:nth-child(2)').classList.remove('active');
+        }
+    }
+}
 
-let toggle = document.querySelector("#menu-btn"); // Este es tu botón para abrir el menú
-let sidebar = document.querySelector("aside");
-let main = document.querySelector("main");
+// Llama a la función al cargar la página para aplicar el tema guardado
+document.addEventListener('DOMContentLoaded', applySavedTheme);
 
-toggle.onclick = function() {
-    sidebar.classList.toggle("active");
-    main.classList.toggle("active");
-    console.log("Sidebar toggled");
-};
 
+// Event listener para el cambio de color
+if (themeToggler) { // Asegúrate de que themeToggler existe antes de agregar el event listener
+    themeToggler.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+
+        // Alternar la clase 'active' en los span del toggler
+        themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
+        themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
+
+        // Guardar la preferencia en localStorage
+        if (document.body.classList.contains('dark-theme')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+}
 // Hover dinámico en los enlaces del sidebar
 let list = document.querySelectorAll("aside .sidebar a");
 

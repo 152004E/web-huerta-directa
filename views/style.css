@@ -139,6 +139,7 @@ img {
 
 #carrito {
   position: absolute;
+  top: 100%;
   right: 0;
   
   background-color: #4e4b5076;
@@ -150,7 +151,7 @@ img {
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.5s ease;
-  z-index: 1000;
+  z-index: 1001;
   pointer-events: none;
 }
 
@@ -159,6 +160,10 @@ img {
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.submenu.carrito-container {
+  position: relative;
 }
 
 table {
@@ -274,10 +279,12 @@ p {
 }
 
 .header-img {
+  position: relative; /* Mantener relative para que imagen-hover-container se posicione correctamente dentro */
+  z-index: 1; /* Un z-index más bajo que el del carrito, para que el carrito esté por encima */
+  /* Mantén tus estilos existentes para la imagen */
   display: flex;
   justify-content: start;
   margin-left: 100px;
-  
 }
 
 .header-img img {
@@ -495,6 +502,17 @@ input {
 .footer1 a:hover {
   color: #004d00;
   text-decoration: underline;
+}
+
+.ajustar {
+  position: absolute; /* Permite posicionar el elemento con respecto a su padre posicionado */
+  top: 30px; /* Ajusta la distancia desde la parte superior. Experimenta con este valor. */
+  right: 30px; /* Ajusta la distancia desde la derecha. Experimenta con este valor. */
+  z-index: 1000; /* Un z-index alto para asegurar que se superponga sobre otros elementos */
+  display: flex; /* Mantiene la disposición flex para los elementos internos */
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .ajustar .theme-toggler {
